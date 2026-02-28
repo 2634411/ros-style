@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Первый Сайт</title>
+    <meta name="description" content="Мой первый сайт по программированию">
+    <meta name="keywords" content="обучение, программирование, удаленка, мой первый сайт">
+    <meta name="author" content="Елена Куликова">
+    <style>
+        /* Это CSS — здесь мы наводим красоту */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 { color: #1a73e8; }
+        p { color: #555; line-height: 1.6; }
+        .btn {
+            background-color: #1a73e8;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #1557b0;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Моя будущая IT-компания</h1>
+        <p>Я учусь разработке и продвижению. Скоро здесь будет проект, который принесет мне первую работу на удаленке!</p>
+        <button class="btn" onclick="sayHello()">Нажми на меня</button>
+    </div>
+
+    <script>
+function sayHello() {
+    // Находим тело сайта
+    const body = document.querySelector('body');
+    // Генерируем случайный мягкий цвет
+    const colors = ['#fce4ec', '#e3f2fd', '#e8f5e9', '#fff3e0', '#f3e5f5'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    
+    // Меняем фон
+    body.style.backgroundColor = randomColor;
+    
+    // Меняем текст на кнопке
+    const btn = document.querySelector('.btn');
+    btn.innerText = "Цвет изменен!";
+}
+    </script>
+
+</body>
+</html>
