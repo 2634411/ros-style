@@ -6,11 +6,12 @@
     <title>ГК Росстайл — Инновационное оснащение образовательных пространств</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-/* Подключаем оригинальные шрифты со старого сайта */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+        /* Подключаем родной шрифт Roboto с поддержкой кириллицы */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 :root {
-    --primary: #3d3773; /* Фирменный фиолетовый */
+    --primary: #3d3773; /* Твой фирменный цвет заголовков */
     --accent: #2eaaaf;  /* Фирменный бирюзовый */
     --accent-hover: #228b8e;
     --text: #3e3971;    
@@ -24,7 +25,8 @@
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif; /* Основной текст как на старом сайте */
+    font-family: 'Roboto', sans-serif; /* Родной шрифт сайта */
+    font-size: 16px; /* Точный размер из админки */
     color: var(--text);
     line-height: 1.6;
     background-color: var(--white);
@@ -50,8 +52,8 @@ body {
 .nav a {
     text-decoration: none;
     color: var(--primary);
-    font-family: 'Montserrat', sans-serif; /* Шрифты меню */
-    font-weight: 600;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
     font-size: 15px;
     transition: color 0.3s ease;
 }
@@ -75,41 +77,42 @@ body {
 
 /* --- ПОЛНОЭКРАННЫЕ БЛОКИ --- */
 
-/* Первый экран: Четкое разделение 50 на 50 */
+/* Первый экран: Честное разделение 50 на 50, которое не разваливается */
 .hero-section {
     position: relative;
     min-height: calc(100vh - 85px);
     display: flex;
-    align-items: center;
     background-color: var(--white);
     overflow: hidden;
 }
 
-/* Левая половина (точно 50% ширины экрана) */
+/* Левая половина под текст (ровно 50%) */
 .hero-content {
     width: 50%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 60px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     z-index: 2;
     text-align: left;
 }
 
 .hero-content h1 {
-    font-family: 'Montserrat', sans-serif; /* Шрифт заголовков как на старом сайте */
-    font-size: 44px;
-    line-height: 1.2;
-    color: var(--primary);
-    font-weight: 800;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 26px; /* Точный размер из твоей админки */
+    line-height: 1.3;
+    color: var(--primary); /* Точный цвет из админки */
+    font-weight: 700;
     margin-bottom: 25px;
 }
 
 .hero-content p {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-muted);
     margin-bottom: 35px;
 }
 
-/* Правая половина (точно 50% ширины экрана) */
+/* Правая половина: Честные 50% ширины экрана */
 .hero-image-bg {
     position: absolute;
     top: 0;
@@ -122,15 +125,15 @@ body {
     z-index: 1;
 }
 
-/* Косая линия-градиент, которая мягко «срезает» левый край картинки */
+/* Четкая косая линия, оставляющая картинке её 50% пространства */
 .hero-image-bg::after {
     content: '';
     position: absolute;
     top: 0;
-    left: -1px;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(115deg, #ffffff 15%, rgba(255, 255, 255, 0) 70%);
+    background: linear-gradient(105deg, #ffffff 0%, #ffffff 10%, rgba(255, 255, 255, 0) 12%);
 }
 
 /* Второй экран: Направления работы */
@@ -144,8 +147,8 @@ body {
 }
 
 .features-section h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px; /* Везде делаем заголовки по 26px для порядка */
     color: var(--primary);
     margin-bottom: 40px;
     font-weight: 700;
@@ -160,7 +163,7 @@ body {
 }
 
 .features-list li {
-    font-size: 20px;
+    font-size: 16px;
     color: var(--text-muted);
     margin-bottom: 25px;
     position: relative;
@@ -172,7 +175,7 @@ body {
     position: absolute;
     left: 0;
     color: var(--accent);
-    font-size: 28px;
+    font-size: 24px;
     line-height: 1;
     top: -2px;
 }
@@ -196,7 +199,7 @@ body {
 }
 
 .contacts-info { text-align: left; }
-.contacts-info h2 { font-family: 'Montserrat', sans-serif; font-size: 36px; color: var(--primary); margin-bottom: 30px; }
+.contacts-info h2 { font-family: 'Roboto', sans-serif; font-size: 26px; color: var(--primary); margin-bottom: 30px; }
 
 .contact-item { margin-bottom: 25px; font-size: 16px; }
 .contact-item strong {
@@ -216,14 +219,26 @@ body {
     box-shadow: 0 10px 30px rgba(61, 55, 115, 0.05);
 }
 
-/* Адаптивность */
-@media (max-width: 991px) {
-    .hero-section { flex-direction: column; padding-top: 40px; }
-    .hero-content { width: 100%; padding: 0 20px; margin-bottom: 40px; }
+/* Эффект наложения текста на картинку при сужении экрана (Desktop-first) */
+@media (max-width: 991px) and (min-width: 769px) {
+    .hero-content {
+        width: 65%; /* Текст заходит на территорию картинки */
+        background: rgba(255, 255, 255, 0.85); /* Легкая плашка под текстом, чтобы он читался поверх фото */
+        padding: 30px;
+        border-radius: 8px;
+        margin-left: 5%;
+    }
+}
+
+/* Мобильная адаптивность включается только на смартфонах */
+@media (max-width: 768px) {
+    .hero-section { flex-direction: column; }
+    .hero-content { width: 100%; padding: 40px 20px; }
     .hero-image-bg { position: relative; width: 100%; height: 300px; }
     .hero-image-bg::after { background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%); }
     .contacts-container { grid-template-columns: 1fr; }
-} 
+}
+        
     </style>
 </head>
 <body>
