@@ -138,38 +138,6 @@ body {
 .stats {
     padding: 60px 5% !important; /* Отступы для блока со статистикой */
 }
-
-/* Возвращаем полноэкранную структуру блоков */
-.hero, .features, .contacts-section {
-    min-height: calc(100vh - 85px); /* Занимает весь экран за вычетом высоты шапки */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Центрируем контент по вертикали */
-    align-items: center;    /* Центрируем контент по горизонтали */
-    text-align: center;
-    padding: 40px 5% !important;
-    box-sizing: border-box;
-}
-
-/* Белый фон для первого и третьего блока, а для второго сделаем легкий серый, чтобы визуально разделить их при прокрутке */
-.hero {
-    background-color: var(--white);
-}
-
-.features {
-    background-color: #f4f4f8; /* Легкий контрастный фон для Направлений */
-}
-
-.contacts-section {
-    background-color: var(--white);
-}
-
-/* Делаем списки или карточки внутри направлений красивыми и ровными */
-.features ul, .features-grid {
-    text-align: left; /* Чтобы сам текст внутри блока читался удобно */
-    max-width: 800px;
-    margin: 20px auto 0 auto;
-}
         
     </style>
 </head>
