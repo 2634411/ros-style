@@ -7,11 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
 
-        /* Подключаем родной шрифт Roboto с поддержкой кириллицы */
+/* Подключаем родной шрифт Roboto с поддержкой кириллицы */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 :root {
-    --primary: #3d3773; /* Твой фирменный цвет заголовков */
+    --primary: #3d3773; /* Фирменный фиолетовый */
     --accent: #2eaaaf;  /* Фирменный бирюзовый */
     --accent-hover: #228b8e;
     --text: #3e3971;    
@@ -25,8 +25,8 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif; /* Родной шрифт сайта */
-    font-size: 16px; /* Точный размер из админки */
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px; 
     color: var(--text);
     line-height: 1.6;
     background-color: var(--white);
@@ -48,13 +48,13 @@ body {
 .logo a { display: flex; align-items: center; }
 .logo img { height: 55px; width: auto; }
 
-.nav { display: flex; align-items: center; gap: 25px; }
+.nav { display: flex; align-items: center; gap: 30px; }
 .nav a {
     text-decoration: none;
     color: var(--primary);
     font-family: 'Roboto', sans-serif; 
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 700; /* Сделали буквы в шапке жирнее */
+    font-size: 16px;  /* Увеличили размер шрифта в шапке */
     transition: color 0.3s ease;
 }
 .nav a:hover { color: var(--accent); }
@@ -64,9 +64,8 @@ body {
     color: var(--white) !important;
     padding: 12px 28px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
-    letter-spacing: 0.5px;
     box-shadow: 0 4px 15px rgba(46, 170, 175, 0.3);
     transition: all 0.3s ease;
 }
@@ -77,63 +76,55 @@ body {
 
 /* --- ПОЛНОЭКРАННЫЕ БЛОКИ --- */
 
-/* Первый экран: Честное разделение 50 на 50, которое не разваливается */
+/* Первый экран: Жесткое разделение на две половины */
 .hero-section {
-    position: relative;
-    min-height: calc(100vh - 85px);
     display: flex;
+    min-height: calc(100vh - 85px);
     background-color: var(--white);
-    overflow: hidden;
+    position: relative;
 }
 
-/* Левая половина под текст (ровно 50%) */
+/* Левая половина (ровно 50% ширины) */
 .hero-content {
     width: 50%;
     padding: 60px 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 2;
     text-align: left;
+    z-index: 2;
 }
 
 .hero-content h1 {
     font-family: 'Roboto', sans-serif; 
-    font-size: 26px; /* Точный размер из твоей админки */
-    line-height: 1.3;
-    color: var(--primary); /* Точный цвет из админки */
+    font-size: 38px; /* Увеличили заголовок первого блока */
+    line-height: 1.25;
+    color: var(--primary); 
     font-weight: 700;
     margin-bottom: 25px;
 }
 
 .hero-content p {
-    font-size: 16px;
+    font-size: 18px; /* Сделали описание чуть крупнее */
     color: var(--text-muted);
     margin-bottom: 35px;
 }
 
-/* Правая половина: Честные 50% ширины экрана */
-.hero-image-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
+/* Правая половина (ровно 50% ширины) */
+.hero-image-wrapper {
     width: 50%;
+    position: relative;
+    height: auto;
+}
+
+.hero-image-bg {
+    width: 100%;
     height: 100%;
     background-image: url('https://ros-style.com/images/2022/09/16/chemystry2_-copy1.jpg');
     background-size: cover;
     background-position: center;
-    z-index: 1;
-}
-
-/* Четкая косая линия, оставляющая картинке её 50% пространства */
-.hero-image-bg::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(105deg, #ffffff 0%, #ffffff 10%, rgba(255, 255, 255, 0) 12%);
+    /* Идеальный косой срез: картинка начинается со скосом, но занимает ВСЮ свою половину */
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Второй экран: Направления работы */
@@ -148,7 +139,7 @@ body {
 
 .features-section h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 26px; /* Везде делаем заголовки по 26px для порядка */
+    font-size: 32px; /* На уровень ниже, чем главный заголовок */
     color: var(--primary);
     margin-bottom: 40px;
     font-weight: 700;
@@ -163,7 +154,7 @@ body {
 }
 
 .features-list li {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--text-muted);
     margin-bottom: 25px;
     position: relative;
@@ -199,7 +190,7 @@ body {
 }
 
 .contacts-info { text-align: left; }
-.contacts-info h2 { font-family: 'Roboto', sans-serif; font-size: 26px; color: var(--primary); margin-bottom: 30px; }
+.contacts-info h2 { font-family: 'Roboto', sans-serif; font-size: 32px; color: var(--primary); margin-bottom: 30px; }
 
 .contact-item { margin-bottom: 25px; font-size: 16px; }
 .contact-item strong {
@@ -219,23 +210,31 @@ body {
     box-shadow: 0 10px 30px rgba(61, 55, 115, 0.05);
 }
 
-/* Эффект наложения текста на картинку при сужении экрана (Desktop-first) */
-@media (max-width: 991px) and (min-width: 769px) {
+/* Эффект наложения текста на картинку при сужении окна браузера */
+@media (max-width: 1100px) and (min-width: 769px) {
     .hero-content {
-        width: 65%; /* Текст заходит на территорию картинки */
-        background: rgba(255, 255, 255, 0.85); /* Легкая плашка под текстом, чтобы он читался поверх фото */
+        width: 60%; /* Текст забирает себе больше ширины */
+        background: rgba(255, 255, 255, 0.9); /* Прозрачный белый фон, чтобы текст легко читался на фоне заехавшей картинки */
         padding: 30px;
         border-radius: 8px;
-        margin-left: 5%;
+        position: relative;
+        z-index: 10;
+    }
+    .hero-image-wrapper {
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
     }
 }
 
-/* Мобильная адаптивность включается только на смартфонах */
+/* Мобильная адаптивность для смартфонов */
 @media (max-width: 768px) {
     .hero-section { flex-direction: column; }
     .hero-content { width: 100%; padding: 40px 20px; }
-    .hero-image-bg { position: relative; width: 100%; height: 300px; }
-    .hero-image-bg::after { background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%); }
+    .hero-image-wrapper { width: 100%; height: 300px; }
+    .hero-image-bg { clip-path: none; } /* Убираем скос на мобилках */
     .contacts-container { grid-template-columns: 1fr; }
 }
         
@@ -257,13 +256,15 @@ body {
         <a href="#contacts" class="cta-button">Связаться с нами</a>
     </nav>
 </header>
-    <section class="hero-section">
+        <section class="hero-section">
         <div class="hero-content">
             <h1>Комплексное оснащение учебных заведений</h1>
             <p>Создаем современную образовательную среду по всей России в соответствии с ФГОС и 838 приказом.</p>
             <a href="napravleniya.html" class="cta-button" style="font-size: 16px; padding: 14px 35px; text-decoration: none; display: inline-block;">Узнать больше</a>
         </div>
-        <div class="hero-image-bg"></div>
+        <div class="hero-image-wrapper">
+            <div class="hero-image-bg"></div>
+        </div>
     </section>
 
     <section class="features-section">
