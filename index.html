@@ -9,9 +9,9 @@
 :root {
     --primary: #3d3773; /* Фирменный фиолетовый */
     --accent: #2eaaaf;  /* Фирменный бирюзовый */
-    --accent-hover: #228b8e; /* Бирюзовый при наведении */
-    --bg-light: #f9f9fc;
-    --text: #333333;
+    --accent-hover: #228b8e;
+    --text: #3e3971;    /* Темный фирменный цвет текста */
+    --text-muted: #718390; /* Серый цвет для описаний */
     --white: #ffffff;
 }
 
@@ -27,71 +27,32 @@ body {
     background-color: var(--white);
 }
 
-/* Красивая и надежная шапка */
+/* Шапка сайта */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
     background: var(--white);
-    box-shadow: 0 4px 20px rgba(61, 55, 115, 0.07); /* Мягкая фирменная тень */
+    box-shadow: 0 4px 20px rgba(61, 55, 115, 0.07);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo a {
-    display: flex;
-    align-items: center;
-}
+.logo a { display: flex; align-items: center; }
+.logo img { height: 55px; width: auto; }
 
-.logo img {
-    height: 55px; /* Оптимальный размер для твоего логотипа */
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.02); /* Легкий интерактив при наведении на лого */
-}
-
-/* Навигация */
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
+.nav { display: flex; align-items: center; gap: 25px; }
 .nav a {
     text-decoration: none;
     color: var(--primary);
     font-weight: 600;
     font-size: 15px;
     transition: color 0.3s ease;
-    position: relative;
 }
+.nav a:hover { color: var(--accent); }
 
-/* Красивая линия при наведении на пункты меню */
-.nav a:not(.cta-button)::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--accent);
-    transition: width 0.3s ease;
-}
-
-.nav a:not(.cta-button):hover::after {
-    width: 100%;
-}
-
-.nav a:hover {
-    color: var(--accent);
-}
-
-/* Кнопка "Связаться с нами" */
 .cta-button {
     background: var(--accent);
     color: var(--white) !important;
@@ -101,44 +62,163 @@ body {
     font-weight: 700;
     letter-spacing: 0.5px;
     box-shadow: 0 4px 15px rgba(46, 170, 175, 0.3);
-    transition: all 0.3s ease !important;
+    transition: all 0.3s ease;
 }
-
 .cta-button:hover {
     background: var(--accent-hover);
-    transform: translateY(-2px); /* Кнопка слегка приподнимается */
-    box-shadow: 0 6px 20px rgba(46, 170, 175, 0.4);
+    transform: translateY(-2px);
 }
 
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    .nav a:not(.cta-button)::after {
-        display: none; /* Убираем линии на мобильных для чистоты */
-    }
-}
-        /* Возвращаем красивые поля для контента на сайте */
-.hero {
-    padding: 60px 5% !important; /* Отступы для главного баннера */
+/* --- ПОЛНОЭКРАННЫЕ БЛОКИ --- */
+
+/* Первый экран: Разделение пополам с косой линией */
+.hero-section {
+    position: relative;
+    min-height: calc(100vh - 85px);
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    background-color: var(--white);
+    overflow: hidden;
 }
 
-.features {
-    padding: 60px 5% !important; /* Отступы для блока с направлениями */
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    z-index: 2;
+    text-align: left; /* Выравнивание текста строго по левому краю */
 }
 
-.stats {
-    padding: 60px 5% !important; /* Отступы для блока со статистикой */
+.hero-content h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 20px;
 }
-        
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+    max-width: 90%;
+}
+
+/* Правая часть первого экрана: Картинка и скос */
+.hero-image-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('https://ros-style.com/images/2022/09/16/chemystry2_-copy1.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Воссоздаем ту самую косую линию-градиент из Joomla шаблона */
+.hero-image-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(125deg, #ffffff 47%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Второй экран: Направления работы */
+.features-section {
+    min-height: 100vh;
+    padding: 80px 5%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features-section h2 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.features-list li {
+    font-size: 20px;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Маркеры-точки для списка направлений как на старом сайте */
+.features-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 28px;
+    line-height: 1;
+    top: -2px;
+}
+
+/* Третий экран: Контакты */
+.contacts-section {
+    min-height: 100vh;
+    padding: 80px 5%;
+    background-color: #f9f9fc; /* Мягкий фон для финала страницы */
+    display: flex;
+    align-items: center;
+}
+
+.contacts-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contacts-info { text-align: left; }
+.contacts-info h2 { font-size: 36px; color: var(--primary); margin-bottom: 30px; }
+
+.contact-item { margin-bottom: 25px; font-size: 16px; }
+.contact-item strong {
+    color: var(--accent);
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(61, 55, 115, 0.05);
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 991px) {
+    .hero-section { flex-direction: column; padding-top: 40px; }
+    .hero-content { max-width: 100%; margin-bottom: 40px; }
+    .hero-image-bg { position: relative; width: 100%; height: 300px; }
+    .hero-image-bg::after { background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%); }
+    .contacts-container { grid-template-columns: 1fr; }
+}    
     </style>
 </head>
 <body>
@@ -157,74 +237,61 @@ body {
         <a href="#contacts" class="cta-button">Связаться с нами</a>
     </nav>
 </header>
-
-    <section class="hero">
+    <section class="hero-section">
         <div class="hero-content">
             <h1>Комплексное оснащение учебных заведений</h1>
             <p>Создаем современную образовательную среду по всей России в соответствии с ФГОС и 838 приказом.</p>
-            <a href="napravleniya.html" class="cta-button" style="font-size: 18px;">Узнать больше</a>
+            <a href="napravleniya.html" class="cta-button" style="font-size: 16px; padding: 14px 35px; text-decoration: none; display: inline-block;">Узнать больше</a>
+        </div>
+        <div class="hero-image-bg"></div>
+    </section>
+
+    <section class="features-section">
+        <h2>Направления работы:</h2>
+        <ul class="features-list">
+            <li>Инфраструктурные решения (разработка концепции, подготовка спецификаций, полное сопровождение проектов)</li>
+            <li>Учебное оборудование (поставка в полном соответствии с ФГОС и 804 приказом)</li>
+            <li>Дополнительное образование (технопарки, Кванториумы, центры одаренных детей)</li>
+        </ul>
+    </section>
+
+    <section class="contacts-section" id="contacts">
+        <div class="contacts-container">
+            <div class="contacts-info">
+                <h2>Контакты</h2>
+                <p style="margin-bottom: 30px; color: #718390;">Свяжитесь с нами для комплексного оснащения вашего учебного заведения. Мы подготовим спецификации и коммерческое предложение под ваши задачи.</p>
+                
+                <div class="contact-item">
+                    <strong>Телефоны</strong>
+                    <span style="display: block; font-size: 16px; margin-bottom: 5px;">
+                        Москва: <a href="tel:+74993228300" style="color: inherit; text-decoration: none; font-weight: bold;">+7 (499) 322-83-00</a>
+                    </span>
+                    <span style="display: block; font-size: 16px;">
+                        Новосибирск: <a href="tel:+73832634411" style="color: inherit; text-decoration: none; font-weight: bold;">+7 (383) 263-44-11</a>
+                    </span>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>Электронная почта</strong>
+                    <a href="mailto:info@ros-style.com" style="color: var(--primary); font-weight: 600; text-decoration: none;">info@ros-style.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>Адрес офиса</strong>
+                    <span style="color: #3e3971;">129323, г. Москва, МО Свиблово, проезд Русанова 11, каб. 3</span>
+                </div>
+
+                <div class="contact-item">
+                    <strong>Режим работы</strong>
+                    <span style="color: #d9534f; font-weight: bold;">24/7 (приём по предварительной записи)</span>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=37.646877%2C55.849964&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxNDA5NBJK0KDQvtGB0YHQQuGPLCDQnNC-0YHQutCy0LAsINC_0YDQvtC10LfQtCDQoNGD0YHQLD3QvdC-0LLQsCwgMTEiCg1X8RhCZS9FX0I%2C&z=16" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative; border:0;"></iframe>
+            </div>
         </div>
     </section>
 
-<section class="features" style="padding: 80px 5%; background: #fff;">
-    <h2 style="text-align: center; color: #3d3773; font-size: 32px; margin-bottom: 50px;">Направления работы</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-        
-        <div style="padding: 30px; border: 1px solid #eee; border-radius: 15px; transition: 0.3s;" onmouseover="this.style.borderColor='#2eaaaf'" onmouseout="this.style.borderColor='#eee'">
-            <h3 style="color: #3d3773;">Инфраструктурные решения</h3>
-            <p>Разработка концепции, подготовка спецификаций и полное сопровождение проектов.</p>
-        </div>
-
-        <div style="padding: 30px; border: 1px solid #eee; border-radius: 15px; transition: 0.3s;" onmouseover="this.style.borderColor='#2eaaaf'" onmouseout="this.style.borderColor='#eee'">
-            <h3 style="color: #3d3773;">Учебное оборудование</h3>
-            <p>Поставка оборудования в полном соответствии с ФГОС и 804 приказом.</p>
-        </div>
-
-        <div style="padding: 30px; border: 1px solid #eee; border-radius: 15px; transition: 0.3s;" onmouseover="this.style.borderColor='#2eaaaf'" onmouseout="this.style.borderColor='#eee'">
-            <h3 style="color: #3d3773;">Дополнительное образование</h3>
-            <p>Оснащение технопарков, Кванториумов и центров одаренных детей.</p>
-        </div>
-
-    </div>
-</section>
-<section class="contacts-section" id="contacts">
-    <div class="contacts-container">
-        <div class="contacts-info">
-            <h2>Контакты</h2>
-            <p style="margin-bottom: 30px; color: #666;">Свяжитесь с нами для комплексного оснащения вашего учебного заведения. Мы подготовим спецификации и коммерческое предложение под ваши задачи.</p>
-            
-            <div class="contact-item">
-                <strong>Телефоны</strong>
-                <span style="display: block; font-size: 16px; margin-bottom: 5px;">
-                    Москва: <a href="tel:+74993228300" style="color: inherit; text-decoration: none; font-weight: bold;">+7 (499) 322-83-00</a>
-                </span>
-                <span style="display: block; font-size: 16px;">
-                    Новосибирск: <a href="tel:+73832634411" style="color: inherit; text-decoration: none; font-weight: bold;">+7 (383) 263-44-11</a>
-                </span>
-            </div>
-            
-            <div class="contact-item">
-                <strong>Электронная почта</strong>
-                <a href="mailto:info@ros-style.com" style="color: var(--accent); font-weight: 500; text-decoration: none;">info@ros-style.com</a>
-            </div>
-            
-            <div class="contact-item">
-                <strong>Адрес офиса</strong>
-                <span>129323, г. Москва, МО Свиблово, проезд Русанова 11, каб. 3</span>
-            </div>
-
-            <div class="contact-item">
-                <strong>Режим работы</strong>
-                <span style="color: #d9534f; font-weight: bold;">24/7 (приём по предварительной записи)</span>
-            </div>
-        </div>
-        
-        <div class="map-container">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.646877%2C55.849964&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxNDA5NBJK0KDQvtGB0YHQQuGPLCDQnNC-0YHQutCy0LAsINC_0YDQvtC10LfQtCDQoNGD0YHQLD3QvdC-0LLQsCwgMTEiCg1X8RhCZS9FX0I%2C&z=16" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative; border:0;"></iframe>
-        </div>
-    </div>
-</section>
-    
 </body>
 </html>
