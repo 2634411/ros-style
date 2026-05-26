@@ -74,25 +74,27 @@ body {
 
 /* --- ПОЛНОЭКРАННЫЕ БЛОКИ --- */
 
-/* Первый экран: Жесткое разделение 50/50 через GRID */
+/* Первый экран: Фоновая картинка из твоей папки на весь блок */
 .hero-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Две абсолютно равные колонки по 50% */
     min-height: calc(100vh - 85px);
-    background-color: var(--white);
     width: 100%;
     position: relative;
+    background-image: url('images/hero-bg.jpg'); /* Твоя локальная картинка */
+    background-size: cover;
+    background-position: center right; /* Прижимаем рисунок к правому краю */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 60px 5%;
 }
 
-/* Левая половина под текст (строго 50%) */
+/* Текстовый контент лежит поверх картинки в левой половине (50%) */
 .hero-content {
-    width: 100%;
-    padding: 60px 8%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 50%;
+    max-width: 650px;
     text-align: left;
     z-index: 2;
+    padding-right: 20px;
 }
 
 .hero-content h1 {
@@ -110,24 +112,6 @@ body {
     margin-bottom: 35px;
 }
 
-/* Правая половина: Обёртка картинки */
-.hero-image-wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-image-bg {
-    width: 100%;
-    height: 100%;
-    background-image: url('images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Косая линия срезает ровно уголок, оставляя картинке весь её объём */
-    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
-}
-
 /* Второй экран: Направления работы */
 .features-section {
     min-height: 100vh;
@@ -136,6 +120,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 5;
 }
 
 .features-section h2 {
@@ -179,6 +165,8 @@ body {
     background-color: #f9f9fc;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 5;
 }
 
 .contacts-container {
@@ -211,43 +199,30 @@ body {
     box-shadow: 0 10px 30px rgba(61, 55, 115, 0.05);
 }
 
-/* Эффект наложения текста на картинку при сужении браузера на ПК и ноутбуках */
-@media (max-width: 1200px) and (min-width: 551px) {
-    .hero-section {
-        grid-template-columns: 1fr; /* Схлопываем сетку в один слой */
-    }
+/* Адаптивность для средних экранов и ноутбуков */
+@media (max-width: 1100px) {
     .hero-content {
-        width: 60%; /* Текст заходит поверх картинки */
-        background: rgba(255, 255, 255, 0.9); /* Мягкая белая подложка для читаемости букв */
-        padding: 40px;
+        width: 65%; /* Расширяем текст, чтобы не зажимался */
+        background: rgba(255, 255, 255, 0.85); /* Полупрозрачный белый фон для читаемости */
+        padding: 30px;
         border-radius: 8px;
-        margin-left: 5%;
-        margin-top: auto;
-        margin-bottom: auto;
-        z-index: 10;
-    }
-    .hero-image-wrapper {
-        width: 50%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-    }
-    .hero-image-bg {
-        clip-path: none; /* Убираем скос, когда картинка становится фоном подложки */
     }
 }
 
-/* Мобильная адаптивность включается ТОЛЬКО на смартфонах (экран меньше 550px) */
-@media (max-width: 550px) {
+/* Мобильная адаптивность для смартфонов (меньше 650px) */
+@media (max-width: 650px) {
     .header { flex-direction: column; gap: 15px; }
     .nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
     
-    .hero-section { grid-template-columns: 1fr; }
-    .hero-content { width: 100%; padding: 40px 20px; }
-    .hero-image-wrapper { width: 100%; height: 320px; position: relative; }
-    .hero-image-bg { clip-path: none; }
-    
+    .hero-section { 
+        background-position: center; /* Центрируем графику на телефонах */
+        padding: 40px 20px;
+    }
+    .hero-content { 
+        width: 100%; 
+        background: rgba(255, 255, 255, 0.9); 
+        padding: 25px;
+    }
     .contacts-container { grid-template-columns: 1fr; }
 }
     </style>
@@ -274,9 +249,6 @@ body {
             <h1>Комплексное оснащение учебных заведений</h1>
             <p>Создаем современную образовательную среду по всей России в соответствии с ФГОС и 838 приказом.</p>
             <a href="napravleniya.html" class="cta-button" style="font-size: 16px; padding: 14px 35px; text-decoration: none; display: inline-block;">Узнать больше</a>
-        </div>
-        <div class="hero-image-wrapper">
-            <div class="hero-image-bg"></div>
         </div>
     </section>
 
