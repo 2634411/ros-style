@@ -308,6 +308,74 @@ body {
     font-weight: 500;
     line-height: 1.4;
 }
+
+/* Блок Этапы работы (4 квадрата) */
+.steps-section {
+    padding: 80px 5%;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.steps-section h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 равных квадрата в ряд */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step-card {
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(61, 55, 115, 0.04);
+    border-top: 4px solid var(--accent); /* Красивая фирменная бирюзовая полоска сверху каждого квадрата */
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(61, 55, 115, 0.08);
+}
+
+.step-card h3 {
+    font-size: 19px;
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.step-card p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Адаптивность для средних экранов (ноутбуки/планшеты) */
+@media (max-width: 1024px) {
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr); /* Превращаются в сетку 2х2 */
+    }
+}
+
+/* Адаптивность для мобильных телефонов */
+@media (max-width: 650px) {
+    .steps-grid {
+        grid-template-columns: 1fr; /* Выстраиваются строго в один столбик */
+    }
+}
         
     </style>
 </head>
@@ -347,6 +415,33 @@ body {
         </div>
     </section>
 
+    <section class="steps-section">
+        <h2>Этапы реализации проекта:</h2>
+        <div class="steps-grid">
+            
+            <div class="step-card">
+                <h3>Разработка концепции</h3>
+                <p>Придумаем и сделаем ваше учреждение уникальным в рамках обозначенного бюджета.</p>
+            </div>
+            
+            <div class="step-card">
+                <h3>Подготовка и согласование спецификации</h3>
+                <p>Посчитаем и учтем все необходимое для функционирования, чтобы ничего не упустить.</p>
+            </div>
+            
+            <div class="step-card">
+                <h3>Конкурсные процедуры</h3>
+                <p>Знаем все о 44 и 223 ФЗ, поможем сделать процесс закупки максимально конкурентным и комфортным для вас.</p>
+            </div>
+            
+            <div class="step-card">
+                <h3>Поставка оборудования</h3>
+                <p>Привезем, смонтируем, запустим и научим ваших педагогов работать с оборудованием.</p>
+            </div>
+            
+        </div>
+    </section>
+    
     <section class="features-section">
         <h2>Направления работы:</h2>
         <ul class="features-list">
