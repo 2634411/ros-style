@@ -229,14 +229,14 @@ body {
 /* Блок О компании */
 .about-section {
     padding: 80px 5%;
-    background-color: #f9f9fc; /* Делаем легкий контрастный фон */
+    background-color: #f9f9fc;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .about-container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     text-align: left;
 }
@@ -244,18 +244,61 @@ body {
 .about-container h2 {
     font-size: 32px;
     color: var(--primary);
-    margin-bottom: 30px;
-    font-weight: 700;
-}
-
-.about-text {
-    font-size: 18px;
-    color: #4e4a7d;
-    line-height: 1.8;
-}
-
-.about-text p {
     margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.about-lead {
+    font-size: 18px;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 900px;
+}
+
+.about-subtitle {
+    font-size: 20px;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Двухколоночный список учреждений для экономии места на экране */
+.clients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clients-grid li {
+    font-size: 16px;
+    color: var(--text-muted);
+    position: relative;
+    padding-left: 35px;
+    line-height: 1.5;
+}
+
+/* Красивые бирюзовые галочки вместо скучных точек */
+.clients-grid li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Адаптивность: на телефонах список становится в один столбик */
+@media (max-width: 768px) {
+    .clients-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }
 
 /* Блок преимуществ */
@@ -404,14 +447,22 @@ body {
         </div>
     </section>
 
-    <section class="about-section">
+        <section class="about-section">
         <div class="about-container">
-            <h2>ГК «Росстайл»</h2>
-            <div class="about-text">
-                <p>Компания "Росстайл" более 10 лет помогает образовательным учреждениям по всей России выстраивать образовательный процесс с применением самых передовых технологий и оборудования в сфере образования.</p>
-                <p>Мы осуществляем проектирование и комплексное оснащение «под ключ» детских садов, общеобразовательных школ, кадетских корпусов, а также центров дополнительного образования, таких как Кванториумы, IT-кубы и Точки роста.</p>
-                <p>Вся поставляемая продукция строго соответствует требованиям ФГОС, действующим санитарно-эпидемиологическим правилам и нормативам, а также актуальным приказам Министерства просвещения РФ.</p>
-            </div>
+            <h2>ГК «РОССТАЙЛ» — ОСНАЩЕНИЕ ЛЮБЫХ ОБРАЗОВАТЕЛЬНЫХ УЧРЕЖДЕНИЙ УЧЕБНЫМ ОБОРУДОВАНИЕМ</h2>
+            
+            <p class="about-lead">Оснащаем образовательные учреждения мебелью, спортивным инвентарем, интерактивным, компьютерным и учебным оборудованием в полном соответствии с ФГОС и 804 приказом. Разрабатываем и реализуем проекты дополнительного образования как в рамках федеральных программ, так и индивидуально под задачи заказчика.</p>
+            
+            <div class="about-subtitle">В числе наших клиентов учреждения:</div>
+            
+            <ul class="clients-grid">
+                <li><strong>Дошкольного образования</strong><br>Детские сады, развивающие центры</li>
+                <li><strong>Среднего общего образования</strong><br>Общеобразовательные школы, гимназии и лицеи</li>
+                <li><strong>Среднего профессионального образования</strong><br>Техникумы, колледжи, училища</li>
+                <li><strong>Дополнительного образования</strong><br>Технопарки, дома детского творчества, центры одаренных детей</li>
+                <li><strong>Высшего образования</strong><br>Университеты, институты, академии</li>
+                <li><strong>Дополнительного профобразования</strong><br>Учебные центры и институты повышения квалификации</li>
+            </ul>
         </div>
     </section>
 
