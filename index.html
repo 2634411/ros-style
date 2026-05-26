@@ -74,25 +74,25 @@ body {
 
 /* --- ПОЛНОЭКРАННЫЕ БЛОКИ --- */
 
-/* Первый экран: делим строго 50/50 через GRID-сетку */
+/* Первый экран: Жесткое разделение 50/50 через GRID */
 .hero-section {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Две абсолютно равные колонки */
+    grid-template-columns: 1fr 1fr; /* Две абсолютно равные колонки по 50% */
     min-height: calc(100vh - 85px);
     background-color: var(--white);
     width: 100%;
     position: relative;
 }
 
-/* Левая половина под текст */
+/* Левая половина под текст (строго 50%) */
 .hero-content {
-    padding: 60px 10% 60px 10%;
+    width: 100%;
+    padding: 60px 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
     z-index: 2;
-    background-color: var(--white);
 }
 
 .hero-content h1 {
@@ -110,12 +110,12 @@ body {
     margin-bottom: 35px;
 }
 
-/* Правая половина с картинкой */
+/* Правая половина: Обёртка картинки */
 .hero-image-wrapper {
     width: 100%;
     height: 100%;
     position: relative;
-    overflow: hidden;
+    z-index: 1;
 }
 
 .hero-image-bg {
@@ -124,8 +124,8 @@ body {
     background-image: url('https://ros-style.com/images/2022/09/16/chemystry2_-copy1.jpg');
     background-size: cover;
     background-position: center;
-    /* Косая линия, которая заходит на 15% левого края картинки */
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    /* Косая линия срезает ровно уголок, оставляя картинке весь её объём */
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Второй экран: Направления работы */
@@ -211,14 +211,14 @@ body {
     box-shadow: 0 10px 30px rgba(61, 55, 115, 0.05);
 }
 
-/* Эффект наложения текста на картинку при сужении экрана (Планшеты/Ноутбуки) */
-@media (max-width: 1100px) and (min-width: 551px) {
+/* Эффект наложения текста на картинку при сужении браузера на ПК и ноутбуках */
+@media (max-width: 1200px) and (min-width: 551px) {
     .hero-section {
-        grid-template-columns: 1fr; /* Переключаем в 1 колонку */
+        grid-template-columns: 1fr; /* Схлопываем сетку в один слой */
     }
     .hero-content {
-        width: 65%; 
-        background: rgba(255, 255, 255, 0.9); 
+        width: 60%; /* Текст заходит поверх картинки */
+        background: rgba(255, 255, 255, 0.9); /* Мягкая белая подложка для читаемости букв */
         padding: 40px;
         border-radius: 8px;
         margin-left: 5%;
@@ -227,18 +227,18 @@ body {
         z-index: 10;
     }
     .hero-image-wrapper {
-        width: 100%;
+        width: 50%;
         position: absolute;
         right: 0;
         top: 0;
         height: 100%;
     }
     .hero-image-bg {
-        clip-path: none; /* Убираем скос, так как картинка становится подложкой */
+        clip-path: none; /* Убираем скос, когда картинка становится фоном подложки */
     }
 }
 
-/* Смартфоны (меньше 550px) */
+/* Мобильная адаптивность включается ТОЛЬКО на смартфонах (экран меньше 550px) */
 @media (max-width: 550px) {
     .header { flex-direction: column; gap: 15px; }
     .nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
