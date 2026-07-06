@@ -102,27 +102,34 @@ body {
 }
 .breadcrumbs a:hover { color: var(--accent); }
 
-/* --- ДЕТАЛЬНЫЕ НАПРАВЛЕНИЯ (ШАХМАТНЫЙ ПОРЯДОК) --- */
+/* --- НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ --- */
 .direction-block {
     padding: 100px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-bottom: 1px solid #f0f0f5;
 }
 
+/* Чередуем фон у четных блоков для лучшего восприятия */
 .direction-block:nth-child(even) {
     background-color: #f9f9fc;
-    flex-direction: row-reverse; /* Разворачивает блоки для шахматного порядка */
 }
 
 .direction-container {
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
+}
+
+/* МАГИЯ ШАХМАТНОГО ПОРЯДКА: у второго блока меняем местами картинку и текст */
+.direction-block:nth-child(even) .direction-text {
+    grid-column: 2;
+}
+.direction-block:nth-child(even) .direction-image-wrapper {
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .direction-text {
@@ -145,7 +152,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Красивые списки с иконками */
+/* Списки с иконками */
 .direction-list {
     list-style: none;
     padding: 0;
@@ -169,56 +176,27 @@ body {
     font-size: 18px;
 }
 
-/* Декоративный графический блок вместо пустых фото */
-.direction-visual {
-    background: var(--white);
+/* Обертка картинок */
+.direction-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.direction-img {
+    width: 100%;
+    max-width: 540px;
+    height: 380px;
+    object-fit: cover;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 50px;
-    border: 1px solid #eaeaea;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 380px;
-    position: relative;
+    transition: transform 0.4s ease;
 }
 
-.direction-block:nth-child(even) .direction-visual {
-    background: #3d3773;
-    border: none;
+.direction-img:hover {
+    transform: scale(1.02); /* Легкий интерактивный эффект при наведении */
 }
-.direction-block:nth-child(even) .direction-visual i {
-    color: rgba(255, 255, 255, 0.15) !important;
-}
-
-.direction-visual-bg-icon {
-    font-size: 160px;
-    color: rgba(46, 170, 175, 0.08);
-    position: absolute;
-    z-index: 1;
-}
-
-.direction-visual h4 {
-    font-size: 24px;
-    font-weight: 900;
-    color: var(--primary);
-    margin: 0 0 15px 0;
-    position: relative;
-    z-index: 2;
-}
-.direction-block:nth-child(even) .direction-visual h4 { color: var(--white); }
-
-.direction-visual p {
-    font-size: 15px;
-    color: var(--text-muted);
-    margin: 0;
-    max-width: 320px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-.direction-block:nth-child(even) .direction-visual p { color: #b4afdb; }
 
 /* Подвал */
 .footer {
@@ -229,12 +207,18 @@ body {
     text-align: center;
 }
 
-/* --- АДАПТИВНОСТЬ --- */
+/* --- АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ СМАРТФОНЫ --- */
 @media (max-width: 1024px) {
-    .direction-container { grid-template-columns: 1fr; gap: 40px; }
-    .direction-block:nth-child(even) { flex-direction: column; }
+    .direction-container { 
+        grid-template-columns: 1fr; 
+        gap: 40px; 
+    }
     .direction-block { padding: 60px 5%; }
-    .direction-visual { min-height: 280px; padding: 40px; }
+    .direction-img { height: 300px; }
+    
+    /* Сбрасываем шахматный порядок на телефонах, чтобы всё шло логично сверху вниз: Текст -> Картинка */
+    .direction-block:nth-child(even) .direction-text { grid-column: auto; }
+    .direction-block:nth-child(even) .direction-image-wrapper { grid-column: auto; grid-row: auto; }
 }
 
 @media (max-width: 650px) {
@@ -262,7 +246,6 @@ body {
     </nav>
 </header>
 
-    <!-- Заголовок страницы -->
     <section class="page-title-section">
         <h1>Направления деятельности</h1>
         <div class="breadcrumbs">
@@ -270,7 +253,6 @@ body {
         </div>
     </section>
 
-    <!-- Раздел 1: Инфраструктурные решения -->
     <section class="direction-block" id="infrastructure">
         <div class="direction-container">
             <div class="direction-text">
@@ -283,15 +265,12 @@ body {
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Юридическое сопровождение:</strong> Составление технического задания и спецификаций строго в рамках требований 44-ФЗ и 223-ФЗ.</li>
                 </ul>
             </div>
-            <div class="direction-visual">
-                <i class="fa-solid fa-compass-drafting direction-visual-bg-icon"></i>
-                <h4>Проектирование</h4>
-                <p>15+ лет опыта позволяют создавать решения, которые безупречно проходят любые ведомственные проверки.</p>
+            <div class="direction-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&h=380&q=80" alt="Строительный план школы и проектирование" class="direction-img">
             </div>
         </div>
     </section>
 
-    <!-- Раздел 2: Профильное учебное оборудование -->
     <section class="direction-block" id="equipment">
         <div class="direction-container">
             <div class="direction-text">
@@ -304,15 +283,12 @@ body {
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Инсталляция и обучение:</strong> Монтаж, пусконаладка сложных приборов и обязательный инструктаж педагогического состава.</li>
                 </ul>
             </div>
-            <div class="direction-visual">
-                <i class="fa-solid fa-microscope direction-visual-bg-icon"></i>
-                <h4>Оснащение по ФГОС</h4>
-                <p>Более 3000 наименований сертифицированного оборудования для комплексного закрытия учебных планов.</p>
+            <div class="direction-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80" alt="Лабораторное учебное оборудование" class="direction-img">
             </div>
         </div>
     </section>
 
-    <!-- Раздел 3: Инновации и дополнительное образование -->
     <section class="direction-block" id="innovations">
         <div class="direction-container">
             <div class="direction-text">
@@ -320,20 +296,17 @@ body {
                 <p>Создание ультрасовременных научно-технических пространств для развития инженерного мышления и творческого потенциала детей. Мы внедряем технологии, которые формируют компетенции будущего.</p>
                 
                 <ul class="direction-list">
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Федеральные проекты:</strong> Оснащение «Кванториумов», «Точек роста», «ИТ-кубов» и центров поддержки одаренных детей.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Федеральные проекты:</strong> Оснащение «Кванториумов», «Точек роста», «ИТ-кубы» и центров поддержки одаренных детей.</li>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Высокие технологии:</strong> Поставка учебной робототехники, VR/AR систем, беспилотных летательных аппаратов (БПЛА) и станков с ЧПУ.</li>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Индивидуальные программы:</strong> Разработка уникальных STEM-лабораторий под специфику вашего региона или учреждения.</li>
                 </ul>
             </div>
-            <div class="direction-visual">
-                <i class="fa-solid fa-vr-cardboard direction-visual-bg-icon"></i>
-                <h4>Технологии будущего</h4>
-                <p>Формируем базу для научно-технического творчества и ранней профориентации школьников.</p>
+            <div class="direction-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=600&q=80" alt="Инновации и робототехника в образовании" class="direction-img">
             </div>
         </div>
     </section>
 
-    <!-- Подвал сайта -->
     <footer class="footer">
         <p>© 2026 ГК «Росстайл». Все права защищены. Комплексное оснащение образовательных учреждений по всей России.</p>
     </footer>
