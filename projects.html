@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выполненные проекты — ГК Росстайл</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+    --primary: #3d3773;
+    --accent: #2eaaaf;
+    --accent-hover: #228b8e;
+    --text: #3e3971;    
+    --text-muted: #718390; 
+    --white: #ffffff;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(61, 55, 115, 0.04);
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; 
+    color: var(--text);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(61, 55, 115, 0.07);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo img { height: 55px; width: auto; }
+.nav { display: flex; align-items: center; gap: 30px; }
+.nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700; 
+    transition: color 0.3s ease;
+}
+.nav a:hover, .nav a.active { color: var(--accent); }
+.cta-button {
+    background: var(--accent);
+    color: var(--white) !important;
+    padding: 12px 28px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(46, 170, 175, 0.3);
+    transition: all 0.3s ease;
+}
+.cta-button:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+/* Заголовок страницы */
+.page-title-section {
+    padding: 60px 5% 40px;
+    background: #f9f9fc;
+}
+.page-title-section h1 {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--primary);
+    margin: 0 0 10px 0;
+}
+
+/* Фильтры (Табы) */
+.filter-container {
+    max-width: 1200px;
+    margin: 40px auto 20px;
+    padding: 0 5%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    background: #f0f0f5;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    color: var(--primary);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Сетка проектов */
+.projects-grid {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid #f0f0f5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(61, 55, 115, 0.08);
+}
+
+.project-img-wrapper {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background: #eaeaea;
+}
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.project-tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-title {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--primary);
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+}
+
+.project-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    background: #f9f9fc;
+    padding: 8px 15px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.project-desc {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Подвал */
+.footer {
+    padding: 40px 5%;
+    background: var(--primary);
+    color: #b4afdb;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .projects-grid { grid-template-columns: 1fr; }
+    .page-title-section h1 { font-size: 32px; }
+}
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <a href="index.html"><img src="images/logoross1.png" alt="ГК Росстайл"></a>
+    </div>
+    <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="napravleniya.html">Направления</a>
+        <a href="images/Catalog.pdf" target="_blank">Каталог</a>
+        <a href="projects.html" class="active">Проекты</a>
+        <a href="index.html#contacts" class="cta-button">Связаться с нами</a>
+    </nav>
+</header>
+
+    <section class="page-title-section">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: left;">
+            <h1>Выполненные проекты</h1>
+            <p style="color: var(--text-muted); font-size: 18px; margin: 10px 0 0 0; max-width: 700px;">
+                Реализованные решения для образовательных учреждений нового поколения по всей территории России.
+            </p>
+        </div>
+    </section>
+
+    <!-- Кнопки фильтрации -->
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterProjects('all')">Все объекты</button>
+        <button class="filter-btn" onclick="filterProjects('school')">Школы</button>
+        <button class="filter-btn" onclick="filterProjects('kindergarten')">Детские сады</button>
+        <button class="filter-btn" onclick="filterProjects('additional')">Доп. образование</button>
+    </div>
+
+    <!-- Сетка объектов -->
+    <main class="projects-grid">
+
+        <!-- Проект 1: Школа -->
+        <article class="project-card" data-category="school">
+            <div class="project-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" alt="Школа" class="project-img">
+            </div>
+            <div class="project-content">
+                <span class="project-tag">Школы</span>
+                <h2 class="project-title">Современная средняя школа на 1100 мест</h2>
+                <div class="project-meta">
+                    <span><i class="fa-solid fa-flask"></i> 14 лабораторий</span>
+                    <span><i class="fa-solid fa-shield"></i> ФГОС</span>
+                </div>
+                <p class="project-desc">Комплексное материально-техническое оснащение учебных классов, предметных лабораторий и профильных мастерских в строгом соответствии с регламентами.</p>
+            </div>
+        </article>
+
+        <!-- Проект 2: Детский сад -->
+        <article class="project-card" data-category="kindergarten">
+            <div class="project-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1564424224827-cd24b8915874?auto=format&fit=crop&w=600&q=80" alt="Детский сад" class="project-img">
+            </div>
+            <div class="project-content">
+                <span class="project-tag">Детские сады</span>
+                <h2 class="project-title">Детский сад общеразвивающего вида</h2>
+                <div class="project-meta">
+                    <span><i class="fa-solid fa-child"></i> Игровые зоны</span>
+                    <span><i class="fa-solid fa-couch"></i> Мебель</span>
+                </div>
+                <p class="project-desc">Организация развивающих и безопасных пространств, поставка специализированной детской мебели, игровых модулей и оборудования для актовых залов.</p>
+            </div>
+        </article>
+
+        <!-- Проект 3: Доп образование -->
+        <article class="project-card" data-category="additional">
+            <div class="project-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=600&q=80" alt="Доп образование" class="project-img">
+            </div>
+            <div class="project-content">
+                <span class="project-tag">Доп. образование</span>
+                <h2 class="project-title">Центр цифрового развития «Точка роста»</h2>
+                <div class="project-meta">
+                    <span><i class="fa-solid fa-robot"></i> STEM</span>
+                    <span><i class="fa-solid fa-file-invoice"></i> Приказ 838</span>
+                </div>
+                <p class="project-desc">Поставка высокотехнологичного оборудования: комплекты робототехники, 3D-принтеры, конструкторы и интерактивные комплексы для инженерии.</p>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 ГК «Росстайл». Все права защищены. Комплексное оснащение образовательных учреждений по всей России.</p>
+    </footer>
+
+    <!-- Простой скрипт фильтрации без перезагрузки страниц -->
+    <script>
+        function filterProjects(category) {
+            // Меняем активную кнопку
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Фильтруем карточки
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
