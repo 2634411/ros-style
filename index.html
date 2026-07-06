@@ -18,6 +18,11 @@
     --text: #3e3971;    
     --text-muted: #718390; 
     --white: #ffffff;
+    
+    /* Единая дизайн-система */
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(61, 55, 115, 0.04);
+    --shadow-hover: 0 20px 50px rgba(61, 55, 115, 0.1);
 }
 
 * {
@@ -75,23 +80,20 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- ПОЛНОЭКРАННЫЕ БЛОКИ --- */
-
-/* Первый экран: Фоновая картинка из твоей папки на весь блок */
+/* --- ПЕРВЫЙ ЭКРАН --- */
 .hero-section {
     min-height: calc(100vh - 85px);
     width: 100%;
     position: relative;
-    background-image: url('images/hero-bg.jpg'); /* Твоя локальная картинка */
+    background-image: url('images/hero-bg.jpg'); 
     background-size: cover;
-    background-position: center right; /* Прижимаем рисунок к правому краю */
+    background-position: center right; 
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     padding: 60px 5%;
 }
 
-/* Текстовый контент лежит поверх картинки в левой половине (50%) */
 .hero-content {
     width: 50%;
     max-width: 650px;
@@ -101,42 +103,97 @@ body {
 }
 
 .hero-content h1 {
-    font-family: 'Roboto', sans-serif; 
-    font-size: 38px; 
-    line-height: 1.25;
+    font-size: 42px; 
+    line-height: 1.2;
     color: var(--primary); 
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 25px;
+    letter-spacing: -0.5px;
 }
 
 .hero-content p {
-    font-size: 18px; 
+    font-size: 19px; 
     color: var(--text-muted);
     margin-bottom: 35px;
 }
 
-/* Направления работы */
-.features-section {
-    min-height: 100vh;
-    padding: 80px 5%;
-    background-color: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 5;
+/* --- БЛОК: О КОМПАНИИ --- */
+.about-section {
+    padding: 100px 5%;
+    background-color: #f9f9fc;
 }
 
-/* --- СТУДИЙНЫЙ БЛОК: НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ --- */
-.features-section {
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-container h2 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 30px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+.about-lead {
+    font-size: 19px;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 50px;
+    max-width: 950px;
+}
+
+.about-subtitle {
+    font-size: 22px;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clients-grid li {
+    font-size: 16px;
+    color: var(--text-muted);
+    position: relative;
+    padding-left: 30px;
+    line-height: 1.6;
+}
+
+.clients-grid li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 12px;
+    height: 2px;
+    background-color: var(--accent); /* Минималистичный бирюзовый дефис */
+}
+
+.clients-grid strong {
+    font-size: 18px;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* --- БЛОК: ЭТАПЫ РАБОТЫ (4 КВАДРАТА) --- */
+.steps-section {
     padding: 100px 5%;
     background-color: var(--white);
-    position: relative;
-    z-index: 5;
+    text-align: center;
 }
 
-.features-section h2 {
-    font-family: 'Roboto', sans-serif;
+.steps-section h2 {
     font-size: 36px;
     color: var(--primary);
     margin-bottom: 50px;
@@ -145,7 +202,65 @@ body {
     letter-spacing: -0.5px;
 }
 
-/* Асимметричная сетка: первые два блока делят экран, третий — акцентный */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step-card {
+    background: #f9f9fc;
+    padding: 45px 30px;
+    border-radius: var(--radius);
+    border: 1px solid #eaeaea;
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent);
+    background: var(--white);
+}
+
+.step-icon-wrapper {
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.step-card h3 {
+    font-size: 21px;
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.step-card p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* --- БЛОК: НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ --- */
+.features-section {
+    padding: 100px 5%;
+    background-color: var(--white);
+}
+
+.features-section h2 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 50px;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -0.5px;
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -157,20 +272,18 @@ body {
 .feature-card {
     background: #f9f9fc;
     border: 1px solid #eaeaea;
-    border-radius: 16px;
+    border-radius: var(--radius);
     padding: 50px 40px;
     text-align: left;
-    text-decoration: none; /* Чтобы вся карточка была кликабельной ссылкой */
+    text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
-    overflow: hidden;
 }
 
-/* Распределяем ширину карточек в стиле Лебедева (6 + 6 на первой строке, 12 на второй) */
 .card-half { grid-column: span 6; min-height: 380px; }
 .card-full { grid-column: span 12; min-height: 280px; background: #3d3773; border: none; }
 .card-full .feature-title { color: var(--white); }
@@ -179,20 +292,13 @@ body {
 
 .feature-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(61, 55, 115, 0.1);
+    box-shadow: var(--shadow-hover);
     border-color: var(--accent);
 }
 
-.card-full:hover {
-    background: #342e63; /* Чуть темнее при наведении для полноширинного блока */
-}
-
-.feature-info {
-    width: 100%;
-}
+.card-full:hover { background: #342e63; }
 
 .feature-title {
-    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: var(--primary);
@@ -205,10 +311,8 @@ body {
     font-size: 16px;
     color: var(--text-muted);
     line-height: 1.7;
-    margin: 0;
 }
 
-/* Красивая интерактивная стрелка внизу карточки */
 .feature-link {
     font-size: 18px;
     font-weight: 700;
@@ -220,32 +324,68 @@ body {
     transition: gap 0.3s ease;
 }
 
-.feature-card:hover .feature-link {
-    gap: 15px; /* Стрелка изящно сдвигается вправо при наведении */
-}
+.feature-card:hover .feature-link { gap: 15px; }
 
-/* Адаптивность для ноутбуков и планшетов */
-@media (max-width: 1024px) {
-    .card-half { grid-column: span 12; min-height: auto; }
-    .card-full { min-height: auto; }
-    .feature-card { padding: 40px 30px; }
-}
-
-@media (max-width: 650px) {
-    .features-section { padding: 60px 20px; }
-    .features-section h2 { font-size: 28px; margin-bottom: 35px; }
-    .feature-title { font-size: 21px; }
-}
-
-/* Третий экран: Контакты */
-.contacts-section {
-    min-height: 100vh;
-    padding: 80px 5%;
+/* --- БЛОК: ЦИФРЫ (ПОЧЕМУ МЫ) --- */
+.stats-section {
+    padding: 100px 5%;
     background-color: #f9f9fc;
+}
+
+.stats-section h2 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 50px;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -0.5px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 45px 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid #eaeaea;
+    text-align: left; /* Перевели в левый флаг для строгого стиля */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent);
+}
+
+.stat-number {
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.stat-desc {
+    font-size: 16px;
+    color: var(--text-muted);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* --- БЛОК: КОНТАКТЫ --- */
+.contacts-section {
+    padding: 100px 5%;
+    background-color: var(--white);
     display: flex;
     align-items: center;
-    position: relative;
-    z-index: 5;
 }
 
 .contacts-container {
@@ -254,252 +394,58 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 60px;
 }
 
-.contacts-info { text-align: left; }
-.contacts-info h2 { font-family: 'Roboto', sans-serif; font-size: 32px; color: var(--primary); margin-bottom: 30px; }
+.contacts-info h2 { font-size: 36px; color: var(--primary); margin-bottom: 30px; font-weight: 900; letter-spacing: -0.5px; }
 
-.contact-item { margin-bottom: 25px; font-size: 16px; }
+.contact-item { margin-bottom: 30px; font-size: 16px; }
 .contact-item strong {
     color: var(--accent);
     display: block;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .map-container {
     width: 100%;
-    height: 450px;
-    border-radius: 12px;
+    height: 500px;
+    border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(61, 55, 115, 0.05);
+    box-shadow: var(--shadow-hover);
 }
 
-/* Адаптивность для средних экранов и ноутбуков */
+/* --- АДАПТИВНОСТЬ ДЛЯ ВСЕХ ЭКРАНОВ --- */
 @media (max-width: 1100px) {
     .hero-content {
-        width: 65%; 
-        background: rgba(255, 255, 255, 0.85); 
-        padding: 30px;
-        border-radius: 8px;
-    }
-}
-
-/* Мобильная адаптивность для смартфонов (меньше 650px) */
-@media (max-width: 650px) {
-    .header { flex-direction: column; gap: 15px; }
-    .nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
-    
-    .hero-section { 
-        background-position: center; 
-        padding: 40px 20px;
-    }
-    .hero-content { 
-        width: 100%; 
+        width: 75%; 
         background: rgba(255, 255, 255, 0.9); 
-        padding: 25px;
+        padding: 40px;
+        border-radius: var(--radius);
     }
-    .contacts-container { grid-template-columns: 1fr; }
-}
-
-/* Блок О компании */
-.about-section {
-    padding: 80px 5%;
-    background-color: #f9f9fc;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.about-container h2 {
-    font-size: 32px;
-    color: var(--primary);
-    margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-.about-lead {
-    font-size: 18px;
-    color: var(--text);
-    line-height: 1.7;
-    margin-bottom: 40px;
-    max-width: 900px;
-}
-
-.about-subtitle {
-    font-size: 20px;
-    color: var(--primary);
-    font-weight: 700;
-    margin-bottom: 25px;
-}
-
-/* Двухколоночный список учреждений */
-.clients-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 40px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.clients-grid li {
-    font-size: 16px;
-    color: var(--text-muted);
-    position: relative;
-    padding-left: 35px;
-    line-height: 1.5;
-}
-
-.clients-grid li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    top: -2px;
-    color: var(--accent);
-    font-size: 20px;
-    font-weight: bold;
+    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    .card-half { grid-column: span 12; min-height: auto; }
+    .contacts-container { grid-template-columns: 1fr; gap: 40px; }
+    .map-container { height: 400px; }
 }
 
 @media (max-width: 768px) {
-    .clients-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-}
-
-/* Блок преимуществ */
-.stats-section {
-    padding: 80px 5%;
-    background-color: var(--white);
-    text-align: center;
-}
-
-.stats-section h2 {
-    font-size: 32px;
-    color: var(--primary);
-    margin-bottom: 50px;
-    font-weight: 700;
-    text-align: left;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.stat-card {
-    background: #ffffff;
-    padding: 40px 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(61, 55, 115, 0.04);
-    border: 1px solid #eaeaea;
-    transition: transform 0.3s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-}
-
-.stat-number {
-    font-size: 46px;
-    font-weight: 900;
-    color: var(--accent);
-    margin-bottom: 10px;
-}
-
-.stat-desc {
-    font-size: 16px;
-    color: var(--text-muted);
-    font-weight: 500;
-    line-height: 1.4;
-}
-
-/* Блок Этапы работы (4 квадрата с иконками) */
-.steps-section {
-    padding: 80px 5%;
-    background-color: var(--white);
-    text-align: center;
-}
-
-.steps-section h2 {
-    font-size: 32px;
-    color: var(--primary);
-    margin-bottom: 50px;
-    font-weight: 700;
-    text-align: left;
-}
-
-.steps-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.step-card {
-    background: #ffffff;
-    padding: 35px 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(61, 55, 115, 0.04);
-    border-top: 4px solid var(--accent); 
-    text-align: left;
-    transition: all 0.3s ease;
-}
-
-.step-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(61, 55, 115, 0.08);
-}
-
-.step-icon-wrapper {
-    margin-bottom: 20px;
-    display: inline-block;
-}
-
-.step-card h3 {
-    font-size: 19px;
-    color: var(--primary);
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-weight: 700;
-    line-height: 1.4;
-}
-
-.step-card p {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin: 0;
-}
-
-@media (max-width: 1024px) {
-    .steps-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
+    .clients-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 
 @media (max-width: 650px) {
-    .steps-grid {
-        grid-template-columns: 1fr; 
-    }
+    .header { flex-direction: column; gap: 15px; }
+    .nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .hero-section { background-position: center; padding: 40px 20px; }
+    .hero-content { width: 100%; padding: 25px; }
+    .hero-content h1 { font-size: 32px; }
+    .about-section, .steps-section, .features-section, .stats-section, .contacts-section { padding: 60px 20px; }
+    .about-container h2, .steps-section h2, .features-section h2, .stats-section h2, .contacts-info h2 { font-size: 28px; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .step-card { padding: 35px 25px; }
 }
-        
     </style>
 </head>
 <body>
@@ -519,6 +465,7 @@ body {
     </nav>
 </header>
 
+    <!-- 1. Главный баннер -->
     <section class="hero-section">
         <div class="hero-content">
             <h1>Комплексное оснащение учебных заведений</h1>
@@ -527,117 +474,103 @@ body {
         </div>
     </section>
 
+    <!-- 2. О компании -->
     <section class="about-section">
         <div class="about-container">
-            <h2>ГК «РОССТАЙЛ» — ОСНАЩЕНИЕ ЛЮБЫХ ОБРАЗОВАТЕЛЬНЫХ УЧРЕЖДЕНИЙ УЧЕБНЫМ ОБОРУДОВАНИЕМ</h2>
-            
-            <p class="about-lead">Оснащаем образовательные учреждения мебелью, спортивным инвентарем, интерактивным, компьютерным и учебным оборудованием в полном соответствии с ФГОС и 838 приказом. Разрабатываем и реализуем проекты дополнительного образования как в рамках federalьных программ, так и индивидуально под задачи заказчика.</p>
+            <h2>ГК «编ОССТАЙЛ» — ОСНАЩЕНИЕ ЛЮБЫХ ОБРАЗОВАТЕЛЬНЫХ УЧРЕЖДЕНИЙ УЧЕБНЫМ ОБОРУДОВАНИЕМ</h2>
+            <p class="about-lead">Оснащаем образовательные учреждения мебелью, спортивным инвентарем, интерактивным, компьютерным и учебным оборудованием в полном соответствии с ФГОС и 838 приказом. Разрабатываем и реализуем проекты дополнительного образования как в рамках федеральных программ, так и индивидуально под задачи заказчика.</p>
             
             <div class="about-subtitle">В числе наших клиентов учреждения:</div>
-            
             <ul class="clients-grid">
-                <li><strong>Дошкольного образования</strong><br>Детские сады, развивающие центры</li>
-                <li><strong>Среднего общего образования</strong><br>Общеобразовательные школы, гимназии и лицеи</li>
-                <li><strong>Среднего профессионального образования</strong><br>Техникумы, колледжи, училища</li>
-                <li><strong>Дополнительного образования</strong><br>Технопарки, дома детского творчества, центры одаренных детей</li>
-                <li><strong>Высшего образования</strong><br>Университеты, институты, академии</li>
-                <li><strong>Дополнительного профобразования</strong><br>Учебные центры и институты повышения квалификации</li>
+                <li><strong>Дошкольного образования</strong>Детские сады, развивающие центры</li>
+                <li><strong>Среднего общего образования</strong>Общеобразовательные школы, гимназии и лицеи</li>
+                <li><strong>Среднего профессионального образования</strong>Техникумы, колледжи, училища</li>
+                <li><strong>Дополнительного образования</strong>Технопарки, дома детского творчества, центры одаренных детей</li>
+                <li><strong>Высшего образования</strong>Университеты, институты, академии</li>
+                <li><strong>Дополнительного профобразования</strong>Учебные центры и институты повышения квалификации</li>
             </ul>
         </div>
     </section>
 
+    <!-- 3. Этапы реализации проекта -->
     <section class="steps-section">
         <h2>Этапы реализации проекта:</h2>
         <div class="steps-grid">
-            
             <div class="step-card">
-                <div class="step-icon-wrapper">
-                    <i class="fa-solid fa-lightbulb" style="font-size: 45px; color: var(--accent);"></i>
-                </div>
+                <div class="step-icon-wrapper"><i class="fa-solid fa-lightbulb" style="font-size: 45px; color: var(--accent);"></i></div>
                 <h3>Разработка концепции</h3>
                 <p>Придумаем и сделаем ваше учреждение уникальным в рамках обозначенного бюджета.</p>
             </div>
-            
             <div class="step-card">
-                <div class="step-icon-wrapper">
-                    <i class="fa-solid fa-clipboard-list" style="font-size: 45px; color: var(--accent);"></i>
-                </div>
-                <h3>Подготовка и согласование спецификации</h3>
+                <div class="step-icon-wrapper"><i class="fa-solid fa-clipboard-list" style="font-size: 45px; color: var(--accent);"></i></div>
+                <h3>Подготовка спецификации</h3>
                 <p>Посчитаем и учтем все необходимое для функционирования, чтобы ничего не упустить.</p>
             </div>
-            
             <div class="step-card">
-                <div class="step-icon-wrapper">
-                    <i class="fa-solid fa-file-signature" style="font-size: 45px; color: var(--accent);"></i>
-                </div>
+                <div class="step-icon-wrapper"><i class="fa-solid fa-file-signature" style="font-size: 45px; color: var(--accent);"></i></div>
                 <h3>Конкурсные процедуры</h3>
-                <p>Знаем все о 44 и 223 ФЗ, поможем сделать процесс закупки максимально конкурентным и комфортным для вас.</p>
+                <p>Знаем все о 44 и 223 ФЗ, поможем сделать процесс закупки максимально комфортным для вас.</p>
             </div>
-            
             <div class="step-card">
-                <div class="step-icon-wrapper">
-                    <i class="fa-solid fa-truck-fast" style="font-size: 45px; color: var(--accent);"></i>
-                </div>
+                <div class="step-icon-wrapper"><i class="fa-solid fa-truck-fast" style="font-size: 45px; color: var(--accent);"></i></div>
                 <h3>Поставка оборудования</h3>
                 <p>Привезем, смонтируем, запустим и научим ваших педагогов работать с оборудованием.</p>
             </div>
-            
         </div>
     </section>
     
+    <!-- 4. Направления деятельности -->
     <section class="features-section">
         <h2>Направления деятельности:</h2>
         <div class="features-grid">
-            
             <a href="napravleniya.html#infrastructure" class="feature-card card-half">
-                <div class="feature-info">
+                <div>
                     <h3 class="feature-title">Инфраструктурные решения и аудит</h3>
                     <p class="feature-desc">От архитектурной концепции и 3D-моделирования пространств до безупречной подготовки спецификаций под 44-ФЗ и 223-ФЗ. Создаем эргономичные, современные и безопасные интерьеры, которые без замечаний проходят любые ведомственные проверки.</p>
                 </div>
                 <div class="feature-link">Подробнее об аудите <i class="fa-solid fa-arrow-right"></i></div>
             </a>
-            
             <a href="napravleniya.html#equipment" class="feature-card card-half">
-                <div class="feature-info">
+                <div>
                     <h3 class="feature-title">Профильное учебное оборудование</h3>
                     <p class="feature-desc">Полный цикл комплектации предметных классов, цифровых лабораторий и спортивных зон в строгом соответствии с ФГОС и 838-м приказом. Поставляем сертифицированную технику, осуществляем профессиональный монтаж и обучаем ваших педагогов.</p>
                 </div>
                 <div class="feature-link">Смотреть стандарты оснащения <i class="fa-solid fa-arrow-right"></i></div>
             </a>
-            
             <a href="napravleniya.html#innovations" class="feature-card card-full">
-                <div class="feature-info">
+                <div>
                     <h3 class="feature-title">Инновации и дополнительное образование</h3>
                     <p class="feature-desc">Проектирование и комплексное оснащение передовых образовательных центров: «Кванториумы», «Точки роста», «ИТ-кубы» и дома детского творчества. Внедряем образовательную робототехнику, VR/AR-технологии, станки с ЧПУ и беспилотные комплексы для раскрытия потенциала нового поколения.</p>
                 </div>
                 <div class="feature-link">Открыть каталог инноваций <i class="fa-solid fa-arrow-right"></i></div>
             </a>
-            
         </div>
     </section>
 
+    <!-- 5. Почему мы (Цифры) -->
     <section class="stats-section">
         <h2>Почему выбирают ГК «Росстайл»:</h2>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-number">10+</div>
-                <div class="stat-desc">лет успешного опыта проектирования и поставок</div>
+                <div class="stat-desc">лет успешного опыта проектирования и поставок оборудования</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">100%</div>
-                <div class="stat-desc">соответствие спецификаций ФГОС и приказам МП РФ</div>
+                <div class="stat-desc">соответствие спецификаций стандартам ФГОС и приказам МП РФ</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">3000+</div>
-                <div class="stat-desc">наименований сертифицированного оборудования</div>
+                <div class="stat-desc">наименований сертифицированного и учебного оборудования</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">Вся РФ</div>
-                <div class="stat-desc">География поставок от Калининграда до Владивостока</div>
+                <div class="stat-desc">География надежных поставок от Калининграда до Владивостока</div>
             </div>
         </div>
     </section>
     
+    <!-- 6. Контакты -->
     <section class="contacts-section" id="contacts">
         <div class="contacts-container">
             <div class="contacts-info">
