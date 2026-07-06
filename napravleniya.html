@@ -3,219 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ГК Росстайл — Инновационное оснащение образовательных пространств</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Направления деятельности — ГК Росстайл</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        :root {
-            --primary: #3d3773; /* Твой фирменный фиолетовый */
-            --accent: #2eaaaf;  /* Твой фирменный бирюзовый */
-            --text: #333;
-            --white: #ffffff;
-        }
+/* Подключаем родной шрифт Roboto с поддержкой кириллицы */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        /* Стильная шапка */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo img {
-            height: 50px; /* Отрегулируй под свой лого */
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: var(--primary);
-            margin-left: 30px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .nav a:hover {
-            color: var(--accent);
-        }
-
-        .cta-button {
-            background: var(--accent);
-            color: var(--white) !important;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-size: 14px;
-        }
-
-        /* Главный баннер */
-        .hero {
-            padding: 100px 5%;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            display: flex;
-            align-items: center;
-            min-height: 60vh;
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            color: var(--primary);
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        /* Блок Контактов */
-.contacts-section {
-    padding: 60px 20px;
-    background-color: #f9f9fc;
+:root {
+    --primary: #3d3773; /* Фирменный фиолетовый */
+    --accent: #2eaaaf;  /* Фирменный бирюзовый */
+    --accent-hover: #228b8e;
+    --text: #3e3971;    
+    --text-muted: #718390; 
+    --white: #ffffff;
+    
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(61, 55, 115, 0.04);
 }
 
-.contacts-container {
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px; 
+    color: var(--text);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+/* Шапка сайта */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(61, 55, 115, 0.07);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a { display: flex; align-items: center; }
+.logo img { height: 55px; width: auto; }
+
+.nav { display: flex; align-items: center; gap: 30px; }
+.nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700; 
+    font-size: 16px;  
+    transition: color 0.3s ease;
+}
+.nav a:hover, .nav a.active { color: var(--accent); }
+
+.cta-button {
+    background: var(--accent);
+    color: var(--white) !important;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(46, 170, 175, 0.3);
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* Заголовок страницы */
+.page-title-section {
+    padding: 60px 5% 40px;
+    background: #f9f9fc;
+    text-align: left;
+}
+
+.page-title-section h1 {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--primary);
+    margin: 0 0 15px 0;
+    letter-spacing: -0.5px;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+.breadcrumbs a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+.breadcrumbs a:hover { color: var(--accent); }
+
+/* --- ДЕТАЛЬНЫЕ НАПРАВЛЕНИЯ (ШАХМАТНЫЙ ПОРЯДОК) --- */
+.direction-block {
+    padding: 100px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f0f0f5;
+}
+
+.direction-block:nth-child(even) {
+    background-color: #f9f9fc;
+    flex-direction: row-reverse; /* Разворачивает блоки для шахматного порядка */
+}
+
+.direction-container {
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 80px;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
-    .contacts-container {
-        grid-template-columns: 1fr;
-    }
+.direction-text {
+    text-align: left;
 }
 
-.contacts-info h2 {
-    color: var(--primary);
+.direction-text h2 {
     font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.contact-item {
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.contact-item strong {
     color: var(--primary);
-    display: block;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: 1.3;
 }
 
-.map-container {
-    width: 100%;
-    height: 400px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.direction-text p {
+    font-size: 17px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Красивые списки с иконками */
+.direction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.direction-list li {
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 18px;
+    position: relative;
+    padding-left: 35px;
+    line-height: 1.5;
+}
+
+.direction-list i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--accent);
+    font-size: 18px;
+}
+
+/* Декоративный графический блок вместо пустых фото */
+.direction-visual {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 50px;
+    border: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    position: relative;
+}
+
+.direction-block:nth-child(even) .direction-visual {
+    background: #3d3773;
+    border: none;
+}
+.direction-block:nth-child(even) .direction-visual i {
+    color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.direction-visual-bg-icon {
+    font-size: 160px;
+    color: rgba(46, 170, 175, 0.08);
+    position: absolute;
+    z-index: 1;
+}
+
+.direction-visual h4 {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--primary);
+    margin: 0 0 15px 0;
+    position: relative;
+    z-index: 2;
+}
+.direction-block:nth-child(even) .direction-visual h4 { color: var(--white); }
+
+.direction-visual p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin: 0;
+    max-width: 320px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.direction-block:nth-child(even) .direction-visual p { color: #b4afdb; }
+
+/* Подвал */
+.footer {
+    padding: 40px 5%;
+    background: var(--primary);
+    color: #b4afdb;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* --- АДАПТИВНОСТЬ --- */
+@media (max-width: 1024px) {
+    .direction-container { grid-template-columns: 1fr; gap: 40px; }
+    .direction-block:nth-child(even) { flex-direction: column; }
+    .direction-block { padding: 60px 5%; }
+    .direction-visual { min-height: 280px; padding: 40px; }
+}
+
+@media (max-width: 650px) {
+    .header { flex-direction: column; gap: 15px; }
+    .nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .page-title-section h1 { font-size: 32px; }
+    .direction-text h2 { font-size: 24px; }
 }
     </style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo">
-            <img src="images/logoross1.png" alt="Росстайл">
-        </div>
-        <nav class="nav">
-            <a href="index.html">Главная</a>
-            <a href="#">Направления</a>
-            <a href="#">Проекты</a>
-            <a href="images/catalog-rosstyle.pdf" target="_blank">Каталог</a>
-            <a href="#contacts" class="cta-button">Связаться с нами</a>
-        </nav>
-    </header>
-
-<section class="content-page" style="padding: 60px 5%;">
-    <h1 style="color: #3d3773; font-size: 36px;">Направления деятельности</h1>
-    <p style="font-size: 18px; color: #666; max-width: 800px;">
-        Мы занимаемся всем спектром оборудования для образовательной деятельности, от простых пробирок до сложных технических решений. Мы разделяем все оборудование на три больших раздела:
-    </p>
-
-    <div class="detailed-features" style="margin-top: 40px;">
-        <div style="margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-left: 5px solid #2eaaaf;">
-            <h2 style="color: #3d3773;">1. Инфраструктурные решения</h2>
-            <p>Мебель, оргтехника, актовые и конференц залы, спортивный инвентарь, уличные тренажеры и МАФы, пищеблок, прачечная, медблок, столярная и слесарные мастерские</p>
-        </div>
-        
-        <div style="margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-left: 5px solid #2eaaaf;">
-            <h2 style="color: #3d3773;">2. Учебное оборудование</h2>
-            <p>Лабораторное оборудование, демонстрационное оборудование, макеты и модели, развивающие пособия</p>
-        </div>
-
-         <div style="margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-left: 5px solid #2eaaaf;">
-            <h2 style="color: #3d3773;">3. Дополнительное образование</h2>
-            <p>Кванториумы, технопарки, точки роста</p>
-        </div>
+<header class="header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/logoross1.png" alt="ГК Росстайл">
+        </a>
     </div>
+    <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="napravleniya.html" class="active">Направления</a>
+        <a href="images/Catalog.pdf" target="_blank">Каталог</a>
+        <a href="#">Проекты</a>
+        <a href="index.html#contacts" class="cta-button">Связаться с нами</a>
+    </nav>
+</header>
 
-    <p style="font-size: 18px; color: #666; max-width: 800px;">
-        Подробнее вы можете ознакомиться в нашем каталоге
-    </p>
-<div style="margin-top: 45px; text-align: center;">
-    <a href="images/catalog-rosstyle.pdf" download class="cta-button" style="font-size: 18px; padding: 15px 40px; background-color: var(--primary); text-decoration: none;">
-        📥 Скачать полный каталог оборудования (PDF)
-    </a>
-</div>
-</section>
+    <!-- Заголовок страницы -->
+    <section class="page-title-section">
+        <h1>Направления деятельности</h1>
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> — <span>Направления деятельности</span>
+        </div>
+    </section>
 
-<section class="contacts-section" id="contacts">
-    <div class="contacts-container">
-        <div class="contacts-info">
-            <h2>Контакты</h2>
-            <p style="margin-bottom: 30px; color: #666;">Свяжитесь с нами для комплексного оснащения вашего учебного заведения. Мы подготовим спецификации и коммерческое предложение под ваши задачи.</p>
-            
-            <div class="contact-item">
-                <strong>Телефоны</strong>
-                <span style="display: block; font-size: 16px; margin-bottom: 5px;">
-                    Москва: <a href="tel:+74993228300" style="color: inherit; text-decoration: none; font-weight: bold;">+7 (499) 322-83-00</a>
-                </span>
-                <span style="display: block; font-size: 16px;">
-                    Новосибирск: <a href="tel:+73832634411" style="color: inherit; text-decoration: none; font-weight: bold;">+7 (383) 263-44-11</a>
-                </span>
+    <!-- Раздел 1: Инфраструктурные решения -->
+    <section class="direction-block" id="infrastructure">
+        <div class="direction-container">
+            <div class="direction-text">
+                <h2>Инфраструктурные решения и аудит</h2>
+                <p>Мы берем на себя самую сложную интеллектуальную и юридическую часть проекта. Команда экспертов ГК «Росстайл» создает концепции, которые идеально балансируют между передовым дизайном и строгим законодательством РФ, экономя время и бюджет заказчика.</p>
+                
+                <ul class="direction-list">
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Аудит и консалтинг:</strong> Анализ текущего состояния фондов и подготовка рекомендаций.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>3D-моделирование и дизайн:</strong> Разработка эргономичных планировок с учетом зонирования и безопасности.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Юридическое сопровождение:</strong> Составление технического задания и спецификаций строго в рамках требований 44-ФЗ и 223-ФЗ.</li>
+                </ul>
             </div>
-            
-            <div class="contact-item">
-                <strong>Электронная почта</strong>
-                <a href="mailto:info@ros-style.com" style="color: var(--accent); font-weight: 500; text-decoration: none;">info@ros-style.com</a>
-            </div>
-            
-            <div class="contact-item">
-                <strong>Адрес офиса</strong>
-                <span>129323, г. Москва, МО Свиблово, проезд Русанова 11, каб. 3</span>
-            </div>
-
-            <div class="contact-item">
-                <strong>Режим работы</strong>
-                <span style="color: #d9534f; font-weight: bold;">24/7 (приём по предварительной записи)</span>
+            <div class="direction-visual">
+                <i class="fa-solid fa-compass-drafting direction-visual-bg-icon"></i>
+                <h4>Проектирование</h4>
+                <p>15+ лет опыта позволяют создавать решения, которые безупречно проходят любые ведомственные проверки.</p>
             </div>
         </div>
-        
-        <div class="map-container">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.646877%2C55.849964&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxNDA5NBJK0KDQvtGB0YHQQuGPLCDQnNC-0YHQutCy0LAsINC_0YDQvtC10LfQtCDQoNGD0YHQLD3QvdC-0LLQsCwgMTEiCg1X8RhCZS9FX0I%2C&z=16" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative; border:0;"></iframe>
+    </section>
+
+    <!-- Раздел 2: Профильное учебное оборудование -->
+    <section class="direction-block" id="equipment">
+        <div class="direction-container">
+            <div class="direction-text">
+                <h2>Профильное учебное оборудование</h2>
+                <p>Полный цикл материально-технического обеспечения учебного процесса. Мы поставляем сертифицированное оборудование, которое делает уроки наглядными, интересными и эффективными, полностью закрывая требования Министерства просвещения РФ.</p>
+                
+                <ul class="direction-list">
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Стандарты ФГОС и Приказ № 838:</strong> Поставка оборудования в стопроцентном соответствии с актуальными государственными регламентами.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Предметные кабинеты и мебель:</strong> Готовые комплексы для физики, химии, биологии, географии, а также специализированная эргономичная мебель.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Инсталляция и обучение:</strong> Монтаж, пусконаладка сложных приборов и обязательный инструктаж педагогического состава.</li>
+                </ul>
+            </div>
+            <div class="direction-visual">
+                <i class="fa-solid fa-microscope direction-visual-bg-icon"></i>
+                <h4>Оснащение по ФГОС</h4>
+                <p>Более 3000 наименований сертифицированного оборудования для комплексного закрытия учебных планов.</p>
+            </div>
         </div>
-    </div>
-</section>
-    
-    </body>
+    </section>
+
+    <!-- Раздел 3: Инновации и дополнительное образование -->
+    <section class="direction-block" id="innovations">
+        <div class="direction-container">
+            <div class="direction-text">
+                <h2>Инновации и дополнительное образование</h2>
+                <p>Создание ультрасовременных научно-технических пространств для развития инженерного мышления и творческого потенциала детей. Мы внедряем технологии, которые формируют компетенции будущего.</p>
+                
+                <ul class="direction-list">
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Федеральные проекты:</strong> Оснащение «Кванториумов», «Точек роста», «ИТ-кубов» и центров поддержки одаренных детей.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Высокие технологии:</strong> Поставка учебной робототехники, VR/AR систем, беспилотных летательных аппаратов (БПЛА) и станков с ЧПУ.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Индивидуальные программы:</strong> Разработка уникальных STEM-лабораторий под специфику вашего региона или учреждения.</li>
+                </ul>
+            </div>
+            <div class="direction-visual">
+                <i class="fa-solid fa-vr-cardboard direction-visual-bg-icon"></i>
+                <h4>Технологии будущего</h4>
+                <p>Формируем базу для научно-технического творчества и ранней профориентации школьников.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <p>© 2026 ГК «Росстайл». Все права защищены. Комплексное оснащение образовательных учреждений по всей России.</p>
+    </footer>
+
+</body>
 </html>
