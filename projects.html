@@ -289,34 +289,47 @@ body {
     <!-- Сетка объектов -->
     <main class="projects-grid">
 
-        <!-- ПРОЕКТ 1: ШКОЛЫ -->
+                <!-- ПРОЕКТ 1: ШКОЛЫ (Лицей «Технополис») -->
         <article class="project-card" data-category="school">
-            <!-- Карусель с 3 фото -->
+            <!-- Карусель с реальными фото Технополиса (9 кадров) -->
             <div class="carousel-container">
                 <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
                 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&h=300&q=80" alt="Класс школы"></div>
-                    <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&h=300&q=80" alt="Учебный холл"></div>
-                    <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&h=300&q=80" alt="Аудитория"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%81/lyceum.jpg" alt="Лицей Технополис"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%81/class_1.jpg" alt="Учебный класс"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%81/robot.jpg" alt="Класс робототехники"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%81/chemistry.jpg" alt="Лаборатория химии"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%81/library_1.jpg" alt="Библиотека и медиатека"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%81/canteen_1.jpeg" alt="Школьная столовая"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%81/gym_1.jpeg" alt="Спортивный зал"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%81/coworking.jpg" alt="Зона коворкинга"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%81/auditorium.jpg" alt="Актовый зал"></div>
                 </div>
 
+                <!-- 9 точек-индикаторов под количество фото -->
                 <div class="carousel-dots">
                     <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
                     <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
                     <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 8)"></span>
                 </div>
             </div>
 
             <div class="project-content">
                 <span class="project-tag">Школы</span>
-                <h2 class="project-title">Современная средняя школа на 1100 мест</h2>
+                <h2 class="project-title" style="min-height: 58px;">Лицей «Технополис»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., рп Кольцово</span></h2>
                 <div class="project-meta">
-                    <span><i class="fa-solid fa-flask"></i> 14 лабораторий</span>
-                    <span><i class="fa-solid fa-shield"></i> ФГОС</span>
+                    <span><i class="fa-solid fa-graduation-cap"></i> IT-лицей</span>
+                    <span><i class="fa-solid fa-cubes"></i> Инновационная среда</span>
                 </div>
-                <p class="project-desc">Комплексное материально-техническое оснащение учебных классов, предметных лабораторий и профильных мастерских в строгом соответствии с регламентами.</p>
+                <p class="project-desc">Масштабное комплексное оснащение ультрасовременного инженерно-технологического лицея. Поставлены и смонтированы цифровые лаборатории, профильные классы робототехники, 3D-моделирования, кулинарии и шитья, а также полностью укомплектованы зоны коворкинга, библиотека, двухуровневый столовый комплекс и спортивные залы.</p>
             </div>
         </article>
 
