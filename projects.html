@@ -333,34 +333,47 @@ body {
             </div>
         </article>
 
-        <!-- ПРОЕКТ 2: ДЕТСКИЕ САДЫ -->
-        <article class="project-card" data-category="kindergarten">
-            <!-- Карусель с 3 фото -->
+        <!-- ПРОЕКТ 2: ШКОЛЫ (ЦО «Восход») -->
+        <article class="project-card" data-category="school">
+            <!-- Карусель с фото ЦО Восход по порядку (9 кадров) -->
             <div class="carousel-container">
                 <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
                 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1564424224827-cd24b8915874?auto=format&fit=crop&w=600&h=300&q=80" alt="Игровая комната"></div>
-                    <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=600&h=300&q=80" alt="Развивающие материалы"></div>
-                    <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&h=300&q=80" alt="Детский сад интерьер"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%92%D0%BE%D1%81%D1%85%D0%BE%D0%B4/1roboticslab.jpg" alt="Лаборатория робототехники"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%92%D0%BE%D1%81%D1%85%D0%BE%D0%B4/2library.jpeg" alt="Библиотечный комплекс"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%92%D0%BE%D1%81%D1%85%D0%BE%D0%B4/3astronomy.jpg" alt="Класс астрономии"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%92%D0%BE%D1%81%D1%85%D0%BE%D0%B4/4assemblyhall.png" alt="Актовый зал"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%92%D0%BE%D1%81%D1%85%D0%BE%D0%B4/5drones.jpg" alt="Зона тестирования беспилотников"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%92%D0%BE%D1%81%D1%85%D0%BE%D0%B4/6Slidinginteractivesystem.jpg" alt="Раздвижная интерактивная система"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%92%D0%BE%D1%81%D1%85%D0%BE%D0%B4/7Gym.png" alt="Спортивный зал"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%92%D0%BE%D1%81%D1%85%D0%BE%D0%B4/8HomeEconomics.jpg" alt="Кабинет домоводства и технологии"></div>
+                    <div class="carousel-slide"><img src="images/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/%D0%92%D0%BE%D1%81%D1%85%D0%BE%D0%B4/9Conferencehall.jpg" alt="Зал заседаний и конференций"></div>
                 </div>
 
+                <!-- 9 индикаторов под фотографии -->
                 <div class="carousel-dots">
                     <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
                     <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
                     <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 8)"></span>
                 </div>
             </div>
 
             <div class="project-content">
-                <span class="project-tag">Детские сады</span>
-                <h2 class="project-title">Детский сад общеразвивающего вида</h2>
+                <span class="project-tag">Школы</span>
+                <h2 class="project-title" style="min-height: 58px;">Центр образования «Восход»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирский район</span></h2>
                 <div class="project-meta">
-                    <span><i class="fa-solid fa-child"></i> Игровые зоны</span>
-                    <span><i class="fa-solid fa-couch"></i> Мебель</span>
+                    <span><i class="fa-solid fa-rocket"></i> ЦО нового типа</span>
+                    <span><i class="fa-solid fa-microchip"></i> Высокотехнологичные классы</span>
                 </div>
-                <p class="project-desc">Организация развивающих и безопасных пространств, поставка специализированной детской мебели, игровых модулей и оборудования для актовых залов.</p>
+                <p class="project-desc">Комплексная реализация проекта современной образовательной экосистемы. В рамках проекта полностью оснащены уникальные лаборатории робототехники и космического мониторинга, смонтирована инновационная раздвижная интерактивная система, запущены зоны для БПЛА, а также укомплектованы мультимедийный актовый зал, спортивные блоки и кабинеты кулинарного мастерства.</p>
             </div>
         </article>
 
