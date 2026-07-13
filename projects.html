@@ -420,6 +420,44 @@ body {
             </div>
         </article>
 
+        <!-- ПРОЕКТ 4: ШКОЛЫ (Гимназия «Краснообская») -->
+        <article class="project-card" data-category="school">
+            <!-- Карусель с фото Гимназии Краснообская в пропорциях 4:3 (6 кадров) -->
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                
+                <div class="carousel-slides" data-current-index="0">
+                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/1Classroom.jpg" alt="Универсальный учебный класс"></div>
+                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/2TechnologyClassroom.jpg" alt="Инженерно-технологические мастерские"></div>
+                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/3MediaCenter.jpg" alt="Информационно-библиотечный медиацентр"></div>
+                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/4MediaHolding.jpg" alt="Школьный медиахолдинг и студия звукозаписи"></div>
+                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/5Recreation.jpg" alt="Зона активной и коворкинг-рекреации"></div>
+                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/6Gym.jpeg" alt="Спортивный тренировочный комплекс"></div>
+                </div>
+
+                <!-- 6 точек под количество фотографий Гимназии -->
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <span class="project-tag">Школы</span>
+                <h2 class="project-title" style="min-height: 58px;">Гимназия «Краснообская»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирский район, р.п. Краснообск</span></h2>
+                <div class="project-meta">
+                    <span><i class="fa-solid fa-photo-film"></i> Медиахолдинг</span>
+                    <span><i class="fa-solid fa-screwdriver-wrench"></i> Техно-классы</span>
+                </div>
+                <p class="project-desc">Инновационное переоснащение академической гимназии под современные стандарты проектной деятельности. Сформирована база для школьного медиацентра и издательского дома, полностью укомплектованы многофункциональные учебные классы, современные рекреационные пространства для отдыха и коворкинга, залы физической культуры и высокотехнологичные лаборатории технологии.</p>
+            </div>
+        </article>
+        
         <!-- ПРОЕКТ 4: ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ -->
         <article class="project-card" data-category="additional">
             <!-- Карусель с 3 фото -->
