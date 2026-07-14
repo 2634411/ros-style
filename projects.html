@@ -529,6 +529,38 @@ body {
             </div>
         </article>
 
+        <!-- ПРОЕКТ 7: ИННОВАЦИИ И ДОП. ОБРАЗОВАНИЕ (Агробиопарк Лицея №21) -->
+        <article class="project-card" data-category="additional">
+            <!-- Карусель с фото агробиопарка в пропорциях 4:3 (3 кадра) -->
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                
+                <div class="carousel-slides" data-current-index="0">
+                    <div class="carousel-slide"><img src="images/Projects/Greenhouse/1GreenhouseExterior.jpg" alt="Агробиоинженерный парк Лицея №21"></div>
+                    <div class="carousel-slide"><img src="images/Projects/Greenhouse/2GreenhouseEmpty.jpg" alt="Автономный вертикальный гидропонный модуль"></div>
+                    <div class="carousel-slide"><img src="images/Projects/Greenhouse/3GreenhousePlants.jpg" alt="Выращивание культур в гидропонной системе"></div>
+                </div>
+
+                <!-- 3 точки под количество фотографий -->
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <span class="project-tag">Дополнительное образование / Инновации</span>
+                <h2 class="project-title" style="min-height: 58px;">Агробиоинженерный парк школы<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Биотехнологический лицей №21, рп Кольцово</span></h2>
+                <div class="project-meta">
+                    <span><i class="fa-solid fa-seedling"></i> Гидропонные фермы</span>
+                    <span><i class="fa-solid fa-dna"></i> Биотехнологии</span>
+                </div>
+                <p class="project-desc">Уникальный проект создания исследовательского агробиопарка. Поставлены и запущены высокотехнологичные автоматические вертикальные гидропонные фермы модульного типа. Оборудование позволяет учащимся проводить реальные научные эксперименты: от микроклонального размножения кустарниковых культур до изучения адаптации лекарственных и декоративных растений в регулируемой бессубстратной среде.</p>
+            </div>
+        </article>
+        
     </main>
 
     <footer class="footer">
