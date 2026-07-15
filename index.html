@@ -93,7 +93,8 @@ body {
     min-height: calc(100vh - 85px);
     width: 100%;
     position: relative;
-    background-image: url('images/hero-bg.jpg'); 
+    /* Добавляем мягкий полупрозрачный белый градиент слева направо, чтобы текст всегда читался */
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 100%), url('images/hero-bg.jpg'); 
     background-size: cover;
     background-position: center right; 
     background-repeat: no-repeat;
@@ -101,7 +102,6 @@ body {
     align-items: center;
     padding: 60px 5%;
 }
-
 .hero-content {
     width: 55%;
     max-width: 700px;
