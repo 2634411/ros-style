@@ -135,7 +135,6 @@ body {
 .carousel-container {
     position: relative;
     width: 100%;
-    /* Используем современный трюк: заставляем блок всегда держать пропорции 4:3 */
     aspect-ratio: 4 / 3; 
     overflow: hidden;
     background: #eaeaea;
@@ -260,6 +259,7 @@ body {
 }
     </style>
 
+    <!-- Твой оригинальный рабочий скрипт Новофона -->
     <script type="text/javascript" async src="https://app.novofon.ru/static/cs.min.js?k=_wEGEkxLg9iY9iNmrXIpwdTAM0bGUv4C"></script>
 </head>
     
@@ -274,7 +274,8 @@ body {
         <a href="napravleniya.html">Направления</a>
         <a href="images/Catalog.pdf" target="_blank">Каталог</a>
         <a href="projects.html" class="active">Проекты</a>
-        <a href="index.html#contacts" class="cta-button">Связаться с нами</a>
+        <!-- Переходит на главную страницу к контактам и мягко пытается активировать виджет по дороге -->
+        <a href="index.html#contacts" class="cta-button" onclick="if(typeof(zd_widget_show) !== 'undefined') { zd_widget_show(); }">Связаться с нами</a>
     </nav>
 </header>
 
@@ -282,7 +283,7 @@ body {
         <div style="max-width: 1200px; margin: 0 auto; text-align: left;">
             <h1>Выполненные проекты</h1>
             <p style="color: var(--text-muted); font-size: 18px; margin: 10px 0 0 0; max-width: 700px;">
-                Реализованные решения для образовательных учреждений нового поколения по всей территории России.
+                Реализованные технологические и инфраструктурные решения для учреждений нового поколения по всей России.
             </p>
         </div>
     </section>
@@ -291,9 +292,8 @@ body {
     <div class="filter-container">
         <button class="filter-btn active" onclick="filterProjects('all')">Все объекты</button>
         <button class="filter-btn" onclick="filterProjects('school')">Школы</button>
-        <button class="filter-btn" onclick="filterProjects('kindergarten')">Детские сады</button>
-        <button class="filter-btn" onclick="filterProjects('university')">Вузы</button>
-        <button class="filter-btn" onclick="filterProjects('additional')">Доп. образование</button>
+        <button class="filter-btn" onclick="filterProjects('university')">Вузы и Кванториумы</button>
+        <button class="filter-btn" onclick="filterProjects('additional')">Доп. образование / Инновации</button>
     </div>
 
     <!-- Сетка объектов -->
@@ -383,7 +383,7 @@ body {
             </div>
         </article>
 
-        <!-- ПРОЕКТ 3: ЦЕНТР ОБРАЗОВАНИЯ «ВЕРХ-ТУЛИНСКИЙ», НОВОСИБИРСКИЙ РАЙОН -->
+        <!-- ПРОЕКТ 3: ЦЕНТР ОБРАЗОВАНИЯ «ВЕРХ-ТУЛИНСКИЙ» -->
         <article class="project-card" data-category="school">
             <div class="carousel-container">
                 <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
@@ -416,18 +416,17 @@ body {
 
             <div class="project-content">
                 <span class="project-tag">Школы</span>
-                <h2 class="project-title" style="min-height: 58px;">Центр образования «Верх-Тулинский»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирский район, п. Верх-Тула</span></h2>
+                <h2 class="project-title" style="min-height: 58px;">ЦО «Верх-Тулинский»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирский район, п. Верх-Тула</span></h2>
                 <div class="project-meta">
-                    <span><i class="fa-solid fa-graduation-cap"></i> Цифровая среда</span>
-                    <span><i class="fa-solid fa-landmark"></i> Школьный музей</span>
+                    <span><i class="fa-solid fa-landmark-dome"></i> Интерактивный музей</span>
+                    <span><i class="fa-solid fa-scissors"></i> Швейный коворкинг</span>
                 </div>
-                <p class="project-desc">Передовое материально-техническое оснащение масштабного образовательного комплекса. Поставлены и смонтированы учебно-метонические комплексы робототехники, современная швейная мастерская со специализированными встроенными машинами и оверлоками, укомплектованы информационно-библиотечные центры, комфортные конференц-зоны, интерактивные пространства школьного музея и спортивные залы.</p>
+                <p class="project-desc">Передовое материально-техническое оснащение крупного пригородного образовательного комплекса. Создано уникальное выставочное пространство — школьный интерактивный музей с мультимедийными экспозициями. Полностью укомплектован швейный коворкинг с профессиональными программируемыми машинами, развёрнуты современные библиотечные медиацентры открытого типа, залы заседаний и двухуровневый обеденный зал.</p>
             </div>
         </article>
 
         <!-- ПРОЕКТ 4: ШКОЛЫ (Гимназия «Краснообская») -->
         <article class="project-card" data-category="school">
-            <!-- Карусель с фото Гимназии Краснообская в пропорциях 4:3 (6 кадров) -->
             <div class="carousel-container">
                 <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
@@ -441,7 +440,6 @@ body {
                     <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/6Gym.jpeg" alt="Спортивный тренировочный комплекс"></div>
                 </div>
 
-                <!-- 6 точек под количество фотографий Гимназии -->
                 <div class="carousel-dots">
                     <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
                     <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
@@ -454,12 +452,12 @@ body {
 
             <div class="project-content">
                 <span class="project-tag">Школы</span>
-                <h2 class="project-title" style="min-height: 58px;">Гимназия «Краснообская»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирский район, р.п. Краснообск</span></h2>
+                <h2 class="project-title" style="min-height: 58px;">Гимназия «Краснообская»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирский район, рп Краснообск</span></h2>
                 <div class="project-meta">
-                    <span><i class="fa-solid fa-photo-film"></i> Медиахолдинг</span>
-                    <span><i class="fa-solid fa-screwdriver-wrench"></i> Техно-классы</span>
+                    <span><i class="fa-solid fa-microphone-lines"></i> Медиацентр и студия</span>
+                    <span><i class="fa-solid fa-gears"></i> Станки и мастерские</span>
                 </div>
-                <p class="project-desc">Инновационное переоснащение академической гимназии под современные стандарты проектной деятельности. Сформирована база для школьного медиацентра и издательского дома, полностью укомплектованы многофункциональные учебные классы, современные рекреационные пространства для отдыха и коворкинга, залы физической культуры и высокотехнологичные лаборатории технологии.</p>
+                <p class="project-desc">Инновационное оснащение гимназии академического профиля под современные проектные стандарты. Сформирован полноценный медиахолдинг со студией звукозаписи и издательским блоком. Развернуты инженерно-технологические мастерские с токарным и фрезерным оборудованием, укомплектованы комфортные рекреационные зоны для командной работы и многофункциональный спортивный комплекс.</p>
             </div>
         </article>
 
@@ -492,14 +490,14 @@ body {
                 <span class="project-tag">Вузы / Кванториумы</span>
                 <h2 class="project-title" style="min-height: 58px;">Педагогический технопарк «Кванториум»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">НГПУ, г. Новосибирск</span></h2>
                 <div class="project-meta">
-                    <span><i class="fa-solid fa-flask-vial"></i> Цифровые лаборатории</span>
-                    <span><i class="fa-solid fa-dna"></i> Анатомический стол</span>
+                    <span><i class="fa-solid fa-dna"></i> 3D-Анатомия</span>
+                    <span><i class="fa-solid fa-flask"></i> Лаборатории НГПУ</span>
                 </div>
-                <p class="project-desc">Комплексное оснащение инновационного педагогического технопарка на базе профильного университета. Поставлены и развернуты передовые цифровые лаборатории по физике, химии и биологии, интерактивные анатомические комплексы, оптическое оборудование исследовательского класса, а также специализированная мебель и учебно-методические стенды для подготовки будущих преподавателей.</p>
+                <p class="project-desc">Комплексное оснащение инновационного педагогического технопарка на базе профильного вуза. Поставлен интерактивный анатомический стол «Пирогов» для виртуального моделирования и 3D-атласа, развёрнуты цифровые естественно-научные лаборатории, высокоточные цифровые микроскопы исследовательского класса и робототехнические стенды для подготовки будущих учителей.</p>
             </div>
         </article>
 
-         <!-- ПРОЕКТ 6: Универсальный физкультурно-оздоровительный комплекс, п. Кольцово -->
+        <!-- ПРОЕКТ 6: Универсальный физкультурно-оздоровительный комплекс (УФОК) -->
         <article class="project-card" data-category="additional">
             <div class="carousel-container">
                 <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
@@ -520,18 +518,17 @@ body {
 
             <div class="project-content">
                 <span class="project-tag">Спортивные объекты</span>
-                <h2 class="project-title" style="min-height: 58px;">Физкультурно-оздоровительный комплекс<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">наукоград Кольцово</span></h2>
+                <h2 class="project-title" style="min-height: 58px;">Легкоатлетический манеж УФОК<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">наукоград Кольцово</span></h2>
                 <div class="project-meta">
-                    <span><i class="fa-solid fa-person-running"></i> Легкоатлетический манеж</span>
-                    <span><i class="fa-solid fa-dumbbell"></i> Спорт-инвентарь</span>
+                    <span><i class="fa-solid fa-stopwatch"></i> Проф-хронометраж</span>
+                    <span><i class="fa-solid fa-shield"></i> Защитные покрытия</span>
                 </div>
-                <p class="project-desc">Масштабное профессиональное оснащение универсального физкультурно-оздоровительного комплекса. Поставлены и смонтированы специализированные легкоатлетические барьеры, стартовые колодки, хронометрические системы, судейское оборудование, инвентарь для прыжковых секторов, а также полностью укомплектованы зоны силовой подготовки и тренировочные залы.</p>
+                <p class="project-desc">Инфраструктурное спортивное оснащение всероссийского уровня. Поставлены и смонтированы профессиональные легкоатлетические барьеры, судейские хронометрические системы, инвентарь для секторов прыжков в длину и высоту, полностью укомплектованы залы силовой подготовки, раздевалки и тренерские зоны с соблюдением требований безопасности Минспорта РФ.</p>
             </div>
         </article>
 
-        <!-- ПРОЕКТ 7: ИННОВАЦИИ И ДОП. ОБРАЗОВАНИЕ (Агробиопарк Лицея №21) -->
+        <!-- ПРОЕКТ 7: Автономные вертикальные теплицы, Лицей №21 -->
         <article class="project-card" data-category="additional">
-            <!-- Карусель с фото агробиопарка в пропорциях 4:3 (3 кадра) -->
             <div class="carousel-container">
                 <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
@@ -542,7 +539,6 @@ body {
                     <div class="carousel-slide"><img src="images/Projects/Greenhouse/3GreenhousePlants.jpg" alt="Выращивание культур в гидропонной системе"></div>
                 </div>
 
-                <!-- 3 точки под количество фотографий -->
                 <div class="carousel-dots">
                     <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
                     <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
@@ -551,16 +547,16 @@ body {
             </div>
 
             <div class="project-content">
-                <span class="project-tag">Дополнительное образование / Инновации</span>
-                <h2 class="project-title" style="min-height: 58px;">Агробиоинженерный парк школы<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Биотехнологический лицей №21, рп Кольцово</span></h2>
+                <span class="project-tag">Инновации / Доп. образование</span>
+                <h2 class="project-title" style="min-height: 58px;">Агробиоинженерный комплекс школы<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Биотехнологический лицей №21, рп Кольцово</span></h2>
                 <div class="project-meta">
-                    <span><i class="fa-solid fa-seedling"></i> Гидропонные фермы</span>
-                    <span><i class="fa-solid fa-dna"></i> Биотехнологии</span>
+                    <span><i class="fa-solid fa-seedling"></i> Гидропонные сис-мы</span>
+                    <span><i class="fa-solid fa-robot"></i> Автоматизация и климат</span>
                 </div>
-                <p class="project-desc">Уникальный проект создания исследовательского агробиопарка. Поставлены и запущены высокотехнологичные автоматические вертикальные гидропонные фермы модульного типа. Оборудование позволяет учащимся проводить реальные научные эксперименты: от микроклонального размножения кустарниковых культур до изучения адаптации лекарственных и декоративных растений в регулируемой бессубстратной среде.</p>
+                <p class="project-desc">Уникальный научно-исследовательский агробиопарк для ранней профориентации школьников. Поставлены и запущены автоматические вертикальные гидропонные фермы модульного типа. Комплекс позволяет учащимся проводить сложные лабораторные эксперименты по микроклональному размножению и адаптации культур в полностью бессубстратной контролируемой среде.</p>
             </div>
         </article>
-        
+
     </main>
 
     <footer class="footer">
@@ -617,4 +613,3 @@ body {
     </script>
 </body>
 </html>
-
