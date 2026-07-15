@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ГК Росстайл — Инновационное оснащение образовательных пространств</title>
+    <title>ГК Росстайл — Комплексное оснащение образовательных пространств под ключ</title>
 
     <!-- Иконки для вкладок браузера (ПК) -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -103,26 +103,47 @@ body {
 }
 
 .hero-content {
-    width: 50%;
-    max-width: 650px;
+    width: 55%;
+    max-width: 700px;
     text-align: left;
     z-index: 2;
     padding-right: 20px;
 }
 
 .hero-content h1 {
-    font-size: 42px; 
-    line-height: 1.2;
+    font-size: 44px; 
+    line-height: 1.25;
     color: var(--primary); 
     font-weight: 900;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     letter-spacing: -0.5px;
 }
 
 .hero-content p {
-    font-size: 19px; 
+    font-size: 18px; 
     color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 15px;
     margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.hero-badge {
+    background: #f0f0f5;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e0e0eb;
 }
 
 /* --- БЛОК: О КОМПАНИИ --- */
@@ -184,7 +205,7 @@ body {
     top: 10px;
     width: 12px;
     height: 2px;
-    background-color: var(--accent); /* Минималистичный бирюзовый дефис */
+    background-color: var(--accent);
 }
 
 .clients-grid strong {
@@ -194,7 +215,7 @@ body {
     margin-bottom: 4px;
 }
 
-/* --- БЛОК: ЭТАПЫ РАБОТЫ (4 КВАДРАТА) --- */
+/* --- БЛОК: ЭТАПЫ РАБОТЫ --- */
 .steps-section {
     padding: 100px 5%;
     background-color: var(--white);
@@ -240,7 +261,7 @@ body {
 }
 
 .step-card h3 {
-    font-size: 21px;
+    font-size: 20px;
     color: var(--primary);
     margin-top: 0;
     margin-bottom: 15px;
@@ -249,7 +270,7 @@ body {
 }
 
 .step-card p {
-    font-size: 15px;
+    font-size: 14px;
     color: var(--text-muted);
     line-height: 1.6;
 }
@@ -363,7 +384,7 @@ body {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     border: 1px solid #eaeaea;
-    text-align: left; /* Перевели в левый флаг для строгого стиля */
+    text-align: left;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -382,61 +403,35 @@ body {
 }
 
 .stat-desc {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--text-muted);
     font-weight: 500;
     line-height: 1.5;
 }
 
-/* --- БЛОК: КОНТАКТЫ --- */
+/* --- БЛОК: КОНТАКТЫ (Полная ширина, без карты) --- */
 .contacts-section {
-    padding: 100px 5%;
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
+    padding: 120px 5%;
+    background-color: #f9f9fc;
 }
 
 .contacts-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-}
-
-.contacts-info h2 { font-size: 36px; color: var(--primary); margin-bottom: 30px; font-weight: 900; letter-spacing: -0.5px; }
-
-.contact-item { margin-bottom: 30px; font-size: 16px; }
-.contact-item strong {
-    color: var(--accent);
-    display: block;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-}
-
-.map-container {
-    width: 100%;
-    height: 500px;
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-hover);
+    text-align: left;
 }
 
 /* --- АДАПТИВНОСТЬ ДЛЯ ВСЕХ ЭКРАНОВ --- */
 @media (max-width: 1100px) {
     .hero-content {
-        width: 75%; 
-        background: rgba(255, 255, 255, 0.9); 
+        width: 80%; 
+        background: rgba(255, 255, 255, 0.93); 
         padding: 40px;
         border-radius: var(--radius);
     }
     .steps-grid { grid-template-columns: repeat(2, 1fr); }
     .card-half { grid-column: span 12; min-height: auto; }
-    .contacts-container { grid-template-columns: 1fr; gap: 40px; }
-    .map-container { height: 400px; }
 }
 
 @media (max-width: 768px) {
@@ -450,7 +445,7 @@ body {
     .hero-content { width: 100%; padding: 25px; }
     .hero-content h1 { font-size: 32px; }
     .about-section, .steps-section, .features-section, .stats-section, .contacts-section { padding: 60px 20px; }
-    .about-container h2, .steps-section h2, .features-section h2, .stats-section h2, .contacts-info h2 { font-size: 28px; }
+    .about-container h2, .steps-section h2, .features-section h2, .stats-section h2 { font-size: 28px; }
     .steps-grid { grid-template-columns: 1fr; }
     .step-card { padding: 35px 25px; }
 }
@@ -474,60 +469,67 @@ body {
         <a href="napravleniya.html">Направления</a>
         <a href="images/Catalog.pdf" target="_blank">Каталог</a>
         <a href="projects.html">Проекты</a>
-        <a href="#contacts" class="cta-button">Связаться с нами</a>
+        <a href="#" class="cta-button" onclick="if(typeof(zd_widget_show) !== 'undefined') { zd_widget_show(); return false; }">Связаться с нами</a>
     </nav>
 </header>
 
     <!-- 1. Главный баннер -->
     <section class="hero-section">
         <div class="hero-content">
-            <h1>Комплексное оснащение учебных заведений</h1>
-            <p>Создаем современную образовательную среду по всей России в соответствии с ФГОС и 838 приказом.</p>
-            <a href="napravleniya.html" class="cta-button" style="font-size: 16px; padding: 14px 35px; text-decoration: none; display: inline-block;">Узнать больше</a>
+            <h1>Комплексное оснащение образовательных пространств под ключ</h1>
+            <p>Проектируем и поставляем профильное учебное, компьютерное, лабораторное и интерактивное оборудование для детских садов, школ, лицеев и вузов России. Сдаём объекты строго по ФГОС и Приказу Минпросвещения № 838.</p>
+            
+            <div class="hero-badges">
+                <div class="hero-badge"><i class="fa-solid fa-file-shield"></i> Поддержка 44-ФЗ и 223-ФЗ</div>
+                <div class="hero-badge"><i class="fa-solid fa-calculator"></i> Расчёт спецификаций за 24 часа</div>
+                <div class="hero-badge"><i class="fa-solid fa-circle-check"></i> Гарантия госэкспертизы</div>
+            </div>
+
+            <a href="napravleniya.html" class="cta-button" style="font-size: 16px; padding: 14px 35px; text-decoration: none; display: inline-block;">Смотреть направления работы</a>
         </div>
     </section>
 
     <!-- 2. О компании -->
     <section class="about-section">
         <div class="about-container">
-            <h2>ГК «РОССТАЙЛ» — ОСНАЩЕНИЕ ЛЮБЫХ ОБРАЗОВАТЕЛЬНЫХ УЧРЕЖДЕНИЙ УЧЕБНЫМ ОБОРУДОВАНИЕМ</h2>
-            <p class="about-lead">Оснащаем образовательные учреждения мебелью, спортивным инвентарем, интерактивным, компьютерным и учебным оборудованием в полном соответствии с ФГОС и 838 приказом. Разрабатываем и реализуем проекты дополнительного образования как в рамках федеральных программ, так и индивидуально под задачи заказчика.</p>
+            <h2>Профессиональный партнёр в развитии образовательной среды</h2>
+            <p class="about-lead">ГК «РОССТАЙЛ» — это экспертный интегратор технологических решений в сфере образования. Мы берём на себя полную ответственность за аудит, проектирование, подбор оборудования, доставку, профессиональный монтаж и последующее обучение педагогов. Вы получаете готовое пространство, полностью соответствующее актуальным нормативам регуляторов.</p>
             
-            <div class="about-subtitle">В числе наших клиентов учреждения:</div>
+            <div class="about-subtitle">Разрабатываем и реализуем проекты любой сложности для:</div>
             <ul class="clients-grid">
-                <li><strong>Дошкольного образования</strong>Детские сады, развивающие центры</li>
-                <li><strong>Среднего общего образования</strong>Общеобразовательные школы, гимназии и лицеи</li>
-                <li><strong>Среднего профессионального образования</strong>Техникумы, колледжи, училища</li>
-                <li><strong>Дополнительного образования</strong>Технопарки, дома детского творчества, центры одаренных детей</li>
-                <li><strong>Высшего образования</strong>Университеты, институты, академии</li>
-                <li><strong>Дополнительного профобразования</strong>Учебные центры и институты повышения квалификации</li>
+                <li><strong>Детских садов и ДОУ</strong>Игровые комплексы, сенсорные комнаты, интерактивные системы раннего развития.</li>
+                <li><strong>Общеобразовательных школ и ИТ-лицеев</strong>Цифровые лаборатории, профильные предметные классы, зоны робототехники и БПЛА.</li>
+                <li><strong>Колледжей и учреждений СПО</strong>Специализированные мастерские, станки с ЧПУ, профессиональные учебные симуляторы.</li>
+                <li><strong>Вузов и Кванториумов</strong>Научно-исследовательские комплексы, интерактивные анатомические столы, биотехнологические лаборатории.</li>
+                <li><strong>Спортивных объектов и манежей</strong>Легкоатлетический и тренажерный инвентарь, судейские системы, трибуны и защитные покрытия.</li>
+                <li><strong>Дополнительного образования</strong>Учебные классы для детских домов творчества, медиацентры и издательские комплексы.</li>
             </ul>
         </div>
     </section>
 
     <!-- 3. Этапы реализации проекта -->
     <section class="steps-section">
-        <h2>Этапы реализации проекта:</h2>
+        <h2>Как мы работаем: от идеи до сдачи объекта без замечаний</h2>
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-icon-wrapper"><i class="fa-solid fa-lightbulb" style="font-size: 45px; color: var(--accent);"></i></div>
-                <h3>Разработка концепции</h3>
-                <p>Придумаем и сделаем ваше учреждение уникальным в рамках обозначенного бюджета.</p>
+                <h3>1. Проектирование</h3>
+                <p>Разрабатываем концепцию и 3D-модель вашего учреждения под конкретный бюджет, сохраняя баланс эстетики и эргономики.</p>
             </div>
             <div class="step-card">
                 <div class="step-icon-wrapper"><i class="fa-solid fa-clipboard-list" style="font-size: 45px; color: var(--accent);"></i></div>
-                <h3>Подготовка спецификации</h3>
-                <p>Посчитаем и учтем все необходимое для функционирования, чтобы ничего не упустить.</p>
+                <h3>2. Точный подбор</h3>
+                <p>Составляем техническое задание и спецификацию строго по Приказу № 838 и ФГОС — без риска отклонения заявок на госзакупках.</p>
             </div>
             <div class="step-card">
                 <div class="step-icon-wrapper"><i class="fa-solid fa-file-signature" style="font-size: 45px; color: var(--accent);"></i></div>
-                <h3>Конкурсные процедуры</h3>
-                <p>Знаем все о 44 и 223 ФЗ, поможем сделать процесс закупки максимально комфортным для вас.</p>
+                <h3>3. Сопровождение тендеров</h3>
+                <p>Обладаем глубокой экспертизой в 44-ФЗ и 223-ФЗ. Гарантируем корректность документации и юридическую прозрачность процедур.</p>
             </div>
             <div class="step-card">
                 <div class="step-icon-wrapper"><i class="fa-solid fa-truck-fast" style="font-size: 45px; color: var(--accent);"></i></div>
-                <h3>Поставка оборудования</h3>
-                <p>Привезем, смонтируем, запустим и научим ваших педагогов работать с оборудованием.</p>
+                <h3>4. Запуск и обучение</h3>
+                <p>Доставляем, монтируем, проводим пусконаладку оборудования и обучаем ваш преподавательский состав работе с инновационной техникой.</p>
             </div>
         </div>
     </section>
@@ -560,36 +562,36 @@ body {
         </div>
     </section>
 
-    <!-- 5. Почему мы (Цифры) -->
+    <!-- 5. Почему мы (Факты и цифры) -->
     <section class="stats-section">
-        <h2>Почему выбирают ГК «Росстайл»:</h2>
+        <h2>ГК «Росстайл» в цифрах и фактах:</h2>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-number">15+</div>
-                <div class="stat-desc">лет успешного опыта проектирования и поставок оборудования</div>
+                <div class="stat-desc">лет безупречной работы на рынке государственного и частного заказа по всей РФ</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">100%</div>
-                <div class="stat-desc">соответствие спецификаций стандартам ФГОС и приказам МП РФ</div>
+                <div class="stat-desc">соответствие поставляемой продукции актуальным требованиям ФГОС и Минпросвещения</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">3000+</div>
-                <div class="stat-desc">наименований сертифицированного и учебного оборудования</div>
+                <div class="stat-desc">наименований сертифицированного учебного и специализированного оборудования в каталоге</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">Вся РФ</div>
-                <div class="stat-desc">География надежных поставок от Калининграда до Владивостока</div>
+                <div class="stat-desc">Опыт оперативной доставки и монтажа оборудования от Калининграда до Дальнего Востока</div>
             </div>
         </div>
     </section>
     
     <!-- 6. Контакты -->
-    <section class="contacts-section" id="contacts" style="padding: 120px 5%; background-color: #f9f9fc;">
-        <div style="max-width: 1200px; margin: 0 auto; text-align: left;">
+    <section class="contacts-section" id="contacts">
+        <div class="contacts-container">
             
-            <h2 style="font-size: 48px; color: var(--primary); margin-top: 0; margin-bottom: 25px; font-weight: 900; letter-spacing: -1.5px;">Связь с нами</h2>
+            <h2 style="font-size: 48px; color: var(--primary); margin-top: 0; margin-bottom: 25px; font-weight: 900; letter-spacing: -1.5px;">Связь с экспертами</h2>
             <p style="font-size: 19px; color: var(--text-muted); line-height: 1.7; margin-bottom: 60px; max-width: 800px;">
-                Свяжитесь с экспертами ГК «Росстайл». Мы подготовим точную спецификацию и коммерческое предложение под ключевые задачи вашего учебного заведения.
+                Доверьте оснащение вашего учреждения профессионалам. Пришлите нам ТЗ или список потребностей — мы разработаем проект, подготовим точную спецификацию и сформируем коммерческое предложение.
             </p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 50px; align-items: start; border-top: 1px solid #e5e5ea; padding-top: 50px; margin-bottom: 50px;">
@@ -611,11 +613,11 @@ body {
                 <div>
                     <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 20px;">Электронная почта</span>
                     <a href="mailto:info@ros-style.com" style="font-size: 24px; color: var(--primary); font-weight: 900; text-decoration: none; border-bottom: 3px solid var(--accent); display: inline-block; line-height: 1.2; padding-bottom: 2px;">info@ros-style.com</a>
-                    <span style="font-size: 14px; color: var(--text-muted); display: block; margin-top: 12px;">Для официальных запросов, тендерной документации и коммерческих предложений.</span>
+                    <span style="font-size: 14px; color: var(--text-muted); display: block; margin-top: 12px;">Для официальных запросов, ТЗ, тендерной документации и коммерческих предложений.</span>
                 </div>
                 
                 <div>
-                    <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 20px;">Офисы</span>
+                    <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 20px;">Офисы Группы Компаний</span>
                     <div style="display: flex; flex-direction: column; gap: 20px;">
                         <div>
                             <strong style="color: var(--primary); font-size: 15px; display: block; margin-bottom: 4px;">Москва</strong>
@@ -631,13 +633,13 @@ body {
             </div>
 
             <div style="background: #ffffff; padding: 20px 30px; border-radius: var(--radius); border: 1px solid #eaeaea; display: inline-block; box-shadow: var(--shadow);">
-                <span style="font-size: 15px; color: var(--text-muted);">Приём в офисах осуществляется по предварительной записи: <strong style="color: var(--primary); margin-left: 5px; font-weight: 700;">24/7</strong></span>
+                <span style="font-size: 15px; color: var(--text-muted);">Приём в офисах осуществляется по предварительной записи. Мы на связи: <strong style="color: var(--primary); margin-left: 5px; font-weight: 700;">24/7</strong></span>
             </div>
             
         </div>
     </section>
 
-        <!-- Подвал сайта -->
+    <!-- Подвал сайта -->
     <footer style="padding: 40px 5%; background: #3d3773; color: #b4afdb; font-size: 14px; text-align: center; margin-top: 0;">
         <p style="margin: 0;">© 2026 ГК «Росстайл». Все права защищены. Комплексное оснащение образовательных учреждений по всей России.</p>
     </footer>
