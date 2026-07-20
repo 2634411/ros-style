@@ -449,9 +449,21 @@ body {
 @media (max-width: 650px) {
     .header { flex-direction: column; gap: 15px; }
     .nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
-    .hero-section { background-position: center; padding: 40px 20px; }
-    .hero-content { width: 100%; padding: 25px; }
+    .hero-section { 
+        background-position: center; 
+        padding: 40px 20px; 
+        /* На мобильных перекрываем картинку мягким светлым слоем полностью, чтобы на любом смартфоне всё читалось идеально */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/hero-bg.jpg');
+    }
+    .hero-content { 
+        width: 100%; 
+        padding: 0; 
+        background: none;
+    }
     .hero-content h1 { font-size: 32px; }
+    .hero-content p {
+        color: #3e3971; /* Делаем основным фирменным цветом на мобильных */
+    }
     .about-section, .steps-section, .features-section, .stats-section, .contacts-section { padding: 60px 20px; }
     .about-container h2, .steps-section h2, .features-section h2, .stats-section h2 { font-size: 28px; }
     .steps-grid { grid-template-columns: 1fr; }
