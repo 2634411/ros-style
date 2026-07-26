@@ -561,9 +561,43 @@ body {
 
     </main>
 
-    <footer class="footer">
-        <p>© 2026 ГК «Росстайл». Все права защищены. Комплексное оснащение образовательных учреждений по всей России.</p>
+        <!-- Подвал сайта со всеми юридическими требованиями -->
+    <footer style="padding: 40px 5% 30px; background: #3d3773; color: #b4afdb; font-size: 13px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; align-items: center;">
+            
+            <p style="margin: 0; line-height: 1.6; max-width: 1000px; color: #8f88c2;">
+                Информация, представленная на сайте, носит исключительно справочно-информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ. Для получения точных расчетов, спецификаций и коммерческих предложений обращайтесь к специалистам ГК «Росстайл».
+            </p>
+
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 10px;">
+                <a href="privacy.html" style="color: #2eaaaf; text-decoration: underline; font-weight: 500;">Политика конфиденциальности</a>
+            </div>
+
+            <p style="margin: 10px 0 0 0; color: #b4afdb;">
+                © 2026 ГК «Росстайл». Все права защищены. Комплексное оснащение образовательных учреждений по всей России.
+            </p>
+        </div>
     </footer>
+
+    <!-- Баннер согласия на Cookie (Требование ФЗ-152) -->
+    <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 500px; background: #ffffff; padding: 20px 25px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border: 1px solid #eaeaea; z-index: 99999; text-align: left;">
+        <p style="margin: 0 0 12px 0; font-size: 13px; color: #3e3971; line-height: 1.5;">
+            Мы используем файлы cookie для обеспечения работы сайта и анализа трафика. Продолжая использовать сайт, вы соглашаетесь с нашей <a href="privacy.html" style="color: #2eaaaf; text-decoration: underline;">Политикой конфиденциальности</a>.
+        </p>
+        <button onclick="acceptCookies()" style="background: #2eaaaf; color: #ffffff; border: none; padding: 8px 22px; border-radius: 30px; font-weight: 700; font-size: 13px; cursor: pointer; transition: background 0.3s ease;">Понятно</button>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            }
+        });
+    </script>
 
     <!-- ЛОГИКА СЛАЙДЕРА И ФИЛЬТРАЦИИ -->
     <script>
