@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta name="description" content="Направления ГК «Росстайл»: предпроектный аудит и проектирование, профильное учебное оборудование, «Точки роста», «Кванториумы» и STEM-лаборатории.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Направления деятельности — ГК Росстайл</title>
@@ -239,6 +240,30 @@ body {
     <!-- Novofon -->
     <script type="text/javascript" async src="https://widget.novofon.ru/novofon.js?k=_wEGEkxLg9iY9iNmrXIpwdTAM0bGUv4C"></script>
     <!-- Novofon -->
+
+<style>
+/* правки 10.2026: телефон, баннер cookie, кнопки */
+html{overflow-x:clip}
+@media (max-width:650px){
+  .header{flex-direction:column;gap:12px;padding:14px 16px}
+  .nav{flex-wrap:wrap;justify-content:center;gap:10px 18px;width:100%}
+  .nav a{font-size:15px}
+  .nav .cta-button{width:100%;text-align:center;box-sizing:border-box}
+}
+#cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#fff;border-top:1px solid #e5e5ea;box-shadow:0 -6px 24px rgba(0,0,0,.08);padding:10px 16px;display:none}
+#cookie-banner .cb-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:14px;justify-content:space-between}
+#cookie-banner p{margin:0;font-size:13px;line-height:1.45;color:#3e3971}
+#cookie-banner a{color:#2eaaaf;text-decoration:underline}
+#cookie-banner button{flex:none;background:#2eaaaf;color:#fff;border:0;padding:8px 22px;border-radius:30px;font-weight:700;font-size:13px;cursor:pointer}
+@media (max-width:650px){#cookie-banner .cb-in{flex-direction:column;align-items:stretch;gap:8px}#cookie-banner p{font-size:12px}}
+.btn-outline{display:inline-block;padding:13px 30px;border:2px solid #3d3773;color:#3d3773;border-radius:30px;font-weight:700;font-size:16px;text-decoration:none;background:#fff}
+.btn-outline:hover{border-color:#2eaaaf;color:#2eaaaf}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-note{margin-top:16px;font-size:15px;color:#4a5568}
+.hero-note a{color:#2eaaaf;font-weight:700}
+.foot-req{margin:0;color:#b4afdb;line-height:1.6}
+.foot-links a{color:#2eaaaf;text-decoration:underline;font-weight:500}
+</style>
 </head>
     
 <body>
@@ -252,7 +277,7 @@ body {
     <nav class="nav">
         <a href="index.html">Главная</a>
         <a href="napravleniya.html" class="active">Направления</a>
-        <a href="images/Catalog.pdf" target="_blank">Каталог</a>
+        <a href="https://shop.ros-style.ru/">Магазин</a>
         <a href="projects.html">Проекты</a>
         <!-- Позволяет Новофону сработать и мягко уйти на контакты главной страницы -->
         <a href="index.html#contacts" class="cta-button" onclick="if(typeof(zd_widget_show) !== 'undefined') { zd_widget_show(); }">Связаться с нами</a>
@@ -284,10 +309,10 @@ body {
         <div class="direction-container">
             <div class="direction-text">
                 <h2>Инфраструктурный консалтинг и предпроектный аудит</h2>
-                <p>Мы берем на себя самую сложную интеллектуальную и юридическую часть проекта. Эксперты ГК «Росстайл» разрабатывают концепции, которые без замечаний проходят государственные проверки, защищают выделенный бюджет и экономят ваше время.</p>
+                <p>Мы берем на себя самую сложную интеллектуальную и юридическую часть проекта. Эксперты ГК «Росстайл» разрабатывают концепции, которые учитывают требования проверяющих органов, укладываются в выделенный бюджет и экономят ваше время.</p>
                 
                 <ul class="direction-list">
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Составление ТЗ «без ошибок»:</strong> Разработка грамотных технических заданий и спецификаций в строгом соответствии с 44-ФЗ и 223-ФЗ, исключающая риск отклонения заявок.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Техническое задание и спецификация:</strong> Готовим документы для закупки по 44-ФЗ и 223-ФЗ. Замечания заказчика или экспертизы к нашей спецификации исправляем бесплатно в течение 5 рабочих дней, если задача не менялась.</li>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Эргономичное 3D-зонирование:</strong> Проектирование функциональных учебных и административных зон с учётом СанПиН, норм пожарной безопасности и принципов безбарьерной среды.</li>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Аудит и модернизация фондов:</strong> Анализ текущего оснащения учреждения, выявление дефицитов и подготовка точного плана доукомплектования.</li>
                 </ul>
@@ -306,7 +331,7 @@ body {
                 <p>Полный цикл материально-технического обеспечения учебного процесса. Мы поставляем и монтируем сертифицированные комплексы, которые превращают сухую теорию в наглядные практические исследования в строгом соответствии с приказами Минпросвещения РФ.</p>
                 
                 <ul class="direction-list">
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>100% соответствие ФГОС и Приказу № 838:</strong> Поставка учебного и лабораторного оборудования, включенного в государственные перечни и сертифицированного для работы с детьми.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>По ФГОС и приказам № 838 и № 1057:</strong> Поставка учебного и лабораторного оборудования, включенного в государственные перечни и сертифицированного для работы с детьми.</li>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Лабораторные комплексы под ключ:</strong> Готовые решения для кабинетов физики, химии, биологии и географии (включая цифровые датчики, микроскопы и реактивы).</li>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Ликвидация «мертвого оборудования»:</strong> Не просто привозим коробки, а производим профессиональную сборку, пусконаладку и обучаем педагогов работе с приборами.</li>
                 </ul>
@@ -322,11 +347,11 @@ body {
         <div class="direction-container">
             <div class="direction-text">
                 <h2>Инновации и дополнительное STEM-образование</h2>
-                <p>Создание ультрасовременных научно-технических площадок для развития инженерного мышления, биотехнологий и творческого потенциала детей. Поставляем решения, формирующие компетенции будущего.</p>
+                <p>Создание научно-технических площадок для развития инженерного мышления, биотехнологий и творческого потенциала детей. Поставляем решения, формирующие компетенции будущего.</p>
                 
                 <ul class="direction-list">
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Интеграция федеральных программ:</strong> Комплексное оснащение центров «Точка роста», технопарков «Кванториум», «ИТ-кубы» и детских домов творчества.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> <strong>Сверхсовременные учебные комплексы:</strong> Поставка образовательной робототехники, VR/AR-систем, полигонов пилотирования БПЛА, ЧПУ-станков и автоматических гидропонных теплиц.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <strong>Учебные комплексы:</strong> Поставка образовательной робототехники, VR/AR-систем, полигонов пилотирования БПЛА, ЧПУ-станков и автоматических гидропонных теплиц.</li>
                     <li><i class="fa-solid fa-circle-check"></i> <strong>Индивидуальные STEM-лаборатории:</strong> Проектирование междисциплинарных пространств под специфику вашего региона, вуза или лицея.</li>
                 </ul>
             </div>
@@ -341,7 +366,7 @@ body {
         <div style="max-width: 800px; margin: 0 auto;">
             <h3 style="font-size: 32px; color: var(--primary); font-weight: 900; margin-top: 0; margin-bottom: 20px; letter-spacing: -0.5px;">Готовы модернизировать образовательное пространство?</h3>
             <p style="font-size: 17px; color: var(--text-muted); line-height: 1.7; margin-bottom: 35px;">
-                Свяжитесь со специалистами ГК «Росстайл». Мы оперативно разработаем концепцию проекта, подготовим точную спецификацию под ваш бюджет и поможем пройти все этапы закупки без стресса.
+                Свяжитесь со специалистами ГК «Росстайл». Мы оперативно разработаем концепцию проекта, подготовим точную спецификацию под ваш бюджет и сопроводим все этапы закупки.
             </p>
             <a href="index.html#contacts" class="cta-button" style="text-decoration: none; display: inline-block; padding: 14px 40px; font-size: 16px;" onclick="if(typeof(zd_widget_show) !== 'undefined') { zd_widget_show(); }">Обсудить проект</a>
         </div>
@@ -356,33 +381,24 @@ body {
             </p>
 
             <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 10px;">
-                <a href="privacy.html" style="color: #2eaaaf; text-decoration: underline; font-weight: 500;">Политика конфиденциальности</a>
+                <span class="foot-links" style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center"><a href="https://shop.ros-style.ru/">Интернет-магазин</a><a href="images/Catalog.pdf" target="_blank">Скачать каталог (PDF, 19 МБ)</a><a href="privacy.html">Политика обработки персональных данных</a></span>
             </div>
 
             <p style="margin: 10px 0 0 0; color: #b4afdb;">
-                © 2026 ГК «Росстайл». Все права защищены. Комплексное оснащение образовательных учреждений по всей России.
+                © 2026 «Росстайл». Комплексное оснащение образовательных учреждений по всей России.</p>
+            <p class="foot-req">ИП Винюкова Елена Владимировна · ИНН 541001116591 · г. Екатеринбург, ул. Машинная, 31Б · <a href="mailto:info@ros-style.ru" style="color:#2eaaaf">info@ros-style.ru</a>
             </p>
         </div>
     </footer>
 
-    <!-- Баннер согласия на Cookie (Требование ФЗ-152) -->
-    <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 500px; background: #ffffff; padding: 20px 25px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border: 1px solid #eaeaea; z-index: 99999; text-align: left;">
-        <p style="margin: 0 0 12px 0; font-size: 13px; color: #3e3971; line-height: 1.5;">
-            Мы используем файлы cookie для обеспечения работы сайта и анализа трафика. Продолжая использовать сайт, вы соглашаетесь с нашей <a href="privacy.html" style="color: #2eaaaf; text-decoration: underline;">Политикой конфиденциальности</a>.
-        </p>
-        <button onclick="acceptCookies()" style="background: #2eaaaf; color: #ffffff; border: none; padding: 8px 22px; border-radius: 30px; font-weight: 700; font-size: 13px; cursor: pointer; transition: background 0.3s ease;">Понятно</button>
-    </div>
-
+    <!-- Баннер cookie -->
+    <div id="cookie-banner"><div class="cb-in">
+        <p>Сайт использует cookie, необходимые для его работы, сервис обратного звонка и Яндекс Метрику. Подробнее — в <a href="privacy.html">Политике обработки персональных данных</a>.</p>
+        <button type="button" onclick="acceptCookies()">Принять</button>
+    </div></div>
     <script>
-        function acceptCookies() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            document.getElementById('cookie-banner').style.display = 'none';
-        }
-        window.addEventListener('DOMContentLoaded', function() {
-            if (!localStorage.getItem('cookiesAccepted')) {
-                document.getElementById('cookie-banner').style.display = 'block';
-            }
-        });
+        function acceptCookies(){try{localStorage.setItem('cookiesAccepted','true')}catch(e){}document.getElementById('cookie-banner').style.display='none';}
+        window.addEventListener('DOMContentLoaded',function(){var ok=false;try{ok=localStorage.getItem('cookiesAccepted')}catch(e){}if(!ok)document.getElementById('cookie-banner').style.display='block';});
     </script>
 
 </body>

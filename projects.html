@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta name="description" content="Выполненные проекты ГК «Росстайл»: лицей «Технополис», ЦО «Восход», ЦО «Верх-Тулинский», гимназия «Краснообская», технопарк НГПУ и другие объекты.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Выполненные проекты — ГК Росстайл</title>
@@ -263,6 +264,30 @@ body {
     <script type="text/javascript" async src="https://widget.novofon.ru/novofon.js?k=_wEGEkxLg9iY9iNmrXIpwdTAM0bGUv4C"></script>
     <!-- Novofon -->
     
+
+<style>
+/* правки 10.2026: телефон, баннер cookie, кнопки */
+html{overflow-x:clip}
+@media (max-width:650px){
+  .header{flex-direction:column;gap:12px;padding:14px 16px}
+  .nav{flex-wrap:wrap;justify-content:center;gap:10px 18px;width:100%}
+  .nav a{font-size:15px}
+  .nav .cta-button{width:100%;text-align:center;box-sizing:border-box}
+}
+#cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#fff;border-top:1px solid #e5e5ea;box-shadow:0 -6px 24px rgba(0,0,0,.08);padding:10px 16px;display:none}
+#cookie-banner .cb-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:14px;justify-content:space-between}
+#cookie-banner p{margin:0;font-size:13px;line-height:1.45;color:#3e3971}
+#cookie-banner a{color:#2eaaaf;text-decoration:underline}
+#cookie-banner button{flex:none;background:#2eaaaf;color:#fff;border:0;padding:8px 22px;border-radius:30px;font-weight:700;font-size:13px;cursor:pointer}
+@media (max-width:650px){#cookie-banner .cb-in{flex-direction:column;align-items:stretch;gap:8px}#cookie-banner p{font-size:12px}}
+.btn-outline{display:inline-block;padding:13px 30px;border:2px solid #3d3773;color:#3d3773;border-radius:30px;font-weight:700;font-size:16px;text-decoration:none;background:#fff}
+.btn-outline:hover{border-color:#2eaaaf;color:#2eaaaf}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-note{margin-top:16px;font-size:15px;color:#4a5568}
+.hero-note a{color:#2eaaaf;font-weight:700}
+.foot-req{margin:0;color:#b4afdb;line-height:1.6}
+.foot-links a{color:#2eaaaf;text-decoration:underline;font-weight:500}
+</style>
 </head>
     
 <body>
@@ -274,7 +299,7 @@ body {
     <nav class="nav">
         <a href="index.html">Главная</a>
         <a href="napravleniya.html">Направления</a>
-        <a href="images/Catalog.pdf" target="_blank">Каталог</a>
+        <a href="https://shop.ros-style.ru/">Магазин</a>
         <a href="projects.html" class="active">Проекты</a>
         <!-- Переходит на главную страницу к контактам и мягко пытается активировать виджет по дороге -->
         <a href="index.html#contacts" class="cta-button" onclick="if(typeof(zd_widget_show) !== 'undefined') { zd_widget_show(); }">Связаться с нами</a>
@@ -285,7 +310,7 @@ body {
         <div style="max-width: 1200px; margin: 0 auto; text-align: left;">
             <h1>Выполненные проекты</h1>
             <p style="color: var(--text-muted); font-size: 18px; margin: 10px 0 0 0; max-width: 700px;">
-                Реализованные технологические и инфраструктурные решения для учреждений нового поколения по всей России.
+                Школы, вузы, спортивные объекты и центры дополнительного образования, которые мы оснастили. Хотите похожий результат — <a href="index.html#contacts" style="color:#2eaaaf;font-weight:700">запросите расчёт</a>.
             </p>
         </div>
     </section>
@@ -570,33 +595,24 @@ body {
             </p>
 
             <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 10px;">
-                <a href="privacy.html" style="color: #2eaaaf; text-decoration: underline; font-weight: 500;">Политика конфиденциальности</a>
+                <span class="foot-links" style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center"><a href="https://shop.ros-style.ru/">Интернет-магазин</a><a href="images/Catalog.pdf" target="_blank">Скачать каталог (PDF, 19 МБ)</a><a href="privacy.html">Политика обработки персональных данных</a></span>
             </div>
 
             <p style="margin: 10px 0 0 0; color: #b4afdb;">
-                © 2026 ГК «Росстайл». Все права защищены. Комплексное оснащение образовательных учреждений по всей России.
+                © 2026 «Росстайл». Комплексное оснащение образовательных учреждений по всей России.</p>
+            <p class="foot-req">ИП Винюкова Елена Владимировна · ИНН 541001116591 · г. Екатеринбург, ул. Машинная, 31Б · <a href="mailto:info@ros-style.ru" style="color:#2eaaaf">info@ros-style.ru</a>
             </p>
         </div>
     </footer>
 
-    <!-- Баннер согласия на Cookie (Требование ФЗ-152) -->
-    <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 500px; background: #ffffff; padding: 20px 25px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border: 1px solid #eaeaea; z-index: 99999; text-align: left;">
-        <p style="margin: 0 0 12px 0; font-size: 13px; color: #3e3971; line-height: 1.5;">
-            Мы используем файлы cookie для обеспечения работы сайта и анализа трафика. Продолжая использовать сайт, вы соглашаетесь с нашей <a href="privacy.html" style="color: #2eaaaf; text-decoration: underline;">Политикой конфиденциальности</a>.
-        </p>
-        <button onclick="acceptCookies()" style="background: #2eaaaf; color: #ffffff; border: none; padding: 8px 22px; border-radius: 30px; font-weight: 700; font-size: 13px; cursor: pointer; transition: background 0.3s ease;">Понятно</button>
-    </div>
-
+    <!-- Баннер cookie -->
+    <div id="cookie-banner"><div class="cb-in">
+        <p>Сайт использует cookie, необходимые для его работы, сервис обратного звонка и Яндекс Метрику. Подробнее — в <a href="privacy.html">Политике обработки персональных данных</a>.</p>
+        <button type="button" onclick="acceptCookies()">Принять</button>
+    </div></div>
     <script>
-        function acceptCookies() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            document.getElementById('cookie-banner').style.display = 'none';
-        }
-        window.addEventListener('DOMContentLoaded', function() {
-            if (!localStorage.getItem('cookiesAccepted')) {
-                document.getElementById('cookie-banner').style.display = 'block';
-            }
-        });
+        function acceptCookies(){try{localStorage.setItem('cookiesAccepted','true')}catch(e){}document.getElementById('cookie-banner').style.display='none';}
+        window.addEventListener('DOMContentLoaded',function(){var ok=false;try{ok=localStorage.getItem('cookiesAccepted')}catch(e){}if(!ok)document.getElementById('cookie-banner').style.display='block';});
     </script>
 
     <!-- ЛОГИКА СЛАЙДЕРА И ФИЛЬТРАЦИИ -->
