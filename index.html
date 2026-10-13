@@ -499,6 +499,40 @@ html{overflow-x:clip}
 .hero-note a{color:#2eaaaf;font-weight:700}
 .foot-req{margin:0;color:#b4afdb;line-height:1.6}
 .foot-links a{color:#2eaaaf;text-decoration:underline;font-weight:500}
+
+#lead{scroll-margin-top:110px}
+.lead-section{padding:90px 5%;background:linear-gradient(180deg,#f4f3fb 0%,#fff 100%)}
+.lead-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:start}
+.lead-intro h2{font-size:40px;color:#3d3773;margin:0 0 18px;font-weight:900;letter-spacing:-1px;line-height:1.15}
+.lead-intro p{font-size:17px;color:#4a5568;line-height:1.65}
+.lead-intro ul{list-style:none;padding:0;margin:22px 0}
+.lead-intro li{position:relative;padding:0 0 14px 30px;color:#4a5568;line-height:1.6}
+.lead-intro li:before{content:'';position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;background:#2eaaaf}
+.lead-intro b{color:#3d3773}
+.lead-alt a{color:#2eaaaf;font-weight:700}
+.lead-form{background:#fff;border-radius:22px;box-shadow:0 18px 50px rgba(61,55,115,.12);padding:30px;display:flex;flex-direction:column;gap:14px}
+.lead-kind{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.lead-kind legend{font-weight:700;color:#3d3773;margin-bottom:8px;font-size:14px}
+.lead-kind label{display:inline-flex;align-items:center;gap:6px;border:1.5px solid #dcd9ef;border-radius:30px;padding:7px 14px;font-size:14px;color:#3d3773;cursor:pointer}
+.lead-kind label:has(input:checked){border-color:#2eaaaf;background:#eaf7f7}
+.lead-kind input{accent-color:#2eaaaf;margin:0}
+.lf{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;color:#3d3773}
+.lf>span{font-weight:400;color:#8a90a0;margin-top:-4px}
+.lf input,.lf textarea{font:inherit;font-weight:400;font-size:16px;color:#2d2a4a;border:1.5px solid #dcd9ef;border-radius:12px;padding:11px 13px;background:#fbfbfe}
+.lf input:focus,.lf textarea:focus{outline:none;border-color:#2eaaaf;background:#fff}
+.lf input[type=file]{padding:9px;font-size:14px}
+.lf-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.lf-check{font-size:13px;color:#4a5568;display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+.lf-check input{margin-top:3px;accent-color:#2eaaaf}
+.lf-check a{color:#2eaaaf}
+.lead-btn{border:0;cursor:pointer;font-size:16px;padding:15px 30px;align-self:flex-start}
+.lead-btn:disabled{opacity:.6;cursor:wait}
+.lead-msg{font-size:15px;line-height:1.5}
+.lead-msg.ok{color:#1d7f6e;font-weight:700;background:#e8f6f1;border-radius:10px;padding:12px 14px}
+.lead-msg.err{color:#b23b3b;background:#fbecec;border-radius:10px;padding:12px 14px}
+@media (max-width:900px){.lead-wrap{grid-template-columns:1fr;gap:30px}.lead-intro h2{font-size:30px}.lead-section{padding:60px 16px}}
+@media (max-width:480px){.lead-form{padding:20px 16px}.lf-row{grid-template-columns:1fr}.lead-btn{width:100%;align-self:stretch}}
 </style>
 </head>
 <body>
@@ -531,10 +565,10 @@ html{overflow-x:clip}
             </div>
 
             <div class="hero-actions">
-                <a href="#contacts" class="cta-button" style="font-size: 16px; padding: 14px 32px; text-decoration: none; display: inline-block;">Бесплатно подобрать оснащение кабинета</a>
+                <a href="#lead" class="cta-button" style="font-size: 16px; padding: 14px 32px; text-decoration: none; display: inline-block;">Бесплатно подобрать оснащение кабинета</a>
                 <a href="projects.html" class="btn-outline">Посмотреть проекты</a>
             </div>
-            <p class="hero-note">Уже есть список оборудования? Пришлите на <a href="mailto:info@ros-style.ru">info@ros-style.ru</a> — проверим комплектность и рассчитаем. Отдельные товары — в <a href="https://shop.ros-style.ru/">интернет-магазине</a>.</p>
+            <p class="hero-note">Уже есть список оборудования? <a href="#lead">Пришлите его</a> — проверим комплектность и рассчитаем. Отдельные товары — в <a href="https://shop.ros-style.ru/">интернет-магазине</a>.</p>
         </div>
     </section>
 
@@ -634,6 +668,66 @@ html{overflow-x:clip}
         </div>
     </section>
     
+    <!-- Заявка -->
+    <section class="lead-section" id="lead">
+        <div class="lead-wrap">
+            <div class="lead-intro">
+                <h2>Получить расчёт оснащения</h2>
+                <p>Опишите задачу или приложите список оборудования. В течение рабочего дня свяжемся, предварительный расчёт подготовим до 3 рабочих дней.</p>
+                <ul>
+                    <li><b>Бесплатно:</b> подбор оснащения одного кабинета (до 10 позиций) — список оборудования и ориентир стоимости в КП.</li>
+                    <li><b>Есть спецификация?</b> Проверим комплектность и соответствие приказам № 838 и № 1057, рассчитаем стоимость.</li>
+                    <li><b>Монтаж и обучение</b> педагогов входят в комплекты.</li>
+                </ul>
+                <p class="lead-alt">Удобнее написать? <a href="mailto:info@ros-style.ru">info@ros-style.ru</a> · <a href="https://t.me/lenvin7" target="_blank" rel="noopener">Telegram @lenvin7</a></p>
+            </div>
+            <form class="lead-form" id="leadForm" action="https://shop.ros-style.ru/lead.php" method="post" enctype="multipart/form-data">
+                <fieldset class="lead-kind">
+                    <legend>Что нужно</legend>
+                    <label><input type="radio" name="kind" value="Подбор оснащения кабинета" checked> Оснастить кабинет</label>
+                    <label><input type="radio" name="kind" value="Проверка и расчёт спецификации"> Проверить спецификацию</label>
+                    <label><input type="radio" name="kind" value="Оснащение учреждения"> Оснастить учреждение</label>
+                    <label><input type="radio" name="kind" value="Другое"> Другое</label>
+                </fieldset>
+                <label class="lf">Учреждение *<input name="org" required maxlength="300" placeholder="Например: МБОУ СОШ № 5, г. Бердск" autocomplete="organization"></label>
+                <label class="lf">Задача *<textarea name="task" required maxlength="4000" rows="4" placeholder="Например: кабинет химии по приказу № 838, 26 мест, нужен демонстрационный стол и вытяжной шкаф"></textarea></label>
+                <label class="lf">Телефон, почта или Telegram *<input name="contact" required maxlength="200" placeholder="+7 900 000-00-00" autocomplete="tel"></label>
+                <div class="lf-row">
+                    <label class="lf">Бюджет <span>по желанию</span><input name="budget" maxlength="100" placeholder="до 1,5 млн ₽"></label>
+                    <label class="lf">Срок <span>по желанию</span><input name="deadline" maxlength="100" placeholder="к 1 сентября"></label>
+                </div>
+                <label class="lf">Список оборудования или ТЗ <span>по желанию, до 15 МБ</span><input type="file" name="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.txt,.rtf,.odt,.ods,.jpg,.jpeg,.png,.zip"></label>
+                <label class="lf-hp" aria-hidden="true">Сайт<input name="website" tabindex="-1" autocomplete="off"></label>
+                <input type="hidden" name="ts" value=""><input type="hidden" name="source" value=""><input type="hidden" name="back" value="https://ros-style.ru/">
+                <label class="lf-check"><input type="checkbox" name="consent" value="1" required><span>Согласен(на) на обработку персональных данных по <a href="privacy.html" target="_blank">Политике</a></span></label>
+                <button type="submit" class="cta-button lead-btn">Отправить заявку</button>
+                <div class="lead-msg" role="status" aria-live="polite"></div>
+            </form>
+        </div>
+    </section>
+    <script>
+    (function(){
+      var f=document.getElementById('leadForm'); if(!f) return;
+      var msg=f.querySelector('.lead-msg'), btn=f.querySelector('.lead-btn');
+      f.ts.value=Date.now(); f.source.value=location.href; f.back.value=location.href.split('#')[0].split('?')[0];
+      var q=new URLSearchParams(location.search);
+      if(q.get('sent')){msg.className='lead-msg ok';msg.textContent='Спасибо! Заявка отправлена. Свяжемся с вами в течение рабочего дня.';}
+      if(q.get('err')){msg.className='lead-msg err';msg.textContent=q.get('err');}
+      f.addEventListener('submit',function(e){
+        if(!window.fetch||!window.FormData) return;
+        e.preventDefault(); btn.disabled=true; btn.textContent='Отправляем…'; msg.className='lead-msg'; msg.textContent='';
+        fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+          .then(function(r){return r.json();})
+          .then(function(d){
+            msg.className='lead-msg '+(d.ok?'ok':'err'); msg.textContent=d.message;
+            if(d.ok){f.reset(); f.ts.value=Date.now()-5000; try{if(window.ym&&window.YM_ID)ym(window.YM_ID,'reachGoal','lead');}catch(x){}}
+          })
+          .catch(function(){msg.className='lead-msg err';msg.innerHTML='Не удалось отправить. Напишите на <a href="mailto:info@ros-style.ru">info@ros-style.ru</a> или в Telegram <a href="https://t.me/lenvin7">@lenvin7</a>.';})
+          .then(function(){btn.disabled=false; btn.textContent='Отправить заявку';});
+      });
+    })();
+    </script>
+
     <!-- 6. Контакты -->
     <section class="contacts-section" id="contacts">
         <div class="contacts-container">
