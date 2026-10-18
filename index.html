@@ -533,7 +533,37 @@ html{overflow-x:clip}
 .lead-msg.err{color:#b23b3b;background:#fbecec;border-radius:10px;padding:12px 14px}
 @media (max-width:900px){.lead-wrap{grid-template-columns:1fr;gap:30px}.lead-intro h2{font-size:30px}.lead-section{padding:60px 16px}}
 @media (max-width:480px){.lead-form{padding:20px 16px}.lf-row{grid-template-columns:1fr}.lead-btn{width:100%;align-self:stretch}}
+
+.tasks-section{padding:70px 5% 30px;max-width:1200px;margin:0 auto}
+.tasks-section h2,.get-section h2{font-size:36px;color:#3d3773;font-weight:900;margin:0 0 24px;letter-spacing:-.5px}
+.tasks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.task-card{display:flex;flex-direction:column;gap:10px;background:#fff;border:1.5px solid #e4e2f2;border-radius:18px;padding:22px;text-decoration:none;color:#4a5568;transition:border-color .2s,transform .2s}
+.task-card:hover{border-color:#2eaaaf;transform:translateY(-2px)}
+.task-num{font-weight:900;color:#2eaaaf;font-size:14px;letter-spacing:.1em}
+.task-card b{color:#3d3773;font-size:19px}
+.task-card span:not(.task-num){font-size:15px;line-height:1.55}
+.task-card em{margin-top:auto;font-style:normal;font-weight:700;color:#2eaaaf}
+.get-section{padding:70px 5%;background:#f7f6fc}
+.get-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.get-list{list-style:none;padding:0;margin:0}
+.get-list li{position:relative;padding:0 0 16px 32px;color:#4a5568;line-height:1.6;font-size:16px}
+.get-list li:before{content:'✓';position:absolute;left:0;top:0;color:#2eaaaf;font-weight:900}
+.get-list b{color:#3d3773}
+.terms-card{background:#fff;border-radius:20px;box-shadow:0 14px 40px rgba(61,55,115,.1);padding:26px}
+.terms-card h3{margin:0 0 12px;color:#3d3773;font-size:22px}
+.terms-card dl{margin:0}
+.terms-card dl div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #eeedf6}
+.terms-card dt{color:#4a5568}
+.terms-card dd{margin:0;font-weight:700;color:#3d3773;text-align:right}
+@media (max-width:1000px){.tasks-grid{grid-template-columns:1fr 1fr}.get-wrap{grid-template-columns:1fr}}
+@media (max-width:560px){.tasks-grid{grid-template-columns:1fr}.tasks-section h2,.get-section h2{font-size:28px}.terms-card dl div{flex-direction:column;gap:2px}.terms-card dd{text-align:left}}
+#cookie-banner{padding-right:84px}
+@media (max-width:650px){#cookie-banner{padding-right:76px}}
 </style>
+<!-- Yandex.Metrika counter -->
+<script>window.YM_ID=113665335;(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(113665335,'init',{webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113665335" style="position:absolute;left:-9999px" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 
@@ -569,6 +599,17 @@ html{overflow-x:clip}
                 <a href="projects.html" class="btn-outline">Посмотреть проекты</a>
             </div>
             <p class="hero-note">Уже есть список оборудования? <a href="#lead">Пришлите его</a> — проверим комплектность и рассчитаем. Отдельные товары — в <a href="https://shop.ros-style.ru/">интернет-магазине</a>.</p>
+        </div>
+    </section>
+
+    <!-- Выбор задачи -->
+    <section class="tasks-section" aria-label="Выберите задачу">
+        <h2>С чего начнём?</h2>
+        <div class="tasks-grid">
+            <a class="task-card" href="https://shop.ros-style.ru/"><span class="task-num">01</span><b>Нужен отдельный товар</b><span>Каталог из 8 500+ позиций под приказы № 838 и № 1057. КП и спецификация — сразу из корзины.</span><em>Открыть магазин →</em></a>
+            <a class="task-card" href="#lead" data-kind="Подбор оснащения кабинета"><span class="task-num">02</span><b>Оснащаем кабинет</b><span>Подберём оборудование одного кабинета бесплатно (до 10 позиций): список и ориентир стоимости в КП.</span><em>Получить подбор →</em></a>
+            <a class="task-card" href="#lead" data-kind="Оснащение учреждения"><span class="task-num">03</span><b>Комплектуем учреждение</b><span>Проектирование, спецификации для закупки, поставка, монтаж и обучение — на весь объект.</span><em>Обсудить объект →</em></a>
+            <a class="task-card" href="#lead" data-kind="Проверка и расчёт спецификации"><span class="task-num">04</span><b>Есть спецификация</b><span>Проверим комплектность и соответствие приказам, предложим варианты по бюджету.</span><em>Отправить на проверку →</em></a>
         </div>
     </section>
 
@@ -617,6 +658,32 @@ html{overflow-x:clip}
         </div>
     </section>
     
+    <!-- Что вы получите и условия -->
+    <section class="get-section" aria-label="Что вы получите">
+        <div class="get-wrap">
+            <div>
+                <h2>Что вы получите после заявки</h2>
+                <ul class="get-list">
+                    <li><b>Коммерческое предложение</b> с ценами, сроками поставки и реквизитами — подходит для обоснования НМЦК.</li>
+                    <li><b>Спецификацию в Excel</b> с привязкой позиций к перечню приказа № 838 или № 1057.</li>
+                    <li><b>Варианты по бюджету</b> — где можно сэкономить без потери функций и что обязательно по перечню.</li>
+                    <li><b>План работ</b>: поставка, монтаж, пусконаладка и обучение педагогов.</li>
+                </ul>
+            </div>
+            <div class="terms-card">
+                <h3>Наши условия</h3>
+                <dl>
+                    <div><dt>Ответ на заявку</dt><dd>в течение рабочего дня</dd></div>
+                    <div><dt>Предварительный расчёт</dt><dd>до 3 рабочих дней</dd></div>
+                    <div><dt>Подбор одного кабинета</dt><dd>бесплатно, до 10 позиций</dd></div>
+                    <div><dt>Замечания к нашей спецификации</dt><dd>исправляем бесплатно за 5 рабочих дней, если задача не менялась</dd></div>
+                    <div><dt>Монтаж и обучение</dt><dd>входят в комплекты, по всей России</dd></div>
+                </dl>
+                <a href="#lead" class="cta-button" style="display:inline-block;text-decoration:none;margin-top:8px">Получить расчёт</a>
+            </div>
+        </div>
+    </section>
+
     <!-- 4. Направления деятельности -->
     <section class="features-section">
         <h2>Направления деятельности:</h2>
@@ -709,6 +776,7 @@ html{overflow-x:clip}
     (function(){
       var f=document.getElementById('leadForm'); if(!f) return;
       var msg=f.querySelector('.lead-msg'), btn=f.querySelector('.lead-btn');
+      document.querySelectorAll('[data-kind]').forEach(function(a){a.addEventListener('click',function(){var r=f.querySelector('input[name=kind][value="'+a.dataset.kind+'"]');if(r)r.checked=true;});});
       f.ts.value=Date.now(); f.source.value=location.href; f.back.value=location.href.split('#')[0].split('?')[0];
       var q=new URLSearchParams(location.search);
       if(q.get('sent')){msg.className='lead-msg ok';msg.textContent='Спасибо! Заявка отправлена. Свяжемся с вами в течение рабочего дня.';}

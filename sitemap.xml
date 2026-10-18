@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ros-style.ru/index.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://ros-style.ru/</loc>
+    <lastmod>2026-10-18</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
+    <loc>https://ros-style.ru/projects.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://ros-style.ru/napravleniya.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://ros-style.ru/projects.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.80</priority>
+    <loc>https://ros-style.ru/privacy.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.30</priority>
   </url>
 </urlset>
