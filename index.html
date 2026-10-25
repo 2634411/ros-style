@@ -471,7 +471,23 @@ body {
     .steps-grid { grid-template-columns: 1fr; }
     .step-card { padding: 35px 25px; }
 }
-    </style>
+    
+/* Отзывы */
+.reviews-section{padding:80px 5%;background:#fff}
+.reviews-section h2{font-size:36px;color:#3d3773;font-weight:900;margin:0 0 10px;letter-spacing:-.5px}
+.rv-sub{color:#718390;margin:0 0 32px;font-size:16px;max-width:760px}
+.rv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1400px}
+.rv-card{margin:0;background:#f7f6fc;border-radius:16px;padding:24px 22px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;border-top:4px solid #2eaaaf}
+.rv-card:nth-child(even){border-top-color:#3d3773}
+.rv-card blockquote{margin:0;font-style:italic;color:#3e3971;font-size:15px;line-height:1.6}
+.rv-card blockquote::before{content:"«";color:#2eaaaf;font-weight:900;font-size:20px;line-height:1;margin-right:2px}
+.rv-card blockquote::after{content:"»";color:#2eaaaf;font-weight:900;font-size:20px;line-height:1;margin-left:2px}
+.rv-card figcaption b{display:block;color:#3d3773;font-size:16px}
+.rv-card figcaption span{display:block;color:#718390;font-size:13px;line-height:1.45;margin-top:4px}
+.rv-more{margin:28px 0 0}.rv-more a{color:#2eaaaf;font-weight:700;text-decoration:none}
+@media (max-width:1100px){.rv-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:650px){.reviews-section{padding:60px 16px}.reviews-section h2{font-size:28px}.rv-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;margin-right:-16px;padding-right:16px}.rv-card{flex:0 0 85%;scroll-snap-align:start}}
+</style>
 
 <!-- Novofon -->
     <script type="text/javascript" async src="https://widget.novofon.ru/novofon.js?k=_wEGEkxLg9iY9iNmrXIpwdTAM0bGUv4C"></script>
@@ -736,6 +752,48 @@ html{overflow-x:clip}
         </div>
     </section>
     
+
+    <!-- Отзывы -->
+    <section class="reviews-section" id="reviews" aria-label="Отзывы заказчиков">
+        <h2>Отзывы заказчиков</h2>
+        <p class="rv-sub">Благодарственные письма руководителей школ, детских садов и органов власти, с которыми мы работали.</p>
+        <div class="rv-grid">
+            <figure class="rv-card">
+                <blockquote>Администрация МБОУ Лицей «Технополис» выражает Вам искреннюю благодарность за плодотворное сотрудничество. Хотим подчеркнуть высокий уровень профессионализма Вашего коллектива и поблагодарить за оперативность и качество поставляемого оборудования. Желаем Вам дальнейших успехов в работе, экономической стабильности, надежных партнеров и достижений поставленных целей!</blockquote>
+                <figcaption><b>Бацулин К. Б.</b><span>Директор МБОУ Лицей «Технополис», р. п. Кольцово</span></figcaption>
+            </figure>
+            <figure class="rv-card">
+                <blockquote>Администрация МАОУ Центр образования «Восход» благодарит ГК «Росстайл» за плодотворное сотрудничество, своевременное выполнение обязательств, оперативность в решении нестандартных задач, профессионализм коллектива, нацеленность на результат, индивидуальный подход и комплексность предоставляемых решений. Желаем успехов и процветания!</blockquote>
+                <figcaption><b>Фролов Д. М.</b><span>Директор МАОУ Центр образования «Восход», п. Восход</span></figcaption>
+            </figure>
+            <figure class="rv-card">
+                <blockquote>Администрация МАОУ Гимназия «Краснообская» выражает благодарность и признательность за поддержку и активное сотрудничество по благоустройству и укреплению материально-технической базы образовательного учреждения. Желаем успехов и благополучия в Вашей дальнейшей профессиональной деятельности!</blockquote>
+                <figcaption><b>Пластун М. А.</b><span>Директор МАОУ Гимназия «Краснообская»</span></figcaption>
+            </figure>
+            <figure class="rv-card">
+                <blockquote>Примите слова искренней благодарности и глубокой признательности за содействие, участие в оснащении, оформлении и создании комфортных условий в МАОУ Центра образования «Верх-Тулинский». Желаем Вам крепкого здоровья, счастья, благополучия.</blockquote>
+                <figcaption><b>Уксусова Н. И.</b><span>Директор МАОУ Центр образования «Верх-Тулинский», п. Верх-Тула</span></figcaption>
+            </figure>
+            <figure class="rv-card">
+                <blockquote>Примите слова искренней благодарности за активную помощь и участие в оснащении и проектировании лабораторий, и помещений спортивного и общего назначения в Региональном Центре выявления и поддержки одаренных детей «Альтаир» желаем вам дальнейшего профессионального роста, успеха и благополучия.</blockquote>
+                <figcaption><b>Ледовский В. В.</b><span>Зам. директора ГАУ ДО НСО ОЦРТДиЮ</span></figcaption>
+            </figure>
+            <figure class="rv-card">
+                <blockquote>Администрация МБОУ «СОШ 2 города Оби Новосибирской области» выражает благодарность за огромный вклад в разработку и дальнейшую реализацию проектов детских технопарков и инженерных классов естественнонаучной направленности на базе образовательного учреждения. Желаем успехов в вашей профессиональной деятельности и интересных проектов!</blockquote>
+                <figcaption><b>Ващенко М. М.</b><span>Директор МБОУ СОШ № 2, г. Обь</span></figcaption>
+            </figure>
+            <figure class="rv-card">
+                <blockquote>Коллектив МБДОУ Детский сад №4 «Солнышко» выражает благодарность за плодотворное сотрудничество и активное участие в оснащении нового корпуса детского сада. Желаем Вам крепкого здоровья и творческих успехов!</blockquote>
+                <figcaption><b>Ранзебова Н. Ю.</b><span>Заведующий МБДОУ Детский сад № 4 «Солнышко», г. Обь</span></figcaption>
+            </figure>
+            <figure class="rv-card">
+                <blockquote>Примите искренние слова благодарности за вклад в развитие социально-значимых объектов города Оби Новосибирской области, строительство нового корпуса МБДОУ детский сад №4 «Солнышко». Уверен, что Ваша преданность делу и профессионализм будут в дальнейшем служить на благо города Оби.</blockquote>
+                <figcaption><b>Буковинин П. В.</b><span>Глава г. Обь, Новосибирская обл.</span></figcaption>
+            </figure>
+        </div>
+        <p class="rv-more"><a href="projects.html">Посмотреть выполненные проекты →</a></p>
+    </section>
+
     <!-- Заявка -->
     <section class="lead-section" id="lead">
         <div class="lead-wrap">
