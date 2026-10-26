@@ -487,6 +487,26 @@ body {
 .rv-more{margin:28px 0 0}.rv-more a{color:#2eaaaf;font-weight:700;text-decoration:none}
 @media (max-width:1100px){.rv-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:650px){.reviews-section{padding:60px 16px}.reviews-section h2{font-size:28px}.rv-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;margin-right:-16px;padding-right:16px}.rv-card{flex:0 0 85%;scroll-snap-align:start}}
+
+/* Проекты на главной */
+.cases-section{padding:80px 5%;background:#f7f6fc}
+.cases-section h2{font-size:36px;color:#3d3773;font-weight:900;margin:0 0 10px;letter-spacing:-.5px}
+.cs-sub{color:#718390;margin:0 0 32px;font-size:16px;max-width:760px}
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1400px}
+.cs-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(61,55,115,.06);display:flex;flex-direction:column}
+.cs-img{position:relative;aspect-ratio:16/10;background:#e9e7f3}
+.cs-img img{width:100%;height:100%;object-fit:cover;display:block}
+.cs-tag{position:absolute;left:14px;top:14px;background:#2eaaaf;color:#fff;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:5px 10px;border-radius:20px}
+.cs-body{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.cs-body h3{margin:0;color:#3d3773;font-size:20px;line-height:1.3}
+.cs-place{margin:6px 0 14px;color:#718390;font-size:14px}
+.cs-body ul{margin:0 0 18px;padding-left:18px;color:#3e3971;font-size:15px;line-height:1.55}
+.cs-body li{margin-bottom:4px}
+.cs-body blockquote{margin:auto 0 0;padding:14px 16px;background:#f7f6fc;border-left:3px solid #2eaaaf;border-radius:8px;font-style:italic;color:#3e3971;font-size:14px;line-height:1.55}
+.cs-body cite{display:block;margin-top:8px;font-style:normal;color:#718390;font-size:13px}
+.cs-more{margin:28px 0 0}.cs-more a{color:#2eaaaf;font-weight:700;text-decoration:none}
+@media (max-width:1000px){.cs-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:650px){.cases-section{padding:60px 16px}.cases-section h2{font-size:28px}.cs-grid{grid-template-columns:1fr}}
 </style>
 
 <!-- Novofon -->
@@ -752,6 +772,42 @@ html{overflow-x:clip}
         </div>
     </section>
     
+
+    <!-- Проекты -->
+    <section class="cases-section" id="cases" aria-label="Выполненные проекты">
+        <h2>Что мы уже оснастили</h2>
+        <p class="cs-sub">Три объекта из двенадцати на странице проектов — школа, центр дополнительного образования и детский сад.</p>
+        <div class="cs-grid">
+            <article class="cs-card">
+                <div class="cs-img"><img src="images/Projects/Technopolis/1exterior.jpg" alt="Инженерный лицей «Технополис»" loading="lazy"><span class="cs-tag">Школа</span></div>
+                <div class="cs-body">
+                    <h3>Инженерный лицей «Технополис»</h3>
+                    <p class="cs-place">наукоград Кольцово, 2021 г.</p>
+                    <ul><li>Аэро- и космоквантум: зоны пилотирования БПЛА, VR/AR, 3D-моделирование</li><li>Спортивный блок: три зала, зал самбо, бассейн</li><li>Медиацентр, фотостудия, конференц-зал, Hi-Tech цех</li></ul>
+                    <blockquote>«Хотим подчеркнуть высокий уровень профессионализма Вашего коллектива и поблагодарить за оперативность и качество поставляемого оборудования.»<cite>— К. Б. Бацулин, директор лицея</cite></blockquote>
+                </div>
+            </article>
+            <article class="cs-card">
+                <div class="cs-img"><img src="https://shop.ros-style.ru/media/projects/altair/altair-21.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО)" loading="lazy"><span class="cs-tag">Доп. образование</span></div>
+                <div class="cs-body">
+                    <h3>Региональный центр «Альтаир» («Сириус» НСО)</h3>
+                    <p class="cs-place">Новосибирская обл., 2020 г.</p>
+                    <ul><li>Сопровождение с этапа проектирования</li><li>Лаборатория прототипирования: 3D-принтеры, станки с ЧПУ, лазерный гравёр</li><li>VR/AR, беспилотники, актовый зал, спортинвентарь</li></ul>
+                    <blockquote>«…Примите слова искренней благодарности за активную помощь и участие в оснащении и проектировании лабораторий, и помещений спортивного и общего назначения…»<cite>— В. В. Ледовский, зам. директора ОЦРТДиЮ</cite></blockquote>
+                </div>
+            </article>
+            <article class="cs-card">
+                <div class="cs-img"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-01.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус" loading="lazy"><span class="cs-tag">Детский сад</span></div>
+                <div class="cs-body">
+                    <h3>Детский сад № 4 «Солнышко» — новый корпус</h3>
+                    <p class="cs-place">г. Обь, 2020 г.</p>
+                    <ul><li>Комплексное оснащение всего корпуса</li><li>Групповые и спальни, медицинский блок</li><li>Актовый и спортивный залы, студия рисования</li></ul>
+                    <blockquote>«Коллектив МБДОУ Детский сад №4 «Солнышко» выражает благодарность за плодотворное сотрудничество и активное участие в оснащении нового корпуса детского сада.»<cite>— Н. Ю. Ранзебова, заведующий</cite></blockquote>
+                </div>
+            </article>
+        </div>
+        <p class="cs-more"><a href="projects.html">Все 12 проектов с фотографиями →</a></p>
+    </section>
 
     <!-- Отзывы -->
     <section class="reviews-section" id="reviews" aria-label="Отзывы заказчиков">
