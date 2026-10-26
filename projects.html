@@ -182,6 +182,8 @@ body {
 .carousel-btn.prev { left: 15px; }
 .carousel-btn.next { right: 15px; }
 
+/* Счётчик фото */
+.carousel-count{position:absolute;bottom:12px;right:14px;z-index:10;background:rgba(30,26,60,.65);color:#fff;font-size:13px;font-weight:600;padding:4px 10px;border-radius:12px;letter-spacing:.3px}
 /* Точки внизу картинки */
 .carousel-dots {
     position: absolute;
@@ -342,28 +344,48 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
                 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="images/Projects/Technopolis/1exterior.jpg" alt="Лицей Технополис — Внешний вид"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Technopolis/2technologypark.jpg" alt="Технопарк"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Technopolis/3Hi-Tech.jpg" alt="Hi-Tech цех"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Technopolis/4biology.jpeg" alt="Лаборатория биологии"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Technopolis/5photostudio.jpg" alt="Фотостудия и медиацентр"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Technopolis/6recreation.jpg" alt="Зона рекреации"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Technopolis/7VR-AR.jpg" alt="Класс VR/AR технологий"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Technopolis/8conferencehall.jpg" alt="Конференц-зал"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Technopolis/9drones.jpg" alt="Зона пилотирования дронов и 3D-печати"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-01.jpg" alt="Лицей Технополис — Внешний вид"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-02.jpg" alt="Технопарк" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-03.jpg" alt="Hi-Tech цех" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-04.jpg" alt="Лаборатория биологии" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-05.jpg" alt="Фотостудия и медиацентр" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-06.jpg" alt="Зона рекреации" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-07.jpg" alt="Класс VR/AR технологий" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-08.jpg" alt="Конференц-зал" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-09.jpg" alt="Зона пилотирования дронов и 3D-печати" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-10.jpg" alt="Инженерный лицей «Технополис» — фото 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-11.jpg" alt="Инженерный лицей «Технополис» — фото 11" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-12.jpg" alt="Инженерный лицей «Технополис» — фото 12" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-13.jpg" alt="Инженерный лицей «Технополис» — фото 13" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-14.jpg" alt="Инженерный лицей «Технополис» — фото 14" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-15.jpg" alt="Инженерный лицей «Технополис» — фото 15" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-16.jpg" alt="Инженерный лицей «Технополис» — фото 16" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-17.jpg" alt="Инженерный лицей «Технополис» — фото 17" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-18.jpg" alt="Инженерный лицей «Технополис» — фото 18" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-19.jpg" alt="Инженерный лицей «Технополис» — фото 19" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-20.jpg" alt="Инженерный лицей «Технополис» — фото 20" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-21.jpg" alt="Инженерный лицей «Технополис» — фото 21" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-22.jpg" alt="Инженерный лицей «Технополис» — фото 22" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-23.jpg" alt="Инженерный лицей «Технополис» — фото 23" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-24.jpg" alt="Инженерный лицей «Технополис» — фото 24" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-25.jpg" alt="Инженерный лицей «Технополис» — фото 25" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-26.jpg" alt="Инженерный лицей «Технополис» — фото 26" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-27.jpg" alt="Инженерный лицей «Технополис» — фото 27" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-28.jpg" alt="Инженерный лицей «Технополис» — фото 28" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-29.jpg" alt="Инженерный лицей «Технополис» — фото 29" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-30.jpg" alt="Инженерный лицей «Технополис» — фото 30" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-31.jpg" alt="Инженерный лицей «Технополис» — фото 31" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-32.jpg" alt="Инженерный лицей «Технополис» — фото 32" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-33.jpg" alt="Инженерный лицей «Технополис» — фото 33" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-34.jpg" alt="Инженерный лицей «Технополис» — фото 34" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-35.jpg" alt="Инженерный лицей «Технополис» — фото 35" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-36.jpg" alt="Инженерный лицей «Технополис» — фото 36" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-37.jpg" alt="Инженерный лицей «Технополис» — фото 37" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-38.jpg" alt="Инженерный лицей «Технополис» — фото 38" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/technopolis/technopolis-39.jpg" alt="Инженерный лицей «Технополис» — фото 39" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 8)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 39</div>
             </div>
 
             <div class="project-content">
@@ -384,28 +406,59 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
                 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="images/Projects/Voshod/1roboticslab.jpg" alt="Лаборатория робототехники"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Voshod/2library.jpeg" alt="Библиотечный комплекс"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Voshod/3astronomy.jpg" alt="Класс астрономии"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Voshod/4assemblyhall.jpeg" alt="Актовый зал"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Voshod/5drones.jpg" alt="Зона тестирования беспилотников"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Voshod/6Slidinginteractivesystem.jpg" alt="Раздвижная интерактивная система"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Voshod/7gym.jpeg" alt="Спортивный зал"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Voshod/8HomeEconomics.jpg" alt="Кабинет домоводства и технологии"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Voshod/9Conferencehall.jpg" alt="Зал заседаний и конференций"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-01.jpg" alt="Лаборатория робототехники"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-02.jpg" alt="Библиотечный комплекс" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-03.jpg" alt="Класс астрономии" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-04.jpg" alt="Актовый зал" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-05.jpg" alt="Зона тестирования беспилотников" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-06.jpg" alt="Раздвижная интерактивная система" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-07.jpg" alt="Спортивный зал" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-08.jpg" alt="Кабинет домоводства и технологии" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-09.jpg" alt="Зал заседаний и конференций" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-10.jpg" alt="ЦО «Восход» — Школа полного дня — фото 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-11.jpg" alt="ЦО «Восход» — Школа полного дня — фото 11" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-12.jpg" alt="ЦО «Восход» — Школа полного дня — фото 12" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-13.jpg" alt="ЦО «Восход» — Школа полного дня — фото 13" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-14.jpg" alt="ЦО «Восход» — Школа полного дня — фото 14" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-15.jpg" alt="ЦО «Восход» — Школа полного дня — фото 15" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-16.jpg" alt="ЦО «Восход» — Школа полного дня — фото 16" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-17.jpg" alt="ЦО «Восход» — Школа полного дня — фото 17" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-18.jpg" alt="ЦО «Восход» — Школа полного дня — фото 18" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-19.jpg" alt="ЦО «Восход» — Школа полного дня — фото 19" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-20.jpg" alt="ЦО «Восход» — Школа полного дня — фото 20" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-21.jpg" alt="ЦО «Восход» — Школа полного дня — фото 21" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-22.jpg" alt="ЦО «Восход» — Школа полного дня — фото 22" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-23.jpg" alt="ЦО «Восход» — Школа полного дня — фото 23" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-24.jpg" alt="ЦО «Восход» — Школа полного дня — фото 24" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-25.jpg" alt="ЦО «Восход» — Школа полного дня — фото 25" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-26.jpg" alt="ЦО «Восход» — Школа полного дня — фото 26" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-27.jpg" alt="ЦО «Восход» — Школа полного дня — фото 27" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-28.jpg" alt="ЦО «Восход» — Школа полного дня — фото 28" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-29.jpg" alt="ЦО «Восход» — Школа полного дня — фото 29" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-30.jpg" alt="ЦО «Восход» — Школа полного дня — фото 30" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-31.jpg" alt="ЦО «Восход» — Школа полного дня — фото 31" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-32.jpg" alt="ЦО «Восход» — Школа полного дня — фото 32" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-33.jpg" alt="ЦО «Восход» — Школа полного дня — фото 33" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-34.jpg" alt="ЦО «Восход» — Школа полного дня — фото 34" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-35.jpg" alt="ЦО «Восход» — Школа полного дня — фото 35" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-36.jpg" alt="ЦО «Восход» — Школа полного дня — фото 36" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-37.jpg" alt="ЦО «Восход» — Школа полного дня — фото 37" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-38.jpg" alt="ЦО «Восход» — Школа полного дня — фото 38" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-39.jpg" alt="ЦО «Восход» — Школа полного дня — фото 39" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-40.jpg" alt="ЦО «Восход» — Школа полного дня — фото 40" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-41.jpg" alt="ЦО «Восход» — Школа полного дня — фото 41" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-42.jpg" alt="ЦО «Восход» — Школа полного дня — фото 42" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-43.jpg" alt="ЦО «Восход» — Школа полного дня — фото 43" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-44.jpg" alt="ЦО «Восход» — Школа полного дня — фото 44" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-45.jpg" alt="ЦО «Восход» — Школа полного дня — фото 45" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-46.jpg" alt="ЦО «Восход» — Школа полного дня — фото 46" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-47.jpg" alt="ЦО «Восход» — Школа полного дня — фото 47" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-48.jpg" alt="ЦО «Восход» — Школа полного дня — фото 48" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-49.jpg" alt="ЦО «Восход» — Школа полного дня — фото 49" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/voshod/voshod-50.jpg" alt="ЦО «Восход» — Школа полного дня — фото 50" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 8)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 50</div>
             </div>
 
             <div class="project-content">
@@ -426,28 +479,28 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
                 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="images/Projects/VerhTula/1Robotics.jpg" alt="Лаборатория робототехники"></div>
-                    <div class="carousel-slide"><img src="images/Projects/VerhTula/2library.png" alt="Медиатека и читальный зал"></div>
-                    <div class="carousel-slide"><img src="images/Projects/VerhTula/3library.jpg" alt="Зона открытого хранения фонда библиотеки"></div>
-                    <div class="carousel-slide"><img src="images/Projects/VerhTula/4HomeEconomics.jpg" alt="Кабинет швейного мастерства и домоводства"></div>
-                    <div class="carousel-slide"><img src="images/Projects/VerhTula/5ConferenceHall.jpg" alt="Современный конференц-зал"></div>
-                    <div class="carousel-slide"><img src="images/Projects/VerhTula/6Museum.jpg" alt="Интерактивная музейная зона школы"></div>
-                    <div class="carousel-slide"><img src="images/Projects/VerhTula/7Museum.png" alt="Экспозиционный школьный комплекс"></div>
-                    <div class="carousel-slide"><img src="images/Projects/VerhTula/8Diningroom.png" alt="Двухуровневый столовый комплекс"></div>
-                    <div class="carousel-slide"><img src="images/Projects/VerhTula/9Gym.jpg" alt="Многофункциональный спортивный зал"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-01.jpg" alt="Лаборатория робототехники"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-02.jpg" alt="Медиатека и читальный зал" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-03.jpg" alt="Зона открытого хранения фонда библиотеки" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-04.jpg" alt="Кабинет швейного мастерства и домоводства" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-05.jpg" alt="Современный конференц-зал" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-06.jpg" alt="Интерактивная музейная зона школы" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-07.jpg" alt="Экспозиционный школьный комплекс" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-08.jpg" alt="Двухуровневый столовый комплекс" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-09.jpg" alt="Многофункциональный спортивный зал" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-10.jpg" alt="ЦО «Верх-Тулинский» — фото 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-11.jpg" alt="ЦО «Верх-Тулинский» — фото 11" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-12.jpg" alt="ЦО «Верх-Тулинский» — фото 12" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-13.jpg" alt="ЦО «Верх-Тулинский» — фото 13" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-14.jpg" alt="ЦО «Верх-Тулинский» — фото 14" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-15.jpg" alt="ЦО «Верх-Тулинский» — фото 15" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-16.jpg" alt="ЦО «Верх-Тулинский» — фото 16" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-17.jpg" alt="ЦО «Верх-Тулинский» — фото 17" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-18.jpg" alt="ЦО «Верх-Тулинский» — фото 18" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/verhtula/verhtula-19.jpg" alt="ЦО «Верх-Тулинский» — фото 19" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 8)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 19</div>
             </div>
 
             <div class="project-content">
@@ -468,22 +521,28 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
                 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/1Classroom.jpg" alt="Универсальный учебный класс"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/2TechnologyClassroom.jpg" alt="Инженерно-технологические мастерские"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/3MediaCenter.jpg" alt="Информационно-библиотечный медиацентр"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/4MediaHolding.jpg" alt="Школьный медиахолдинг и студия звукозаписи"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/5Recreation.jpg" alt="Зона активной и коворкинг-рекреации"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Krasnoobsk/6Gym.jpeg" alt="Спортивный тренировочный комплекс"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-01.jpg" alt="Универсальный учебный класс"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-02.jpg" alt="Инженерно-технологические мастерские" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-03.jpg" alt="Информационно-библиотечный медиацентр" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-04.jpg" alt="Школьный медиахолдинг и студия звукозаписи" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-05.jpg" alt="Зона активной и коворкинг-рекреации" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-06.jpg" alt="Спортивный тренировочный комплекс" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-07.jpg" alt="Гимназия «Краснообская» — фото 7" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-08.jpg" alt="Гимназия «Краснообская» — фото 8" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-09.jpg" alt="Гимназия «Краснообская» — фото 9" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-10.jpg" alt="Гимназия «Краснообская» — фото 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-11.jpg" alt="Гимназия «Краснообская» — фото 11" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-12.jpg" alt="Гимназия «Краснообская» — фото 12" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-13.jpg" alt="Гимназия «Краснообская» — фото 13" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-14.jpg" alt="Гимназия «Краснообская» — фото 14" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-15.jpg" alt="Гимназия «Краснообская» — фото 15" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-16.jpg" alt="Гимназия «Краснообская» — фото 16" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-17.jpg" alt="Гимназия «Краснообская» — фото 17" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-18.jpg" alt="Гимназия «Краснообская» — фото 18" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/krasnoobsk/krasnoobsk-19.jpg" alt="Гимназия «Краснообская» — фото 19" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 19</div>
             </div>
 
             <div class="project-content">
@@ -504,22 +563,19 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
                 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="images/Projects/Kvantorium/1AnatomicalTable.jpg" alt="Интерактивный анатомический стол Пирогов"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Kvantorium/2Sensors.jpg" alt="Цифровые лаборатории и датчики"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Kvantorium/3Engineering.jpg" alt="Зона робототехники и инженерного творчества"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Kvantorium/4LaboratoryEquipment.jpg" alt="Высокотехнологичное лабораторное оборудование"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Kvantorium/5ProjectWork.jpg" alt="Пространство для проектной и командной работы"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Kvantorium/6DigitalMicroscopes.jpg" alt="Комплекс современных цифровых микроскопов"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/kvantorium/kvantorium-01.jpg" alt="Интерактивный анатомический стол Пирогов"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/kvantorium/kvantorium-02.jpg" alt="Цифровые лаборатории и датчики" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/kvantorium/kvantorium-03.jpg" alt="Зона робототехники и инженерного творчества" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/kvantorium/kvantorium-04.jpg" alt="Высокотехнологичное лабораторное оборудование" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/kvantorium/kvantorium-05.jpg" alt="Пространство для проектной и командной работы" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/kvantorium/kvantorium-06.jpg" alt="Комплекс современных цифровых микроскопов" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/kvantorium/kvantorium-07.jpg" alt="Педагогический технопарк «Кванториум» — фото 7" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/kvantorium/kvantorium-08.jpg" alt="Педагогический технопарк «Кванториум» — фото 8" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/kvantorium/kvantorium-09.jpg" alt="Педагогический технопарк «Кванториум» — фото 9" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/kvantorium/kvantorium-10.jpg" alt="Педагогический технопарк «Кванториум» — фото 10" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 10</div>
             </div>
 
             <div class="project-content">
@@ -540,16 +596,23 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
                 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="images/Projects/UFOK/1exterior.jpeg" alt="УФОК Кольцово — Внешний вид комплекса"></div>
-                    <div class="carousel-slide"><img src="images/Projects/UFOK/2gym.jpg" alt="Легкоатлетический манеж и беговые зоны"></div>
-                    <div class="carousel-slide"><img src="images/Projects/UFOK/3gym.jpg" alt="Многофункциональный спортивный зал"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-01.jpg" alt="УФОК Кольцово — Внешний вид комплекса"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-02.jpg" alt="Легкоатлетический манеж и беговые зоны" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-03.jpg" alt="Многофункциональный спортивный зал" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-04.jpg" alt="Легкоатлетический манеж УФОК — фото 4" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-05.jpg" alt="Легкоатлетический манеж УФОК — фото 5" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-06.jpg" alt="Легкоатлетический манеж УФОК — фото 6" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-07.jpg" alt="Легкоатлетический манеж УФОК — фото 7" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-08.jpg" alt="Легкоатлетический манеж УФОК — фото 8" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-09.jpg" alt="Легкоатлетический манеж УФОК — фото 9" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-10.jpg" alt="Легкоатлетический манеж УФОК — фото 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-11.jpg" alt="Легкоатлетический манеж УФОК — фото 11" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-12.jpg" alt="Легкоатлетический манеж УФОК — фото 12" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-13.jpg" alt="Легкоатлетический манеж УФОК — фото 13" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ufok/ufok-14.jpg" alt="Легкоатлетический манеж УФОК — фото 14" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 14</div>
             </div>
 
             <div class="project-content">
@@ -570,16 +633,22 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
                 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="images/Projects/Greenhouse/1GreenhouseExterior.jpg" alt="Агробиоинженерный парк Лицея №21"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Greenhouse/2GreenhouseEmpty.jpg" alt="Автономный вертикальный гидропонный модуль"></div>
-                    <div class="carousel-slide"><img src="images/Projects/Greenhouse/3GreenhousePlants.jpg" alt="Выращивание культур в гидропонной системе"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-01.jpg" alt="Агробиоинженерный парк Лицея №21"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-02.jpg" alt="Автономный вертикальный гидропонный модуль" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-03.jpg" alt="Выращивание культур в гидропонной системе" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-04.jpg" alt="Агробиоинженерный комплекс школы — фото 4" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-05.jpg" alt="Агробиоинженерный комплекс школы — фото 5" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-06.jpg" alt="Агробиоинженерный комплекс школы — фото 6" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-07.jpg" alt="Агробиоинженерный комплекс школы — фото 7" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-08.jpg" alt="Агробиоинженерный комплекс школы — фото 8" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-09.jpg" alt="Агробиоинженерный комплекс школы — фото 9" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-10.jpg" alt="Агробиоинженерный комплекс школы — фото 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-11.jpg" alt="Агробиоинженерный комплекс школы — фото 11" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-12.jpg" alt="Агробиоинженерный комплекс школы — фото 12" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/greenhouse/greenhouse-13.jpg" alt="Агробиоинженерный комплекс школы — фото 13" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 13</div>
             </div>
 
             <div class="project-content">
@@ -600,7 +669,7 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-21.jpg" alt="Компьютерный класс и VR-лаборатория" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-21.jpg" alt="Компьютерный класс и VR-лаборатория"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-12.jpg" alt="Лаборатория прототипирования: станки с ЧПУ" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-13.jpg" alt="Пилотирование беспилотников" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-15.jpg" alt="Робототехника" loading="lazy"></div>
@@ -608,23 +677,35 @@ html{overflow-x:clip}
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-10.jpg" alt="Занятия по электронике" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-07.jpg" alt="Шахматный класс с интерактивной панелью" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-09.jpg" alt="Студия изобразительного искусства" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-01.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 9" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-02.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-03.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 11" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-04.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 12" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-05.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 13" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-06.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 14" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-08.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 15" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-11.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 16" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-14.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 17" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-16.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 18" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-17.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 19" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-18.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 20" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-19.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 21" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-20.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 22" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-22.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 23" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-23.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 24" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-24.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 25" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-25.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 26" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-26.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 27" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-27.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 28" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-29.jpg" alt="Региональный центр «Альтаир» («Сириус» НСО) — фото 29" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 29</div>
             </div>
 
             <div class="project-content">
                 <span class="project-tag">Доп. образование</span>
-                <h2 class="project-title" style="min-height: 58px;">Региональный центр «Альтаир» («Сириус» НСО)<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., 2020 г.</span></h2>
+                <h2 class="project-title" style="min-height: 58px;">Региональный центр «Альтаир» («Сириус» НСО)<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл.</span></h2>
                 <div class="project-meta">
                     <span><i class="fa-solid fa-cube"></i> Лаборатория прототипирования</span>
                     <span><i class="fa-solid fa-vr-cardboard"></i> VR/AR и БПЛА</span>
@@ -640,7 +721,7 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-01.jpg" alt="Новый корпус детского сада" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-01.jpg" alt="Новый корпус детского сада"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-16.jpg" alt="Групповое помещение" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-07.jpg" alt="Мебель для игровой зоны" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-12.jpg" alt="Спортивный зал" loading="lazy"></div>
@@ -648,23 +729,27 @@ html{overflow-x:clip}
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-18.jpg" alt="Студия рисования" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-04.jpg" alt="Уголок безопасности" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-08.jpg" alt="Игровая зона" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-02.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 9" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-03.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-05.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 11" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-06.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 12" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-09.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 13" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-10.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 14" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-11.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 15" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-13.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 16" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-14.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 17" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-15.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 18" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-19.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 19" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-20.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 20" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-21.jpg" alt="Детский сад № 4 «Солнышко» — новый корпус — фото 21" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 21</div>
             </div>
 
             <div class="project-content">
                 <span class="project-tag">Детские сады</span>
-                <h2 class="project-title" style="min-height: 58px;">Детский сад № 4 «Солнышко» — новый корпус<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., г. Обь, 2020 г.</span></h2>
+                <h2 class="project-title" style="min-height: 58px;">Детский сад № 4 «Солнышко» — новый корпус<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., г. Обь</span></h2>
                 <div class="project-meta">
                     <span><i class="fa-solid fa-child-reaching"></i> Групповые и спальни</span>
                     <span><i class="fa-solid fa-futbol"></i> Спортивный и актовый залы</span>
@@ -680,29 +765,37 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-22.jpg" alt="Здание детского сада" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-22.jpg" alt="Здание детского сада"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-02.jpg" alt="Спальня «Космос»" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-05.jpg" alt="Игровая зона группы" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-09.jpg" alt="Групповое помещение" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-14.jpg" alt="Шкафы в раздевалке" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-19.jpg" alt="Столы и стулья в группе" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-21.jpg" alt="Мебель для групповой" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-01.jpg" alt="Детский сад «Золотой ключик» — фото 8" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-03.jpg" alt="Детский сад «Золотой ключик» — фото 9" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-04.jpg" alt="Детский сад «Золотой ключик» — фото 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-06.jpg" alt="Детский сад «Золотой ключик» — фото 11" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-07.jpg" alt="Детский сад «Золотой ключик» — фото 12" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-08.jpg" alt="Детский сад «Золотой ключик» — фото 13" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-10.jpg" alt="Детский сад «Золотой ключик» — фото 14" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-11.jpg" alt="Детский сад «Золотой ключик» — фото 15" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-12.jpg" alt="Детский сад «Золотой ключик» — фото 16" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-13.jpg" alt="Детский сад «Золотой ключик» — фото 17" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-15.jpg" alt="Детский сад «Золотой ключик» — фото 18" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-16.jpg" alt="Детский сад «Золотой ключик» — фото 19" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-17.jpg" alt="Детский сад «Золотой ключик» — фото 20" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-18.jpg" alt="Детский сад «Золотой ключик» — фото 21" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-20.jpg" alt="Детский сад «Золотой ключик» — фото 22" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-23.jpg" alt="Детский сад «Золотой ключик» — фото 23" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 23</div>
             </div>
 
             <div class="project-content">
                 <span class="project-tag">Детские сады</span>
-                <h2 class="project-title" style="min-height: 58px;">Детский сад «Золотой ключик»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., наукоград Кольцово, 2021 г.</span></h2>
+                <h2 class="project-title" style="min-height: 58px;">Детский сад «Золотой ключик»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., наукоград Кольцово</span></h2>
                 <div class="project-meta">
                     <span><i class="fa-solid fa-bed"></i> Дизайн спален</span>
                     <span><i class="fa-solid fa-kit-medical"></i> Медицинский блок</span>
@@ -718,7 +811,7 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-01.jpg" alt="Здание школы" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-01.jpg" alt="Здание школы"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-02.jpg" alt="Зал заседаний" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-04.jpg" alt="Учебный кабинет с интерактивной панелью" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-08.jpg" alt="Кабинет начальных классов" loading="lazy"></div>
@@ -726,23 +819,45 @@ html{overflow-x:clip}
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-25.jpg" alt="Библиотека" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-20.jpg" alt="Медицинский блок" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-27.jpg" alt="Игровая комната" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-03.jpg" alt="СОШ им. П. П. Лановенчика — фото 9" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-05.jpg" alt="СОШ им. П. П. Лановенчика — фото 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-06.jpg" alt="СОШ им. П. П. Лановенчика — фото 11" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-07.jpg" alt="СОШ им. П. П. Лановенчика — фото 12" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-09.jpg" alt="СОШ им. П. П. Лановенчика — фото 13" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-10.jpg" alt="СОШ им. П. П. Лановенчика — фото 14" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-11.jpg" alt="СОШ им. П. П. Лановенчика — фото 15" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-12.jpg" alt="СОШ им. П. П. Лановенчика — фото 16" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-13.jpg" alt="СОШ им. П. П. Лановенчика — фото 17" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-15.jpg" alt="СОШ им. П. П. Лановенчика — фото 18" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-16.jpg" alt="СОШ им. П. П. Лановенчика — фото 19" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-17.jpg" alt="СОШ им. П. П. Лановенчика — фото 20" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-18.jpg" alt="СОШ им. П. П. Лановенчика — фото 21" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-19.jpg" alt="СОШ им. П. П. Лановенчика — фото 22" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-21.jpg" alt="СОШ им. П. П. Лановенчика — фото 23" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-22.jpg" alt="СОШ им. П. П. Лановенчика — фото 24" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-23.jpg" alt="СОШ им. П. П. Лановенчика — фото 25" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-24.jpg" alt="СОШ им. П. П. Лановенчика — фото 26" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-26.jpg" alt="СОШ им. П. П. Лановенчика — фото 27" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-28.jpg" alt="СОШ им. П. П. Лановенчика — фото 28" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-29.jpg" alt="СОШ им. П. П. Лановенчика — фото 29" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-30.jpg" alt="СОШ им. П. П. Лановенчика — фото 30" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-31.jpg" alt="СОШ им. П. П. Лановенчика — фото 31" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-32.jpg" alt="СОШ им. П. П. Лановенчика — фото 32" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-33.jpg" alt="СОШ им. П. П. Лановенчика — фото 33" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-34.jpg" alt="СОШ им. П. П. Лановенчика — фото 34" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-35.jpg" alt="СОШ им. П. П. Лановенчика — фото 35" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-36.jpg" alt="СОШ им. П. П. Лановенчика — фото 36" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-37.jpg" alt="СОШ им. П. П. Лановенчика — фото 37" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-38.jpg" alt="СОШ им. П. П. Лановенчика — фото 38" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-39.jpg" alt="СОШ им. П. П. Лановенчика — фото 39" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 39</div>
             </div>
 
             <div class="project-content">
                 <span class="project-tag">Школы</span>
-                <h2 class="project-title" style="min-height: 58px;">СОШ им. П. П. Лановенчика<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., р. п. Маслянино, 2019 г.</span></h2>
+                <h2 class="project-title" style="min-height: 58px;">СОШ им. П. П. Лановенчика<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., р. п. Маслянино</span></h2>
                 <div class="project-meta">
                     <span><i class="fa-solid fa-chair"></i> Мебель для всей школы</span>
                     <span><i class="fa-solid fa-kit-medical"></i> Медблок и рекреации</span>
@@ -758,7 +873,7 @@ html{overflow-x:clip}
                 <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
 
                 <div class="carousel-slides" data-current-index="0">
-                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-01.jpg" alt="Здание школы и стадион" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-01.jpg" alt="Здание школы и стадион"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-03.jpg" alt="Актовый зал" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-02.jpg" alt="Библиотека" loading="lazy"></div>
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-04.jpg" alt="Спортивный зал" loading="lazy"></div>
@@ -769,22 +884,12 @@ html{overflow-x:clip}
                     <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-09.jpg" alt="Учебный кабинет" loading="lazy"></div>
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
-                    <span class="carousel-dot" onclick="jumpToSlide(this, 8)"></span>
-                </div>
+                <div class="carousel-count"><span class="cc-cur">1</span> / 9</div>
             </div>
 
             <div class="project-content">
                 <span class="project-tag">Школы</span>
-                <h2 class="project-title" style="min-height: 58px;">СОШ № 2 — новое здание школы<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., г. Обь, 2018 г.</span></h2>
+                <h2 class="project-title" style="min-height: 58px;">СОШ № 2 — новое здание школы<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., г. Обь</span></h2>
                 <div class="project-meta">
                     <span><i class="fa-solid fa-flask"></i> Кабинеты физики и биологии</span>
                     <span><i class="fa-solid fa-person-swimming"></i> Бассейн и спортзал</span>
@@ -865,10 +970,19 @@ html{overflow-x:clip}
             slidesTrack.setAttribute('data-current-index', index);
             slidesTrack.style.transform = `translateX(-${index * 100}%)`;
             
-            const dots = container.querySelectorAll('.carousel-dot');
-            dots.forEach(d => d.classList.remove('active'));
-            dots[index].classList.add('active');
+            const cur = container.querySelector('.cc-cur');
+            if (cur) cur.textContent = index + 1;
         }
+            // Листание пальцем на телефоне
+        document.querySelectorAll('.carousel-container').forEach(c => {
+            let x0 = null;
+            c.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, {passive: true});
+            c.addEventListener('touchend', e => {
+                if (x0 === null) return;
+                const dx = e.changedTouches[0].clientX - x0; x0 = null;
+                if (Math.abs(dx) > 40) moveSlide(c.querySelector('.carousel-btn'), dx < 0 ? 1 : -1);
+            }, {passive: true});
+        });
     </script>
 </body>
 </html>
