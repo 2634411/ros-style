@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta name="description" content="Выполненные проекты «Росстайл»: лицей «Технополис», ЦО «Восход», ЦО «Верх-Тулинский», гимназия «Краснообская», технопарк НГПУ и другие объекты.">
+    <meta name="description" content="Выполненные проекты «Росстайл»: лицей «Технополис», ЦО «Восход», ЦО «Верх-Тулинский», гимназия «Краснообская», СОШ № 2 г. Оби, школа в Маслянино, детские сады «Солнышко» и «Золотой ключик», центр «Альтаир», технопарк НГПУ.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Выполненные проекты оснащения школ и детских садов — Росстайл</title>
@@ -329,6 +329,7 @@ html{overflow-x:clip}
         <button class="filter-btn" onclick="filterProjects('school')">Школы</button>
         <button class="filter-btn" onclick="filterProjects('university')">Вузы и Кванториумы</button>
         <button class="filter-btn" onclick="filterProjects('additional')">Доп. образование / Инновации</button>
+        <button class="filter-btn" onclick="filterProjects('kindergarten')">Детские сады</button>
     </div>
 
     <!-- Сетка объектов -->
@@ -589,6 +590,206 @@ html{overflow-x:clip}
                     <span><i class="fa-solid fa-robot"></i> Автоматизация и климат</span>
                 </div>
                 <p class="project-desc">Уникальный научно-исследовательский агробиопарк для ранней профориентации школьников. Поставлены и запущены автоматические вертикальные гидропонные фермы модульного типа. Комплекс позволяет учащимся проводить сложные лабораторные эксперименты по микроклональному размножению и адаптации культур в полностью бессубстратной контролируемой среде.</p>
+            </div>
+        </article>
+
+        <!-- Региональный центр «Альтаир» («Сириус» НСО) -->
+        <article class="project-card" data-category="additional">
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="carousel-slides" data-current-index="0">
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-21.jpg" alt="Компьютерный класс и VR-лаборатория" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-12.jpg" alt="Лаборатория прототипирования: станки с ЧПУ" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-13.jpg" alt="Пилотирование беспилотников" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-15.jpg" alt="Робототехника" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-28.jpg" alt="Естественнонаучная лаборатория" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-10.jpg" alt="Занятия по электронике" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-07.jpg" alt="Шахматный класс с интерактивной панелью" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/altair/altair-09.jpg" alt="Студия изобразительного искусства" loading="lazy"></div>
+                </div>
+
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <span class="project-tag">Доп. образование</span>
+                <h2 class="project-title" style="min-height: 58px;">Региональный центр «Альтаир» («Сириус» НСО)<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., 2020 г.</span></h2>
+                <div class="project-meta">
+                    <span><i class="fa-solid fa-cube"></i> Лаборатория прототипирования</span>
+                    <span><i class="fa-solid fa-vr-cardboard"></i> VR/AR и БПЛА</span>
+                </div>
+                <p class="project-desc">Экспертное сопровождение проекта на всех стадиях — начиная с проектирования. Поставлены оргтехника, лаборатория прототипирования (3D-принтеры, промышленные станки с ЧПУ, лазерный резак-гравёр), беспилотники, лаборатории виртуальной и дополненной реальности, оборудование актового зала (звук, свет, проекция) и спортивный инвентарь.</p>
+            </div>
+        </article>
+
+        <!-- Детский сад № 4 «Солнышко» — новый корпус -->
+        <article class="project-card" data-category="kindergarten">
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="carousel-slides" data-current-index="0">
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-01.jpg" alt="Новый корпус детского сада" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-16.jpg" alt="Групповое помещение" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-07.jpg" alt="Мебель для игровой зоны" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-12.jpg" alt="Спортивный зал" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-17.jpg" alt="Спальня" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-18.jpg" alt="Студия рисования" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-04.jpg" alt="Уголок безопасности" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/solnyshko/solnyshko-08.jpg" alt="Игровая зона" loading="lazy"></div>
+                </div>
+
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <span class="project-tag">Детские сады</span>
+                <h2 class="project-title" style="min-height: 58px;">Детский сад № 4 «Солнышко» — новый корпус<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., г. Обь, 2020 г.</span></h2>
+                <div class="project-meta">
+                    <span><i class="fa-solid fa-child-reaching"></i> Групповые и спальни</span>
+                    <span><i class="fa-solid fa-futbol"></i> Спортивный и актовый залы</span>
+                </div>
+                <p class="project-desc">Экспертное сопровождение на финальных стадиях и комплексное оснащение нового корпуса всем необходимым для работы детского сада: групповые помещения и спальни, медицинский блок, актовый и спортивный залы, студия рисования.</p>
+            </div>
+        </article>
+
+        <!-- Детский сад «Золотой ключик» -->
+        <article class="project-card" data-category="kindergarten">
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="carousel-slides" data-current-index="0">
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-22.jpg" alt="Здание детского сада" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-02.jpg" alt="Спальня «Космос»" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-05.jpg" alt="Игровая зона группы" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-09.jpg" alt="Групповое помещение" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-14.jpg" alt="Шкафы в раздевалке" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-19.jpg" alt="Столы и стулья в группе" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/zolotoj/zolotoj-21.jpg" alt="Мебель для групповой" loading="lazy"></div>
+                </div>
+
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <span class="project-tag">Детские сады</span>
+                <h2 class="project-title" style="min-height: 58px;">Детский сад «Золотой ключик»<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., наукоград Кольцово, 2021 г.</span></h2>
+                <div class="project-meta">
+                    <span><i class="fa-solid fa-bed"></i> Дизайн спален</span>
+                    <span><i class="fa-solid fa-kit-medical"></i> Медицинский блок</span>
+                </div>
+                <p class="project-desc">Экспертное сопровождение на всех стадиях — начиная с проектирования. Поставлены мебель и посуда, укомплектован медицинский блок, разработан дизайн спален.</p>
+            </div>
+        </article>
+
+        <!-- СОШ им. П. П. Лановенчика -->
+        <article class="project-card" data-category="school">
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="carousel-slides" data-current-index="0">
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-01.jpg" alt="Здание школы" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-02.jpg" alt="Зал заседаний" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-04.jpg" alt="Учебный кабинет с интерактивной панелью" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-08.jpg" alt="Кабинет начальных классов" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-14.jpg" alt="Рекреация" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-25.jpg" alt="Библиотека" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-20.jpg" alt="Медицинский блок" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/maslyanino/maslyanino-27.jpg" alt="Игровая комната" loading="lazy"></div>
+                </div>
+
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <span class="project-tag">Школы</span>
+                <h2 class="project-title" style="min-height: 58px;">СОШ им. П. П. Лановенчика<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., р. п. Маслянино, 2019 г.</span></h2>
+                <div class="project-meta">
+                    <span><i class="fa-solid fa-chair"></i> Мебель для всей школы</span>
+                    <span><i class="fa-solid fa-kit-medical"></i> Медблок и рекреации</span>
+                </div>
+                <p class="project-desc">Экспертное сопровождение на всех стадиях — начиная с проектирования. Поставлена мебель для учебных кабинетов, библиотеки и столовой, оснащены медицинский блок и рекреации.</p>
+            </div>
+        </article>
+
+        <!-- СОШ № 2 — новое здание школы -->
+        <article class="project-card" data-category="school">
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(this, -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" onclick="moveSlide(this, 1)"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="carousel-slides" data-current-index="0">
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-01.jpg" alt="Здание школы и стадион" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-03.jpg" alt="Актовый зал" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-02.jpg" alt="Библиотека" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-04.jpg" alt="Спортивный зал" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-05.jpg" alt="Бассейн" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-07.jpg" alt="Кабинет естественных наук" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-06.jpg" alt="Учебный кабинет" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-08.jpg" alt="Компьютерный класс" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="https://shop.ros-style.ru/media/projects/ob2/ob2-09.jpg" alt="Учебный кабинет" loading="lazy"></div>
+                </div>
+
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="jumpToSlide(this, 0)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 1)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 2)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 3)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 4)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 5)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 6)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 7)"></span>
+                    <span class="carousel-dot" onclick="jumpToSlide(this, 8)"></span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <span class="project-tag">Школы</span>
+                <h2 class="project-title" style="min-height: 58px;">СОШ № 2 — новое здание школы<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 500;">Новосибирская обл., г. Обь, 2018 г.</span></h2>
+                <div class="project-meta">
+                    <span><i class="fa-solid fa-flask"></i> Кабинеты физики и биологии</span>
+                    <span><i class="fa-solid fa-person-swimming"></i> Бассейн и спортзал</span>
+                </div>
+                <p class="project-desc">Экспертное сопровождение на финальных стадиях и комплексное оснащение школы всем необходимым оборудованием. На базе школы созданы два кабинета научно-проектной деятельности по физике и биологии. Перед открытием школу посетил Президент России В. В. Путин — как значимый социальный объект с высокой степенью готовности и оснащённости.</p>
             </div>
         </article>
 
